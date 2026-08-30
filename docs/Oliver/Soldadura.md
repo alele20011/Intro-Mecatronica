@@ -92,3 +92,5 @@ A continuación se presentan las evidencias visuales recolectadas durante la ses
 
 ![Medición y ensamble de tubos perfil cuadrado](../imVS/IMG_9375.jpeg)
 *Figura 5: Inspección final de los perfiles metálicos cuadrados cortados y unidos, mostrando el cordón de soldadura y el área afectada por el calor.*
+
+[def]: ../imVS/8bf14a20-deec-4154-89b8-32e359038d35.jpeg

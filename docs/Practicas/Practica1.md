@@ -41,3 +41,9 @@ El componente que **domina el error** en la temporización del circuito es el **
 * **Qué falló:** El circuito no oscilaba al inicio debido a una conexión errónea de nodos entre las resistencias temporizadoras y el integrado.
 * **Cómo se encontró:** Se siguió el diagrama esquemático línea por línea con el multímetro en modo continuidad. Se observó que el puente entre el pin 2 (*TRIGGER*) y el pin 6 (*THRESHOLD*) no estaba conectado al nodo común entre $R_B$ y el capacitor $C$.
 * **Cómo se resolvió:** Se reubicaron los terminales en la protoboard de modo que $R_A$ ($1\text{ k}\Omega$) quedara entre $Vcc$ y el pin 7 (*DISCHARGE*), $R_B$ ($10\text{ k}\Omega$) entre el pin 7 y la unión de los pines 2 y 6, y el capacitor de $100\ \mu\text{F}$ entre ese mismo nodo y tierra.
+
+
+
+
+
+//Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
