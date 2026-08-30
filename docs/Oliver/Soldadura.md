@@ -87,7 +87,7 @@ A continuación se presentan las evidencias visuales recolectadas durante la ses
 ---
 
 ### 5.4. Piezas Soldadas y Verificación
-![Piezas unidas por soldadura de arco](../imVS/imVS/8bf14a20-deec-4154-89b8-32e359038d35.jpeg)
+![Piezas unidas por soldadura de arco](../imVS/8bf14a20-deec-4154-89b8-32e359038d35.jpeg)
 *Figura 4: Resultado del ensamble en ángulo mediante cordón de soldadura por arco sobre mesa metálica de trabajo perforated, utilizando regla y escuadra metálica Truper para alineación.*
 
 ![Medición y ensamble de tubos perfil cuadrado](../imVS/IMG_9375.jpeg)
