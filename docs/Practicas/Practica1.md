@@ -84,10 +84,10 @@ A continuación se muestra el comportamiento dinámico del circuito en tiempo re
 
 [<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](videos/Video 2026-08-30 at 2.35.15 PM.mp4)
 
-*Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`demo_osciloscopio_555.mp4`), o utiliza la reproducción directa si exportas a HTML:*
+*Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`Video 2026-08-30 at 2.35.15 PM.mp4`), o utiliza la reproducción directa si exportas a HTML:*
 
 ```html
-<video src="videos/demo_osciloscopio_555.mp4" controls width="100%"></video>
+<video src="videos/Video 2026-08-30 at 2.35.15 PM.mp4" controls width="100%"></video>
 
 
 
