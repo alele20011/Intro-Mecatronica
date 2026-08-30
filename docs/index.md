@@ -2,12 +2,12 @@
 
 **Equipo**:
 
- - Nombre integrante 1
- - Nombre integrante 2
+ - Roberto Alejandro Cruz Ortiz
+ - Belem
 
 **Contacto**: 
 
-- Correo integrante 1
+- 205810@iberopuebla.mx
 - Correo integrante 2
 
 **Carrera**: Ingeniría Mecatrónica
