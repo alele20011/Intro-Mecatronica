@@ -54,7 +54,7 @@ En esta sección se llevó a cabo el diseño, simulación y armado físico de un
 * **Simulación / Esquema:** Se diseñó el circuito definiendo la red RC (resistencia-capacitancia) para establecer la frecuencia de oscilación deseada.
 * **Implementación Física:** Se trasladó la conexión al protoboard utilizando capacitores electrolíticos, cerámicos, resistencias de precisión, LED indicador y cables de puenteo (*jumpers*).
 
-![Diagrama esquemático en Tinkercad del NE555](../imVS/Captura de pantalla 2026-08-30 151855)
+![Diagrama esquemático en Tinkercad del NE555](../imVS/Captura de pantalla 2026-08-30 151855.png)
 *Figura 6: Diagrama y simulación de la conexión del temporizador NE555 alimentado por la fuente de voltaje.*
 
 ![Ensamble del circuito astable en protoboard](../imVS/Image%202026-08-30%20at%202.35.15%20PM.jpeg)
@@ -82,7 +82,7 @@ Para caracterizar el comportamiento del circuito, se conectó la salida del temp
 
 A continuación se muestra el comportamiento dinámico del circuito en tiempo real, observando la sincronización entre la onda cuadrada en la pantalla del osciloscopio y el parpadeo constante del LED en la protoboard:
 
-[<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](videos/demo_osciloscopio_555.mp4)
+[<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](videos/Video 2026-08-30 at 2.35.15 PM.mp4)
 
 *Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`demo_osciloscopio_555.mp4`), o utiliza la reproducción directa si exportas a HTML:*
 
