@@ -62,7 +62,7 @@ En esta sección se llevó a cabo el diseño, simulación y armado físico de un
 
 ---
 
-### 6.2. Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)
+###  Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)
 
 Para caracterizar el comportamiento del circuito, se conectó la salida del temporizador a la punta de prueba del Canal 1 de un osciloscopio **Tektronix MDO3022 Mixed Domain Oscilloscope**.
 
@@ -78,16 +78,16 @@ Para caracterizar el comportamiento del circuito, se conectó la salida del temp
 
 ---
 
-### 6.3. Video de Demostración del Funcionamiento
+###  Video de Demostración del Funcionamiento
 
 A continuación se muestra el comportamiento dinámico del circuito en tiempo real, observando la sincronización entre la onda cuadrada en la pantalla del osciloscopio y el parpadeo constante del LED en la protoboard:
 
-[<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](videos/Video 2026-08-30 at 2.35.15 PM.mp4)
+[<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](../imVS/VidOscilos.mp4)
 
-*Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`Video 2026-08-30 at 2.35.15 PM.mp4`), o utiliza la reproducción directa si exportas a HTML:*
+*Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`VidOscilos.mp4`), o utiliza la reproducción directa si exportas a HTML:*
 
 ```html
-<video src="videos/Video 2026-08-30 at 2.35.15 PM.mp4" controls width="100%"></video>
+<video src="../imVS/VidOscilos.mp4" controls width="100%"></video>
 
 
 
