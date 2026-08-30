@@ -56,5 +56,5 @@ nav:
   - "Reflexiones":
       - "Vision Mecatronica": Reflexiones/VisionMecatronica.md
       - "Vision Mecatronica Belem": Reflexiones/Belemm.md
-  - "Proyecto de Ingenieria":     
-    -"Practica1": ProyectoIng/Practica1.md 
+  - 'Proyecto de Ingeniería':
+      - 'Práctica 1': 'practica1.md'
