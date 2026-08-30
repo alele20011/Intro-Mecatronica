@@ -69,26 +69,26 @@ Para finalizar la sesión, se pusieron en práctica los conceptos aprendidos:
 A continuación se presentan las evidencias visuales recolectadas durante la sesión de taller en la **Universidad Iberoamericana Puebla**, donde se aprecian el equipo de seguridad, la infraestructura utilizada y los resultados de la soldadura.
 
 ### 5.1. Equipo de Protección Personal (EPP)
-![Equipo de protección personal completo](imVS/IMG_9369.jpeg)
+![Equipo de protección personal completo](../imVS/IMG_9369.jpeg)
 *Figura 1: Estudiante equipado con la vestimenta requerida: careta para soldar Truper, bata/overol, pechera de cuero, guantes de carnaza y botas de seguridad en el taller del IDIT Ibero Puebla.*
 
 ---
 
 ### 5.2. Conexión de Seguridad Eléctrica
-![Conexión eléctrica de la máquina](imVS/IMG_9383.jpeg)
+![Conexión eléctrica de la máquina](../imVS/IMG_9383.jpeg)
 *Figura 2: Proceso de conexión de la clavija industrial a la toma eléctrica autorizada del taller, utilizando guantes de protección en todo momento.*
 
 ---
 
 ### 5.3. Infraestructura y Máquina de Soldar
-![Máquina de soldar y cableado](imVS/IMG_9384.jpeg)
+![Máquina de soldar y cableado](../imVS/IMG_9384.jpeg)
 *Figura 3: Equipo de soldadura industrial, mostrando el carrete con el cableado de corriente, portaelectrodo y las zonas de trabajo del laboratorio.*
 
 ---
 
 ### 5.4. Piezas Soldadas y Verificación
-![Piezas unidas por soldadura de arco](imVS/8bf14a20-deec-4154-89b8-32e359038d35.jpeg)
+![Piezas unidas por soldadura de arco](../imVS/imVS/8bf14a20-deec-4154-89b8-32e359038d35.jpeg)
 *Figura 4: Resultado del ensamble en ángulo mediante cordón de soldadura por arco sobre mesa metálica de trabajo perforated, utilizando regla y escuadra metálica Truper para alineación.*
 
-![Medición y ensamble de tubos perfil cuadrado](imVS/IMG_9375.jpeg)
+![Medición y ensamble de tubos perfil cuadrado](../imVS/IMG_9375.jpeg)
 *Figura 5: Inspección final de los perfiles metálicos cuadrados cortados y unidos, mostrando el cordón de soldadura y el área afectada por el calor.*
