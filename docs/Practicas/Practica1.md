@@ -43,6 +43,51 @@ El componente que **domina el error** en la temporización del circuito es el **
 * **Cómo se resolvió:** Se reubicaron los terminales en la protoboard de modo que $R_A$ ($1\text{ k}\Omega$) quedara entre $Vcc$ y el pin 7 (*DISCHARGE*), $R_B$ ($10\text{ k}\Omega$) entre el pin 7 y la unión de los pines 2 y 6, y el capacitor de $100\ \mu\text{F}$ entre ese mismo nodo y tierra.
 
 
+---
+
+## 6. Práctica de Circuito Oscilador con Temporizador NE555
+
+### 6.1. Diagrama Esquemático y Ensamble en Protoboard
+
+En esta sección se llevó a cabo el diseño, simulación y armado físico de un circuito astable utilizando el circuito integrado **NE555**, orientado a la generación de señales de pulso cuadradas y el control de parpadeo de una carga (LED).
+
+* **Simulación / Esquema:** Se diseñó el circuito definiendo la red RC (resistencia-capacitancia) para establecer la frecuencia de oscilación deseada.
+* **Implementación Física:** Se trasladó la conexión al protoboard utilizando capacitores electrolíticos, cerámicos, resistencias de precisión, LED indicador y cables de puenteo (*jumpers*).
+
+![Diagrama esquemático en Tinkercad del NE555](../imVS/Captura de pantalla 2026-08-30 151855)
+*Figura 6: Diagrama y simulación de la conexión del temporizador NE555 alimentado por la fuente de voltaje.*
+
+![Ensamble del circuito astable en protoboard](../imVS/Image%202026-08-30%20at%202.35.15%20PM.jpeg)
+*Figura 7: Implementación física del circuito en protoboard, mostrando el arreglo de componentes y cableado de alimentación.*
+
+---
+
+### 6.2. Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)
+
+Para caracterizar el comportamiento del circuito, se conectó la salida del temporizador a la punta de prueba del Canal 1 de un osciloscopio **Tektronix MDO3022 Mixed Domain Oscilloscope**.
+
+1. **Conexión de Mediciones:**
+   * La punta del osciloscopio se conectó a la señal de salida del NE555 (Canal 1), asegurando la toma de tierra al negativo común de la fuente de poder de 5 V.
+2. **Parámetros Medidos:**
+   * **Frecuencia ($f$):** $\approx 594.9\text{ mHz}$ (período de oscilación amplio visible en el parpadeo del LED).
+   * **Período ($T$):** $\approx 1.681\text{ s}$.
+   * **Ciclo de Trabajo (+Duty):** $\approx 48.7\%$, confirmando una onda cuadrada casi simétrica de encendido y apagado.
+
+![Pantalla del osciloscopio con señal de oscilación](../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg)
+*Figura 8: Lectura del osciloscopio Tektronix registrando la señal continua y los parámetros de frecuencia y ciclo de trabajo.*
+
+---
+
+### 6.3. Video de Demostración del Funcionamiento
+
+A continuación se muestra el comportamiento dinámico del circuito en tiempo real, observando la sincronización entre la onda cuadrada en la pantalla del osciloscopio y el parpadeo constante del LED en la protoboard:
+
+[<img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración">](videos/demo_osciloscopio_555.mp4)
+
+*Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (`demo_osciloscopio_555.mp4`), o utiliza la reproducción directa si exportas a HTML:*
+
+```html
+<video src="videos/demo_osciloscopio_555.mp4" controls width="100%"></video>
 
 
 
