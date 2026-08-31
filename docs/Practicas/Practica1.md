@@ -73,7 +73,7 @@ Para caracterizar el comportamiento del circuito, se conectó la salida del temp
    * **Período ($T$):** $\approx 1.681\text{ s}$.
    * **Ciclo de Trabajo (+Duty):** $\approx 48.7\%$, confirmando una onda cuadrada casi simétrica de encendido y apagado.
 
-![Pantalla del osciloscopio con señal de oscilación](../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg)
+![Pantalla del osciloscopio con señal de oscilación](../imVS/Image 2026-08-30 at 2.35.13 PM.jpeg)
 *Figura 8: Lectura del osciloscopio Tektronix registrando la señal continua y los parámetros de frecuencia y ciclo de trabajo.*
 
 ---
