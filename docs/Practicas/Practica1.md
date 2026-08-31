@@ -16,7 +16,7 @@ $$\% \text{ de Error} = \left| \frac{\text{Valor Teórico} - \text{Valor Medido}
 | **V de salida en ALTO (V)** | $3.5\text{ V}$ ($\approx Vcc - 1.5$) | $2.90\text{ V}$ | $17.14\%$ | Osciloscopio / Multímetro |
 | **Frecuencia (Hz)** | $0.69\text{ Hz}$ | $0.685\text{ Hz}$ ($684.9\text{ mHz}$) | $0.72\%$ | Osciloscopio (Measure) |
 | **Duty (%)** | $52.40\%$ | $49.53\%$ | $5.48\%$ | Osciloscopio (Measure) |
-| **I del LED (mA)** | $4.55\text{ mA}$ | $2.73\text{ mA}$ | $40.00\%$ | Multímetro (A, en serie) / Calculado con $V_{out}$ medido |
+| **I del LED (mA)** | $4.55\text{ mA}$ | $3.8\text{ mA}$ | $16.48\%$ | Multímetro (A, en serie) / Calculado con $V_{out}$ medido |
 
 ---
 
