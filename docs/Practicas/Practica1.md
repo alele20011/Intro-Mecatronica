@@ -123,15 +123,18 @@ La duración del pulso en un circuito monoestable depende directamente de la con
 ## 3. Evidencia Fotográfica y Demostración en Video
 
 ### Montaje Físico en Protoboard
-![Montaje Físico del Circuito Monoestable](IMG_9620.jpg)
+![Ensamble del circuito monoestable en protoboard](../imVS/IMG_9620.jpg)
 
 * **Descripción:** Montaje del circuito temporizador monoestable utilizando el CI NE555, resistencia temporizadora de $47\text{ k}\Omega$, capacitor de $100\ \mu\text{F}$, botón pulsador (*push button*) para el disparo en el pin 2 y LED indicador azul con su resistencia limitadora en la salida (pin 3).
 
 ---
 
 ### Evidencia del Pulso Temporizado (Video de Medición)
-* **Archivo de Video:** `demostracion_monoestable.mp4` (o enlace correspondiente a tu portafolio/drive).
+* **Archivo de Video:** `Video punto extra.mp4` (o enlace correspondiente a tu portafolio/drive).
 * **Duración total:** $7\text{ segundos}$.
+
+[<img src="../imVS/IMG_9620" width="600" alt="Ver video de demostración">](../imVS/Videopuntoextra1.mp4)
+
 * **Descripción de la prueba:**
   * **00:00 - 00:01:** Estado inicial en reposo. El cronómetro digital se encuentra en `00:00.00` y el LED permanece apagado en nivel BAJO ($0\text{ V}$).
   * **00:02:** Se presiona el botón de disparo (*trigger*). El LED azul se enciende inmediatamente al pasar la salida al nivel ALTO y se inicia el conteo.
