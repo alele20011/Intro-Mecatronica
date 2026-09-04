@@ -90,5 +90,33 @@ A continuación se muestra el comportamiento dinámico del circuito en tiempo re
 <video src="../imVS/VidOscilos.mp4" controls width="100%"></video>
 
 
+# Actividad de Punto Extra: Temporizador 555 en Modo Monoestable
+
+## 1. Tabla de Medición vs. Teoría
+
+Para el cálculo teórico del tiempo de pulso ($t_{pulso}$), se utiliza la resistencia comercial disponible $R = 47\text{ k}\Omega$ ($47,000\ \Omega$) y el capacitor electrolítico de $C = 100\ \mu\text{F}$ ($100 \times 10^{-6}\text{ F}$):
+
+$$t_{pulso (teórico)} = 1.1 \cdot R \cdot C = 1.1 \times 47,000\ \Omega \times (100 \times 10^{-6}\text{ F}) = 5.17\text{ s}$$
+
+$$\% \text{ de Error} = \left| \frac{t_{teórico} - t_{medido}}{t_{teórico}} \right| \times 100 = \left| \frac{5.17\text{ s} - 5.0\text{ s}}{5.17\text{ s}} \right| \times 100 \approx 3.29\%$$
+
+| Magnitud | Teórico (calculado) | Medido (cronómetro / osciloscopio) | % de error |
+| :--- | :--- | :--- | :--- |
+| **Duración del pulso (s)** | $5.17\text{ s}$ | $5.00\text{ s}$ | $3.29\%$ |
+
+> **Nota:** La tabla de la práctica mostraba un tiempo teórico sugerido de $1.1\text{ s}$ (pensado para $R = 100\text{ k}\Omega$ y $C = 10\ \mu\text{F}$). Al ajustar la fórmula con los componentes reales del laboratorio ($R = 47\text{ k}\Omega$ y $C = 100\ \mu\text{F}$), el valor teórico exacto da $5.17\text{ s}$.
+
+---
+
+## 2. Explicación de la Duración del Pulso y Variaciones
+
+La duración del pulso en un circuito monoestable depende directamente de la constante de tiempo $RC$ para alcanzar el umbral de disparo interno del 555 ($\frac{2}{3}Vcc$):
+
+* **Cambio de componentes respecto al ejemplo de la guía:** Al sustituir los valores base ($100\text{ k}\Omega$ y $10\ \mu\text{F}$) por los componentes disponibles ($47\text{ k}\Omega$ y $100\ \mu\text{F}$), el producto $R \cdot C$ incrementó considerablemente. El capacitor de $100\ \mu\text{F}$ retiene diez veces más carga que uno de $10\ \mu\text{F}$, lo que extiende el tiempo necesario para cargarse hasta $\frac{2}{3}Vcc$ y aumenta la duración del pulso a poco más de $5$ segundos.
+* **Causa del margen de error ($3.29\%$):**
+  * **Tolerancia del capacitor electrolítico:** Típicamente varía entre un $-20\%$ y un $+80\%$. Una pequeña desviación a la baja en la capacitancia real del componente reduce ligeramente el tiempo de carga efectivo de $5.17\text{ s}$ a los $5.00\text{ s}$ medidos.
+  * **Tolerancia de la resistencia:** La resistencia de $47\text{ k}\Omega$ cuenta con una tolerancia de $\pm 5\%$.
+  * **Tiempo de reacción humano:** Al utilizar un cronómetro manual para medir la salida luminosa del LED, existe un tiempo de reacción inherente al presionar el botón al inicio y al apagado del diodo.
+
 
 //Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
