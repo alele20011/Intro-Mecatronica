@@ -2,13 +2,13 @@
 
 **Equipo**:
 
- - Nombre   Belem Mixcoatl Palestino
- - Nombre integrante 2
+ - Nombre Roberto Alejandro Cruz Ortiz 
+ - Nombre Belem Mixcoatl Palestino
 
 **Contacto**: 
 
-- Correo belem.mixcoatl@iberopuebla.mx
-- Correo integrante 2
+- Correo 205810@iberopuebla.mx
+- Correo 207879@iberopuebla.mx
 
 **Carrera**: Ingeniría Mecatrónica
 
