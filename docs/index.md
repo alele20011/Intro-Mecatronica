@@ -2,12 +2,12 @@
 
 **Equipo**:
 
- - Nombre integrante 1
+ - Nombre   Belem Mixcoatl Palestino
  - Nombre integrante 2
 
 **Contacto**: 
 
-- Correo integrante 1
+- Correo belem.mixcoatl@iberopuebla.mx
 - Correo integrante 2
 
 **Carrera**: Ingeniría Mecatrónica
