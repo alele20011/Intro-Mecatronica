@@ -119,4 +119,23 @@ La duración del pulso en un circuito monoestable depende directamente de la con
   * **Tiempo de reacción humano:** Al utilizar un cronómetro manual para medir la salida luminosa del LED, existe un tiempo de reacción inherente al presionar el botón al inicio y al apagado del diodo.
 
 
+
+## 3. Evidencia Fotográfica y Demostración en Video
+
+### Montaje Físico en Protoboard
+![Montaje Físico del Circuito Monoestable](IMG_9620.jpg)
+
+* **Descripción:** Montaje del circuito temporizador monoestable utilizando el CI NE555, resistencia temporizadora de $47\text{ k}\Omega$, capacitor de $100\ \mu\text{F}$, botón pulsador (*push button*) para el disparo en el pin 2 y LED indicador azul con su resistencia limitadora en la salida (pin 3).
+
+---
+
+### Evidencia del Pulso Temporizado (Video de Medición)
+* **Archivo de Video:** `demostracion_monoestable.mp4` (o enlace correspondiente a tu portafolio/drive).
+* **Duración total:** $7\text{ segundos}$.
+* **Descripción de la prueba:**
+  * **00:00 - 00:01:** Estado inicial en reposo. El cronómetro digital se encuentra en `00:00.00` y el LED permanece apagado en nivel BAJO ($0\text{ V}$).
+  * **00:02:** Se presiona el botón de disparo (*trigger*). El LED azul se enciende inmediatamente al pasar la salida al nivel ALTO y se inicia el conteo.
+  * **00:02 - 00:05:** El capacitor de $100\ \mu\text{F}$ se carga progresivamente a través de la resistencia de $47\text{ k}\Omega$. El LED se mantiene encendido.
+  * **00:05.71:** El voltaje del capacitor alcanza los $\frac{2}{3}Vcc$, conmutando la salida a nivel BAJO. El LED se apaga completamente, registrando una duración efectiva del pulso de $5.00\text{ segundos}$ en el cronómetro.
+
 //Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
