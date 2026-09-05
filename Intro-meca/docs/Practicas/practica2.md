@@ -3,7 +3,7 @@
 ## 1. Códigos e Implementación en el IDE
 
 ### Programa 1: BLINK (Salida Digital)
-![Código IDE - BLINK](../imVS/Code1bl.png)
+![Código IDE - BLINK](../imVS/Code1bl.jpeg)
 
 ![Esquemático - BLINK](../imVS/Esq1.png)
 
@@ -54,8 +54,7 @@ De este modo, la lógica de lectura resulta invertida con respecto al estado fí
 ### Bitácora de Errores
 * **Síntoma / Fallo:** Al intentar compilar y transferir el programa a la tarjeta ESP32 DevKit V1 desde el entorno de desarrollo, el sistema arrojaba una falla indicando que no encontraba la plataforma seleccionada (`Could not find previously selected board 'ESP32 Dev Board'`) y no detectaba el puerto de comunicación.
 * **Cómo se encontró:** Se observó la notificación de error en la barra inferior del IDE y se comprobó que el menú desplegable de selección de puertos no reconocía ningún puerto COM activo asignado a la tarjeta.
-* **Solución:** 1. Se agregó el enlace oficial del gestor de tarjetas ESP32 en las preferencias del entorno (`https://espressif.github.io/arduino-esp32/package_esp32_index.json`).
-  2. Se abrió el gestor de tarjetas (*Board Manager*), se buscó el paquete **esp32** de Espressif y se completó su instalación.
+
   3. Se seleccionó la tarjeta **DOIT ESP32 DEVKIT V1** y el puerto COM asignado, permitiendo realizar la compilación y subida del programa de forma satisfactoria.
 
 ### Conclusión
