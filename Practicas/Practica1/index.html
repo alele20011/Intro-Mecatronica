@@ -1,0 +1,1275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../../SobreMi/">
+      
+      
+        <link rel="next" href="../practica2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 1 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-temporizador-555-en-modo-astable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tabla-de-medicion-vs-teoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Tabla de Medición vs. Teoría
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-analisis-del-error-por-que-no-dio-exacto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Análisis del Error: ¿Por qué no dio exacto?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Bitácora de Errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-polarizacion-del-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error 1: Polarización del LED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-colocacion-erronea-de-las-resistencias-temporizadoras-r_a-y-r_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error 2: Colocación Errónea de las Resistencias Temporizadoras (\(R_A\) y \(R_B\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practica-de-circuito-oscilador-con-temporizador-ne555" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Práctica de Circuito Oscilador con Temporizador NE555
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Práctica de Circuito Oscilador con Temporizador NE555">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-diagrama-esquematico-y-ensamble-en-protoboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Diagrama Esquemático y Ensamble en Protoboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medicion-y-analisis-de-senal-con-osciloscopio-tektronix-mdo3022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-de-demostracion-del-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video de Demostración del Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tabla-de-medicion-vs-teoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Tabla de Medición vs. Teoría
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-analisis-del-error-por-que-no-dio-exacto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Análisis del Error: ¿Por qué no dio exacto?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Bitácora de Errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-polarizacion-del-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error 1: Polarización del LED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-colocacion-erronea-de-las-resistencias-temporizadoras-r_a-y-r_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error 2: Colocación Errónea de las Resistencias Temporizadoras (\(R_A\) y \(R_B\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practica-de-circuito-oscilador-con-temporizador-ne555" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Práctica de Circuito Oscilador con Temporizador NE555
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Práctica de Circuito Oscilador con Temporizador NE555">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-diagrama-esquematico-y-ensamble-en-protoboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Diagrama Esquemático y Ensamble en Protoboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medicion-y-analisis-de-senal-con-osciloscopio-tektronix-mdo3022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-de-demostracion-del-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video de Demostración del Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-temporizador-555-en-modo-astable">Reporte de Práctica: Temporizador 555 en Modo Astable</h1>
+<h2 id="1-tabla-de-medicion-vs-teoria">1. Tabla de Medición vs. Teoría</h2>
+<p>Para el cálculo teórico de la corriente del LED (<span class="arithmatex">\(I_{LED}\)</span>), se toma un voltaje directo del LED <span class="arithmatex">\(V_f \approx 2.0\text{ V}\)</span>:</p>
+<div class="arithmatex">\[I_{LED (teórico)} = \frac{V_{out} - V_f}{R_{LED}} = \frac{3.5\text{ V} - 2.0\text{ V}}{330\ \Omega} \approx 4.55\text{ mA}\]</div>
+<div class="arithmatex">\[I_{LED (medido)} = \frac{2.9\text{ V} - 2.0\text{ V}}{330\ \Omega} \approx 2.73\text{ mA}\]</div>
+<div class="arithmatex">\[\% \text{ de Error} = \left| \frac{\text{Valor Teórico} - \text{Valor Medido}}{\text{Valor Teórico}} \right| \times 100\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Magnitud</th>
+<th style="text-align: left;">Teórico (calculado)</th>
+<th style="text-align: left;">Medido</th>
+<th style="text-align: left;">% de error</th>
+<th style="text-align: left;">¿Con qué lo mediste?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Vcc (V)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(5.0\text{ V}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(5.01\text{ V}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.20\%\)</span></td>
+<td style="text-align: left;">Multímetro (V, en paralelo)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>V de salida en ALTO (V)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(3.5\text{ V}\)</span> (<span class="arithmatex">\(\approx Vcc - 1.5\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\(2.90\text{ V}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(17.14\%\)</span></td>
+<td style="text-align: left;">Osciloscopio / Multímetro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia (Hz)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.69\text{ Hz}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.685\text{ Hz}\)</span> (<span class="arithmatex">\(684.9\text{ mHz}\)</span>)</td>
+<td style="text-align: left;"><span class="arithmatex">\(0.72\%\)</span></td>
+<td style="text-align: left;">Osciloscopio (Measure)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Duty (%)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(52.40\%\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(49.53\%\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(5.48\%\)</span></td>
+<td style="text-align: left;">Osciloscopio (Measure)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I del LED (mA)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(4.55\text{ mA}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(3.8\text{ mA}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(16.48\%\)</span></td>
+<td style="text-align: left;">Multímetro (A, en serie) / Calculado con <span class="arithmatex">\(V_{out}\)</span> medido</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-analisis-del-error-por-que-no-dio-exacto">2. Análisis del Error: ¿Por qué no dio exacto?</h2>
+<p>El componente que <strong>domina el error</strong> en la temporización del circuito es el <strong>capacitor electrolítico de <span class="arithmatex">\(100\ \mu\text{F}\)</span></strong>.</p>
+<ul>
+<li><strong>Tolerancia del capacitor:</strong> Los capacitores electrolíticos tienen una tolerancia muy amplia (típicamente entre <span class="arithmatex">\(-20\%\)</span> y <span class="arithmatex">\(+80\%\)</span>). Una ligera variación respecto al valor nominal de <span class="arithmatex">\(100\ \mu\text{F}\)</span> altera directamente las constantes de tiempo de carga (<span class="arithmatex">\(t_{ALTO}\)</span>) y descarga (<span class="arithmatex">\(t_{BAJO}\)</span>), desviando la frecuencia teórica y el ciclo de trabajo (<em>duty cycle</em>).</li>
+<li><strong>Tolerancia de resistores:</strong> Las resistencias de película de carbón comerciales tienen una tolerancia de solo <span class="arithmatex">\(\pm 5\%\)</span>, por lo que su contribución al porcentaje de error global es considerablemente menor comparada con la del capacitor.</li>
+<li><strong>Caída de voltaje en la salida del 555:</strong> La etapa de salida interna del transistor bipolar del NE555 presenta una caída de tensión en estado ALTO. Aunque en teoría se aproxima como <span class="arithmatex">\(Vcc - 1.5\text{ V}\)</span> (<span class="arithmatex">\(3.5\text{ V}\)</span>), en la medición real se registraron <span class="arithmatex">\(2.90\text{ V}\)</span> debido a la carga que demanda el LED y la resistencia limitadora, lo que explica la diferencia en la corriente calculada.</li>
+</ul>
+<hr />
+<h2 id="3-bitacora-de-errores">3. Bitácora de Errores</h2>
+<h3 id="error-1-polarizacion-del-led">Error 1: Polarización del LED</h3>
+<ul>
+<li><strong>Qué falló:</strong> Al alimentar la protoboard con los <span class="arithmatex">\(5\text{ V}\)</span> regulados, el LED no parpadeaba ni emitía luz.</li>
+<li><strong>Cómo se encontró:</strong> Se comprobó con el osciloscopio que la patilla 3 de salida del NE555 sí estaba entregando la onda cuadrada esperada. Al inspeccionar físicamente el componente, se identificó que las terminales del LED (ánodo y cátodo) estaban invertidas.</li>
+<li><strong>Cómo se resolvió:</strong> Se rotó el LED <span class="arithmatex">\(180^\circ\)</span> en la protoboard, conectando correctamente el ánodo al nodo de la resistencia de <span class="arithmatex">\(330\ \Omega\)</span> (proveniente del pin 3) y el cátodo a la línea de tierra (<span class="arithmatex">\(GND\)</span>).</li>
+</ul>
+<h3 id="error-2-colocacion-erronea-de-las-resistencias-temporizadoras-r_a-y-r_b">Error 2: Colocación Errónea de las Resistencias Temporizadoras (<span class="arithmatex">\(R_A\)</span> y <span class="arithmatex">\(R_B\)</span>)</h3>
+<ul>
+<li><strong>Qué falló:</strong> El circuito no oscilaba al inicio debido a una conexión errónea de nodos entre las resistencias temporizadoras y el integrado.</li>
+<li><strong>Cómo se encontró:</strong> Se siguió el diagrama esquemático línea por línea con el multímetro en modo continuidad. Se observó que el puente entre el pin 2 (<em>TRIGGER</em>) y el pin 6 (<em>THRESHOLD</em>) no estaba conectado al nodo común entre <span class="arithmatex">\(R_B\)</span> y el capacitor <span class="arithmatex">\(C\)</span>.</li>
+<li><strong>Cómo se resolvió:</strong> Se reubicaron los terminales en la protoboard de modo que <span class="arithmatex">\(R_A\)</span> (<span class="arithmatex">\(1\text{ k}\Omega\)</span>) quedara entre <span class="arithmatex">\(Vcc\)</span> y el pin 7 (<em>DISCHARGE</em>), <span class="arithmatex">\(R_B\)</span> (<span class="arithmatex">\(10\text{ k}\Omega\)</span>) entre el pin 7 y la unión de los pines 2 y 6, y el capacitor de <span class="arithmatex">\(100\ \mu\text{F}\)</span> entre ese mismo nodo y tierra.</li>
+</ul>
+<hr />
+<h2 id="6-practica-de-circuito-oscilador-con-temporizador-ne555">6. Práctica de Circuito Oscilador con Temporizador NE555</h2>
+<h3 id="61-diagrama-esquematico-y-ensamble-en-protoboard">6.1. Diagrama Esquemático y Ensamble en Protoboard</h3>
+<p>En esta sección se llevó a cabo el diseño, simulación y armado físico de un circuito astable utilizando el circuito integrado <strong>NE555</strong>, orientado a la generación de señales de pulso cuadradas y el control de parpadeo de una carga (LED).</p>
+<ul>
+<li><strong>Simulación / Esquema:</strong> Se diseñó el circuito definiendo la red RC (resistencia-capacitancia) para establecer la frecuencia de oscilación deseada.</li>
+<li><strong>Implementación Física:</strong> Se trasladó la conexión al protoboard utilizando capacitores electrolíticos, cerámicos, resistencias de precisión, LED indicador y cables de puenteo (<em>jumpers</em>).</li>
+</ul>
+<p><img alt="Diagrama esquemático en Tinkercad del NE555" src="../../imVS/Captura%20de%20pantalla%202026-08-30%20151855.png" />
+<em>Figura 6: Diagrama y simulación de la conexión del temporizador NE555 alimentado por la fuente de voltaje.</em></p>
+<p><img alt="Ensamble del circuito astable en protoboard" src="../../imVS/Image%202026-08-30%20at%202.35.15%20PM.jpeg" />
+<em>Figura 7: Implementación física del circuito en protoboard, mostrando el arreglo de componentes y cableado de alimentación.</em></p>
+<hr />
+<h3 id="medicion-y-analisis-de-senal-con-osciloscopio-tektronix-mdo3022">Medición y Análisis de Señal con Osciloscopio (Tektronix MDO3022)</h3>
+<p>Para caracterizar el comportamiento del circuito, se conectó la salida del temporizador a la punta de prueba del Canal 1 de un osciloscopio <strong>Tektronix MDO3022 Mixed Domain Oscilloscope</strong>.</p>
+<ol>
+<li><strong>Conexión de Mediciones:</strong></li>
+<li>La punta del osciloscopio se conectó a la señal de salida del NE555 (Canal 1), asegurando la toma de tierra al negativo común de la fuente de poder de 5 V.</li>
+<li><strong>Parámetros Medidos:</strong></li>
+<li><strong>Frecuencia (<span class="arithmatex">\(f\)</span>):</strong> <span class="arithmatex">\(\approx 594.9\text{ mHz}\)</span> (período de oscilación amplio visible en el parpadeo del LED).</li>
+<li><strong>Período (<span class="arithmatex">\(T\)</span>):</strong> <span class="arithmatex">\(\approx 1.681\text{ s}\)</span>.</li>
+<li><strong>Ciclo de Trabajo (+Duty):</strong> <span class="arithmatex">\(\approx 48.7\%\)</span>, confirmando una onda cuadrada casi simétrica de encendido y apagado.</li>
+</ol>
+<p><img alt="Pantalla del osciloscopio con señal de oscilación" src="../../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" />
+<em>Figura 8: Lectura del osciloscopio Tektronix registrando la señal continua y los parámetros de frecuencia y ciclo de trabajo.</em></p>
+<hr />
+<h3 id="video-de-demostracion-del-funcionamiento">Video de Demostración del Funcionamiento</h3>
+<p>A continuación se muestra el comportamiento dinámico del circuito en tiempo real, observando la sincronización entre la onda cuadrada en la pantalla del osciloscopio y el parpadeo constante del LED en la protoboard:</p>
+<p><a href="../../imVS/VidOscilos.mp4"><img src="../imVS/Image%202026-08-30%20at%202.35.13%20PM.jpeg" width="600" alt="Ver video de demostración"></a></p>
+<p><em>Figura 9: Haz clic en la imagen superior para reproducir el video de la práctica (<code>VidOscilos.mp4</code>), o utiliza la reproducción directa si exportas a HTML:</em></p>
+<p>```html</p>
+<video src="../imVS/VidOscilos.mp4" controls width="100%"></video>
+
+<h1 id="actividad-de-punto-extra-temporizador-555-en-modo-monoestable">Actividad de Punto Extra: Temporizador 555 en Modo Monoestable</h1>
+<h2 id="1-tabla-de-medicion-vs-teoria_1">1. Tabla de Medición vs. Teoría</h2>
+<p>Para el cálculo teórico del tiempo de pulso (<span class="arithmatex">\(t_{pulso}\)</span>), se utiliza la resistencia comercial disponible <span class="arithmatex">\(R = 47\text{ k}\Omega\)</span> (<span class="arithmatex">\(47,000\ \Omega\)</span>) y el capacitor electrolítico de <span class="arithmatex">\(C = 100\ \mu\text{F}\)</span> (<span class="arithmatex">\(100 \times 10^{-6}\text{ F}\)</span>):</p>
+<div class="arithmatex">\[t_{pulso (teórico)} = 1.1 \cdot R \cdot C = 1.1 \times 47,000\ \Omega \times (100 \times 10^{-6}\text{ F}) = 5.17\text{ s}\]</div>
+<div class="arithmatex">\[\% \text{ de Error} = \left| \frac{t_{teórico} - t_{medido}}{t_{teórico}} \right| \times 100 = \left| \frac{5.17\text{ s} - 5.0\text{ s}}{5.17\text{ s}} \right| \times 100 \approx 3.29\%\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Magnitud</th>
+<th style="text-align: left;">Teórico (calculado)</th>
+<th style="text-align: left;">Medido (cronómetro / osciloscopio)</th>
+<th style="text-align: left;">% de error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Duración del pulso (s)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(5.17\text{ s}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(5.00\text{ s}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(3.29\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> La tabla de la práctica mostraba un tiempo teórico sugerido de <span class="arithmatex">\(1.1\text{ s}\)</span> (pensado para <span class="arithmatex">\(R = 100\text{ k}\Omega\)</span> y <span class="arithmatex">\(C = 10\ \mu\text{F}\)</span>). Al ajustar la fórmula con los componentes reales del laboratorio (<span class="arithmatex">\(R = 47\text{ k}\Omega\)</span> y <span class="arithmatex">\(C = 100\ \mu\text{F}\)</span>), el valor teórico exacto da <span class="arithmatex">\(5.17\text{ s}\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="2-explicacion-de-la-duracion-del-pulso-y-variaciones">2. Explicación de la Duración del Pulso y Variaciones</h2>
+<p>La duración del pulso en un circuito monoestable depende directamente de la constante de tiempo <span class="arithmatex">\(RC\)</span> para alcanzar el umbral de disparo interno del 555 (<span class="arithmatex">\(\frac{2}{3}Vcc\)</span>):</p>
+<ul>
+<li><strong>Cambio de componentes respecto al ejemplo de la guía:</strong> Al sustituir los valores base (<span class="arithmatex">\(100\text{ k}\Omega\)</span> y <span class="arithmatex">\(10\ \mu\text{F}\)</span>) por los componentes disponibles (<span class="arithmatex">\(47\text{ k}\Omega\)</span> y <span class="arithmatex">\(100\ \mu\text{F}\)</span>), el producto <span class="arithmatex">\(R \cdot C\)</span> incrementó considerablemente. El capacitor de <span class="arithmatex">\(100\ \mu\text{F}\)</span> retiene diez veces más carga que uno de <span class="arithmatex">\(10\ \mu\text{F}\)</span>, lo que extiende el tiempo necesario para cargarse hasta <span class="arithmatex">\(\frac{2}{3}Vcc\)</span> y aumenta la duración del pulso a poco más de <span class="arithmatex">\(5\)</span> segundos.</li>
+<li><strong>Causa del margen de error (<span class="arithmatex">\(3.29\%\)</span>):</strong></li>
+<li><strong>Tolerancia del capacitor electrolítico:</strong> Típicamente varía entre un <span class="arithmatex">\(-20\%\)</span> y un <span class="arithmatex">\(+80\%\)</span>. Una pequeña desviación a la baja en la capacitancia real del componente reduce ligeramente el tiempo de carga efectivo de <span class="arithmatex">\(5.17\text{ s}\)</span> a los <span class="arithmatex">\(5.00\text{ s}\)</span> medidos.</li>
+<li><strong>Tolerancia de la resistencia:</strong> La resistencia de <span class="arithmatex">\(47\text{ k}\Omega\)</span> cuenta con una tolerancia de <span class="arithmatex">\(\pm 5\%\)</span>.</li>
+<li><strong>Tiempo de reacción humano:</strong> Al utilizar un cronómetro manual para medir la salida luminosa del LED, existe un tiempo de reacción inherente al presionar el botón al inicio y al apagado del diodo.</li>
+</ul>
+<h2 id="3-evidencia-fotografica-y-demostracion-en-video">3. Evidencia Fotográfica y Demostración en Video</h2>
+<h3 id="montaje-fisico-en-protoboard">Montaje Físico en Protoboard</h3>
+<p><img alt="Ensamble del circuito monoestable en protoboard" src="../../imVS/IMG_9620.jpg" /></p>
+<ul>
+<li><strong>Descripción:</strong> Montaje del circuito temporizador monoestable utilizando el CI NE555, resistencia temporizadora de <span class="arithmatex">\(47\text{ k}\Omega\)</span>, capacitor de <span class="arithmatex">\(100\ \mu\text{F}\)</span>, botón pulsador (<em>push button</em>) para el disparo en el pin 2 y LED indicador azul con su resistencia limitadora en la salida (pin 3).</li>
+</ul>
+<hr />
+<h3 id="evidencia-del-pulso-temporizado-video-de-medicion">Evidencia del Pulso Temporizado (Video de Medición)</h3>
+<ul>
+<li><strong>Archivo de Video:</strong> <code>Video punto extra.mp4</code> (o enlace correspondiente a tu portafolio/drive).</li>
+<li><strong>Duración total:</strong> <span class="arithmatex">\(7\text{ segundos}\)</span>.</li>
+</ul>
+<p><a href="../../imVS/Videopuntoextra1.mp4"><img src="../imVS/IMG_9620" width="600" alt="Ver video de demostración"></a></p>
+<ul>
+<li><strong>Descripción de la prueba:</strong></li>
+<li><strong>00:00 - 00:01:</strong> Estado inicial en reposo. El cronómetro digital se encuentra en <code>00:00.00</code> y el LED permanece apagado en nivel BAJO (<span class="arithmatex">\(0\text{ V}\)</span>).</li>
+<li><strong>00:02:</strong> Se presiona el botón de disparo (<em>trigger</em>). El LED azul se enciende inmediatamente al pasar la salida al nivel ALTO y se inicia el conteo.</li>
+<li><strong>00:02 - 00:05:</strong> El capacitor de <span class="arithmatex">\(100\ \mu\text{F}\)</span> se carga progresivamente a través de la resistencia de <span class="arithmatex">\(47\text{ k}\Omega\)</span>. El LED se mantiene encendido.</li>
+<li><strong>00:05.71:</strong> El voltaje del capacitor alcanza los <span class="arithmatex">\(\frac{2}{3}Vcc\)</span>, conmutando la salida a nivel BAJO. El LED se apaga completamente, registrando una duración efectiva del pulso de <span class="arithmatex">\(5.00\text{ segundos}\)</span> en el cronómetro.</li>
+</ul>
+<p>.
+<strong>Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la práctica hola</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

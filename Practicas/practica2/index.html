@@ -1,0 +1,1418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica1/">
+      
+      
+        <link rel="next" href="../../Proyectos/Proyecto1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 2 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-esp32-salida-entrada-antirrebote" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-codigos-e-implementacion-en-el-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Códigos e Implementación en el IDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Códigos e Implementación en el IDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programa-1-blink-salida-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 1: BLINK (Salida Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-2-blink-con-boton-entrada-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 2: BLINK con Botón (Entrada Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-3-toggle-con-antirrebote-sin-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 3: TOGGLE con Antirrebote (Sin delay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-extra-contador-con-y-sin-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa Extra: Contador con y sin Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematicos-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemáticos y Montaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-explicacion-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Explicación Teórica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Explicación Teórica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-que-es-el-rebote-de-un-boton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a. ¿Qué es el rebote de un botón?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-por-que-con-input_pullup-la-logica-queda-invertida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b. ¿Por qué con INPUT_PULLUP la lógica queda invertida?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-reporte-de-fallas-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Reporte de Fallas y Conclusiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Reporte de Fallas y Conclusiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-evidencias-en-video-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Evidencias en Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Evidencias en Video de Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circuito-1-blink-salida-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 1: BLINK (Salida Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-2-blink-con-boton-entrada-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 2: BLINK con Botón (Entrada Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-3-toggle-con-antirrebote-sin-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 3: TOGGLE con Antirrebote (Sin delay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-extra-contador-con-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito Extra: Contador CON Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-extra-contador-sin-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito Extra: Contador SIN Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-codigos-e-implementacion-en-el-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Códigos e Implementación en el IDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Códigos e Implementación en el IDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programa-1-blink-salida-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 1: BLINK (Salida Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-2-blink-con-boton-entrada-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 2: BLINK con Botón (Entrada Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-3-toggle-con-antirrebote-sin-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa 3: TOGGLE con Antirrebote (Sin delay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programa-extra-contador-con-y-sin-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programa Extra: Contador con y sin Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematicos-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemáticos y Montaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-explicacion-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Explicación Teórica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Explicación Teórica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-que-es-el-rebote-de-un-boton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a. ¿Qué es el rebote de un botón?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-por-que-con-input_pullup-la-logica-queda-invertida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b. ¿Por qué con INPUT_PULLUP la lógica queda invertida?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-reporte-de-fallas-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Reporte de Fallas y Conclusiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Reporte de Fallas y Conclusiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-evidencias-en-video-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Evidencias en Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Evidencias en Video de Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circuito-1-blink-salida-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 1: BLINK (Salida Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-2-blink-con-boton-entrada-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 2: BLINK con Botón (Entrada Digital)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-3-toggle-con-antirrebote-sin-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 3: TOGGLE con Antirrebote (Sin delay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-extra-contador-con-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito Extra: Contador CON Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuito-extra-contador-sin-antirrebote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito Extra: Contador SIN Antirrebote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-esp32-salida-entrada-antirrebote">Reporte de Práctica: ESP32 - Salida, Entrada &amp; Antirrebote</h1>
+<h2 id="1-codigos-e-implementacion-en-el-ide">1. Códigos e Implementación en el IDE</h2>
+<h3 id="programa-1-blink-salida-digital">Programa 1: BLINK (Salida Digital)</h3>
+<p><img alt="Código IDE - BLINK" src="../../imVS/Code1bl.png" />
+<img alt="Esquemático - BLINK" src="../../imVS/Esq1.png" /></p>
+<hr />
+<h3 id="programa-2-blink-con-boton-entrada-digital">Programa 2: BLINK con Botón (Entrada Digital)</h3>
+<p><img alt="Código IDE - BLINK con Botón" src="../../imVS/Code2.png" />
+<img alt="Esquemático - BLINK con Botón" src="../../imVS/Esq2.png" /></p>
+<hr />
+<h3 id="programa-3-toggle-con-antirrebote-sin-delay">Programa 3: TOGGLE con Antirrebote (Sin delay)</h3>
+<p><img alt="Código IDE - TOGGLE" src="../../imVS/Code3.png" />
+<img alt="Esquemático - TOGGLE" src="../../imVS/Esq3.png" /></p>
+<hr />
+<h3 id="programa-extra-contador-con-y-sin-antirrebote">Programa Extra: Contador con y sin Antirrebote</h3>
+<p><img alt="Código IDE - Contador Extra Parte 1" src="../../imVS/CodeEx.png" />
+<img alt="Código IDE - Contador Extra Parte 2" src="../../imVS/CodeEx2.png" /></p>
+<hr />
+<h2 id="2-esquematicos-y-montaje">2. Esquemáticos y Montaje</h2>
+<ul>
+<li><strong>Asignación de Pines (GPIOs):</strong></li>
+<li><strong>LED:</strong> Conectado al <strong>GPIO23</strong> a través de una resistencia limitadora de <span class="arithmatex">\(220\ \Omega\)</span> hacia tierra (<span class="arithmatex">\(GND\)</span>).</li>
+<li><strong>Botón:</strong> Conectado entre el <strong>GPIO33</strong> y <span class="arithmatex">\(GND\)</span> para operar utilizando la resistencia interna <code>INPUT_PULLUP</code>.</li>
+</ul>
+<hr />
+<h2 id="3-explicacion-teorica">3. Explicación Teórica</h2>
+<h3 id="a-que-es-el-rebote-de-un-boton">a. ¿Qué es el rebote de un botón?</h3>
+<p>El rebote (<em>bounce</em>) es un fenómeno mecánico inevitable. Al presionar o soltar un interruptor o botón físico, las láminas metálicas internas no efectúan un contacto limpio e instantáneo, sino que chocan y vibran microscópicamente durante varios milisegundos (típicamente entre <span class="arithmatex">\(1\text{ ms}\)</span> y <span class="arithmatex">\(30\text{ ms}\)</span>). Debido a que el microcontrolador ESP32 opera a altas frecuencias de procesamiento, interpreta este ruido de conmutación como múltiples pulsaciones consecutivas muy rápidas en lugar de una sola acción del usuario.</p>
+<h3 id="b-por-que-con-input_pullup-la-logica-queda-invertida">b. ¿Por qué con <code>INPUT_PULLUP</code> la lógica queda invertida?</h3>
+<p>Al definir el pin mediante <code>INPUT_PULLUP</code>, se activa internamente una resistencia conectada directamente a la línea de alimentación de <span class="arithmatex">\(3.3\text{ V}\)</span>.
+* <strong>Estado en reposo (sin presionar):</strong> La resistencia fija la entrada en un voltaje alto, haciendo que <code>digitalRead()</code> devuelva el valor <code>HIGH</code> (<span class="arithmatex">\(1\)</span>).
+* <strong>Estado activo (presionado):</strong> Al presionar el botón, la señal se deriva directamente a <span class="arithmatex">\(GND\)</span> (<span class="arithmatex">\(0\text{ V}\)</span>), provocando que <code>digitalRead()</code> devuelva el valor <code>LOW</code> (<span class="arithmatex">\(0\)</span>).</p>
+<p>De este modo, la lógica de lectura resulta invertida con respecto al estado físico del pulsador (reposo = <code>HIGH</code>, presionado = <code>LOW</code>).</p>
+<hr />
+<h2 id="4-reporte-de-fallas-y-conclusiones">4. Reporte de Fallas y Conclusiones</h2>
+<h3 id="bitacora-de-errores">Bitácora de Errores</h3>
+<ul>
+<li><strong>Síntoma / Fallo:</strong> Al intentar compilar y transferir el programa a la tarjeta ESP32 DevKit V1 desde el entorno de desarrollo, el sistema arrojaba una falla indicando que no encontraba la plataforma seleccionada (<code>Could not find previously selected board 'ESP32 Dev Board'</code>) y no detectaba el puerto de comunicación.</li>
+<li>
+<p><strong>Cómo se encontró:</strong> Se observó la notificación de error en la barra inferior del IDE y se comprobó que el menú desplegable de selección de puertos no reconocía ningún puerto COM activo asignado a la tarjeta.</p>
+</li>
+<li>
+<p>Se seleccionó la tarjeta <strong>DOIT ESP32 DEVKIT V1</strong> y el puerto COM asignado, permitiendo realizar la compilación y subida del programa de forma satisfactoria.</p>
+</li>
+</ul>
+<h3 id="conclusion">Conclusión</h3>
+<p>Durante el desarrollo de la práctica se comprendió la configuración y manipulación de entradas y salidas digitales en la plataforma ESP32. Se verificó la eficiencia de activar la resistencia interna <code>INPUT_PULLUP</code> para simplificar las conexiones eléctricas en la protoboard, así como la efectividad de implementar algoritmos de filtrado por software mediante la función <code>millis()</code> para eliminar falsos disparos por rebotes mecánicos en lecturas digitales.</p>
+<h2 id="5-evidencias-en-video-de-funcionamiento">5. Evidencias en Video de Funcionamiento</h2>
+<h3 id="circuito-1-blink-salida-digital">Circuito 1: BLINK (Salida Digital)</h3>
+<p>Demostración del parpadeo básico del LED utilizando un retardo de <span class="arithmatex">\(1\text{ segundo}\)</span> controlado por el GPIO23 de la ESP32.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w_Qtb8Ws10E?si=QGFF0pg3M0m-iIhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Enlace directo al video:</strong> <a href="https://www.youtube.com/watch?v=w_Qtb8Ws10E">Ver Demostración Circuito 1 en YouTube</a></li>
+</ul>
+<hr />
+<h3 id="circuito-2-blink-con-boton-entrada-digital">Circuito 2: BLINK con Botón (Entrada Digital)</h3>
+<p>Funcionamiento de la entrada digital con lógica invertida (<code>INPUT_PULLUP</code>). El LED se enciende únicamente mientras se mantiene presionado el botón.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Afe0GvEjUSc?si=TDY5n4mht8_VPcWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Enlace directo al video:</strong> <a href="https://www.youtube.com/watch?v=Afe0GvEjUSc">Ver Demostración Circuito 2 en YouTube</a></li>
+</ul>
+<hr />
+<h3 id="circuito-3-toggle-con-antirrebote-sin-delay">Circuito 3: TOGGLE con Antirrebote (Sin delay)</h3>
+<p>Prueba de alternancia de estado del LED (Encendido/Apagado) tras presionar el botón, utilizando filtrado de tiempo no bloqueante mediante la función <code>millis()</code>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LnkOw9mtqOU?si=Dsi31QhSmA0edCk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Enlace directo al video:</strong> <a href="https://www.youtube.com/watch?v=LnkOw9mtqOU">Ver Demostración Circuito 3 en YouTube</a></li>
+</ul>
+<hr />
+<h3 id="circuito-extra-contador-con-antirrebote">Circuito Extra: Contador CON Antirrebote</h3>
+<p>Conteo preciso de pulsaciones en la consola serial. Se observa cómo el algoritmo filtra el ruido mecánico y cada pulsación incrementa el contador exactamente de <span class="arithmatex">\(1\)</span> en <span class="arithmatex">\(1\)</span>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6p2IZ1vtLGA?si=DxgKnA2ioLxyU84f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Enlace directo al video:</strong> <a href="https://www.youtube.com/watch?v=6p2IZ1vtLGA">Ver Demostración Contador Con Antirrebote en YouTube</a></li>
+</ul>
+<hr />
+<h3 id="circuito-extra-contador-sin-antirrebote">Circuito Extra: Contador SIN Antirrebote</h3>
+<p>Prueba del contador desactivando el filtro por software. Se evidencia cómo los rebotes mecánicos del botón generan incrementos múltiples e impredecibles en el monitor serie con una sola pulsación física.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BmOHg-esA7g?si=Dcl9OVob3RpqfRGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Enlace directo al video:</strong> <a href="https://www.youtube.com/watch?v=BmOHg-esA7g">Ver Demostración Contador Sin Antirrebote en YouTube</a></li>
+</ul>
+<p>//Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
