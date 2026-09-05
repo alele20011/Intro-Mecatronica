@@ -58,4 +58,5 @@ De este modo, la lógica de lectura resulta invertida con respecto al estado fí
 
 ### Conclusión
 Durante el desarrollo de la práctica se comprendió la configuración y manipulación de entradas y salidas digitales en la plataforma ESP32. Se verificó la eficiencia de activar la resistencia interna `INPUT_PULLUP` para simplificar las conexiones eléctricas en la protoboard, así como la efectividad de implementar algoritmos de filtrado por software mediante la función `millis()` para eliminar falsos disparos por rebotes mecánicos en lecturas digitales.
+
 //Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
