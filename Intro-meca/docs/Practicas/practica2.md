@@ -3,8 +3,7 @@
 ## 1. Códigos e Implementación en el IDE
 
 ### Programa 1: BLINK (Salida Digital)
-![Código IDE - BLINK](../imVS/Code1bl.jpeg)
-
+![Código IDE - BLINK](../imVS/Code1bl.png)
 ![Esquemático - BLINK](../imVS/Esq1.png)
 
 ---

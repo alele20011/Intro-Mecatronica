@@ -119,7 +119,6 @@ La duración del pulso en un circuito monoestable depende directamente de la con
   * **Tiempo de reacción humano:** Al utilizar un cronómetro manual para medir la salida luminosa del LED, existe un tiempo de reacción inherente al presionar el botón al inicio y al apagado del diodo.
 
 
-
 ## 3. Evidencia Fotográfica y Demostración en Video
 
 ### Montaje Físico en Protoboard
