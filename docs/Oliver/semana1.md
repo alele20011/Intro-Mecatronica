@@ -227,17 +227,17 @@
 
   <div class="gallery-grid">
     <div class="gallery-card">
-      <img src="IMG_9063.jpg" alt="Escaneo 3D Unitree Air 2">
+    ![Escaneo del cuadrupedo](../imVS/IMG_9063.jpeg)
       <div class="caption">Figura 1. Escaneo 3D del robot cuadrúpedo</div>
       <div class="description">Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.</div>
     </div>
     <div class="gallery-card">
-      <img src="Captura de pantalla 2026-08-19 144046.jpg" alt="Croquis acotado en CATIA V5">
+     ![Croquis en CATIA](../imVS/CroquisCATIA.jpg)
       <div class="caption">Figura 2. Trazo geométrico acotado en CATIA V5</div>
       <div class="description">Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.</div>
     </div>
     <div class="gallery-card">
-      <img src="IMG_9096.jpg" alt="Construcción de perfil en Sketcher">
+      ![Croquis en CATIA](../imVS/IMG_9096.jpeg)
       <div class="caption">Figura 3. Definición de perfil técnico en CAD</div>
       <div class="description">Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.</div>
     </div>
