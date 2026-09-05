@@ -3,26 +3,26 @@
 ## 1. Códigos e Implementación en el IDE
 
 ### Programa 1: BLINK (Salida Digital)
-![Código IDE - BLINK](imVS/blink_codigo.jpeg)
-![Esquemático - BLINK](imVS/blink_esquematico.jpeg)
+![Código IDE - BLINK](../imVS/Code1.png)
+![Esquemático - BLINK](../imVS/Esq1.png)
 
 ---
 
 ### Programa 2: BLINK con Botón (Entrada Digital)
-![Código IDE - BLINK con Botón](imVS/blink_boton_codigo.jpeg)
-![Esquemático - BLINK con Botón](imVS/blink_boton_esquematico.jpeg)
+![Código IDE - BLINK con Botón](../imVS/Code2.png)
+![Esquemático - BLINK con Botón](../imVS/Esq2.png)
 
 ---
 
 ### Programa 3: TOGGLE con Antirrebote (Sin delay)
-![Código IDE - TOGGLE](imVS/toggle_codigo.jpeg)
-![Esquemático - TOGGLE](imVS/toggle_esquematico.jpeg)
+![Código IDE - TOGGLE](../imVS/Code3.png)
+![Esquemático - TOGGLE](../imVS/Esq3.png)
 
 ---
 
 ### Programa Extra: Contador con y sin Antirrebote
-![Código IDE - Contador Extra Parte 1](imVS/contador_extra_codigo_1.jpeg)
-![Código IDE - Contador Extra Parte 2](imVS/contador_extra_codigo_2.jpeg)
+![Código IDE - Contador Extra Parte 1](../imVS/CodeEx.png)
+![Código IDE - Contador Extra Parte 2](../imVS/CodeEx2.png)
 
 ---
 
