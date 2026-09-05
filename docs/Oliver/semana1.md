@@ -226,14 +226,14 @@
 
 A continuación se presenta el registro visual de las actividades desarrolladas en el laboratorio y las prácticas de dibujo computarizado efectivas durante la semana:
 
-![Escaneo 3D Unitree Air 2](../imVS/IMG_9063.jpg)
+![Escaneo 3D Unitree Air 2](../imVS/IMG_9063.jpeg)
 
 **Figura 1. Escaneo 3D del robot cuadrúpedo:** Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.
 
-![Croquis en CATIA](../imVS/Captura%20de%20pantalla%202026-08-19%20144046.jpg)
+![Croquis en CATIA](../imVS/CroquisCATIA.jpg)
 
 **Figura 2. Trazo geométrico acotado en CATIA V5:** Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.
 
-![Perfil técnico en CAD](../imVS/IMG_9096.jpg)
+![Perfil técnico en CAD](../imVS/IMG_9096.jpeg)
 
 **Figura 3. Definición de perfil técnico en CAD:** Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.
