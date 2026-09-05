@@ -225,20 +225,12 @@
 <h2>5. Evidencia Fotográfica y Registros de Trabajo</h2>
   <p>A continuación se presenta el registro visual de las actividades desarrolladas en el laboratorio y las prácticas de dibujo computarizado efectivas durante la semana:</p>
 
-  <div class="gallery-grid">
-    <div class="gallery-card">
-    ![Escaneo del cuadrupedo](../imVS/IMG_9063.jpeg)
-      <div class="caption">Figura 1. Escaneo 3D del robot cuadrúpedo</div>
-      <div class="description">Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.</div>
-    </div>
-    <div class="gallery-card">
-     ![Croquis en CATIA](../imVS/CroquisCATIA.jpg)
-      <div class="caption">Figura 2. Trazo geométrico acotado en CATIA V5</div>
-      <div class="description">Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.</div>
-    </div>
-    <div class="gallery-card">
-      ![Croquis en CATIA](../imVS/IMG_9096.jpeg)
-      <div class="caption">Figura 3. Definición de perfil técnico en CAD</div>
-      <div class="description">Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.</div>
-    </div>
-  </div>
+  <p>![Escaneo 3D Unitree Air 2](../imVS/IMG_9063.jpg)</p>
+  <p><strong>Figura 1. Escaneo 3D del robot cuadrúpedo:</strong> Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.</p>
+
+  <p>![Croquis en CATIA](../imVS/Captura de pantalla 2026-08-19 144046.jpg)</p>
+  <p><strong>Figura 2. Trazo geométrico acotado en CATIA V5:</strong> Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.</p>
+
+  <p>![Perfil técnico en CAD](../imVS/IMG_9096.jpg)</p>
+  <p><strong>Figura 3. Definición de perfil técnico en CAD:</strong> Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.</p>
+  
