@@ -62,3 +62,5 @@ Durante el desarrollo de la práctica se comprendió la configuración y manipul
 
 
 //Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
+
+Fin
