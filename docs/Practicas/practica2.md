@@ -59,8 +59,49 @@ De este modo, la lógica de lectura resulta invertida con respecto al estado fí
 ### Conclusión
 Durante el desarrollo de la práctica se comprendió la configuración y manipulación de entradas y salidas digitales en la plataforma ESP32. Se verificó la eficiencia de activar la resistencia interna `INPUT_PULLUP` para simplificar las conexiones eléctricas en la protoboard, así como la efectividad de implementar algoritmos de filtrado por software mediante la función `millis()` para eliminar falsos disparos por rebotes mecánicos en lecturas digitales.
 
+## 5. Evidencias en Video de Funcionamiento
 
+### Circuito 1: BLINK (Salida Digital)
+Demostración del parpadeo básico del LED utilizando un retardo de $1\text{ segundo}$ controlado por el GPIO23 de la ESP32.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w_Qtb8Ws10E?si=QGFF0pg3M0m-iIhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* **Enlace directo al video:** [Ver Demostración Circuito 1 en YouTube](https://www.youtube.com/watch?v=w_Qtb8Ws10E)
+
+---
+
+### Circuito 2: BLINK con Botón (Entrada Digital)
+Funcionamiento de la entrada digital con lógica invertida (`INPUT_PULLUP`). El LED se enciende únicamente mientras se mantiene presionado el botón.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Afe0GvEjUSc?si=TDY5n4mht8_VPcWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* **Enlace directo al video:** [Ver Demostración Circuito 2 en YouTube](https://www.youtube.com/watch?v=Afe0GvEjUSc)
+
+---
+
+### Circuito 3: TOGGLE con Antirrebote (Sin delay)
+Prueba de alternancia de estado del LED (Encendido/Apagado) tras presionar el botón, utilizando filtrado de tiempo no bloqueante mediante la función `millis()`.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LnkOw9mtqOU?si=Dsi31QhSmA0edCk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* **Enlace directo al video:** [Ver Demostración Circuito 3 en YouTube](https://www.youtube.com/watch?v=LnkOw9mtqOU)
+
+---
+
+### Circuito Extra: Contador CON Antirrebote
+Conteo preciso de pulsaciones en la consola serial. Se observa cómo el algoritmo filtra el ruido mecánico y cada pulsación incrementa el contador exactamente de $1$ en $1$.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6p2IZ1vtLGA?si=DxgKnA2ioLxyU84f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* **Enlace directo al video:** [Ver Demostración Contador Con Antirrebote en YouTube](https://www.youtube.com/watch?v=6p2IZ1vtLGA)
+
+---
+
+### Circuito Extra: Contador SIN Antirrebote
+Prueba del contador desactivando el filtro por software. Se evidencia cómo los rebotes mecánicos del botón generan incrementos múltiples e impredecibles en el monitor serie con una sola pulsación física.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BmOHg-esA7g?si=Dcl9OVob3RpqfRGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* **Enlace directo al video:** [Ver Demostración Contador Sin Antirrebote en YouTube](https://www.youtube.com/watch?v=BmOHg-esA7g)
 
 //Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica//
-
-Fin
