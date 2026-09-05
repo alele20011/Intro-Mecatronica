@@ -222,14 +222,18 @@
 
 </body>
 </html>
-<h2>5. Evidencia Fotográfica y Registros de Trabajo</h2>
-  <p>A continuación se presenta el registro visual de las actividades desarrolladas en el laboratorio y las prácticas de dibujo computarizado efectivas durante la semana:</p>
+## 5. EVIDENCIA FOTOGRÁFICA Y REGISTROS DE TRABAJO
 
-  <p><img src="../imVS/IMG_9063.jpg" alt="Escaneo 3D Unitree Air 2" style="max-width: 100%; height: auto;" /></p>
-  <p><strong>Figura 1. Escaneo 3D del robot cuadrúpedo:</strong> Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.</p>
+A continuación se presenta el registro visual de las actividades desarrolladas en el laboratorio y las prácticas de dibujo computarizado efectivas durante la semana:
 
-  <p><img src="../imVS/Captura de pantalla 2026-08-19 144046.jpg" alt="Croquis en CATIA" style="max-width: 100%; height: auto;" /></p>
-  <p><strong>Figura 2. Trazo geométrico acotado en CATIA V5:</strong> Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.</p>
+![Escaneo 3D Unitree Air 2](../imVS/IMG_9063.jpg)
 
-  <p><img src="../imVS/IMG_9096.jpg" alt="Perfil técnico en CAD" style="max-width: 100%; height: auto;" /></p>
-  <p><strong>Figura 3. Definición de perfil técnico en CAD:</strong> Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.</p>
+**Figura 1. Escaneo 3D del robot cuadrúpedo:** Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.
+
+![Croquis en CATIA](../imVS/Captura%20de%20pantalla%202026-08-19%20144046.jpg)
+
+**Figura 2. Trazo geométrico acotado en CATIA V5:** Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.
+
+![Perfil técnico en CAD](../imVS/IMG_9096.jpg)
+
+**Figura 3. Definición de perfil técnico en CAD:** Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.
