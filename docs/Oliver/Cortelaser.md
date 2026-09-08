@@ -376,7 +376,7 @@
 
 A continuación se presenta el registro visual del reconocimiento de equipo e instalaciones en el laboratorio de manufactura y la preparación de archivos vectoriales:
 
-![Cortadoras láser CAMFive](../imVS/IMG_9652.jpg)
+![Cortadoras láser CAMFive](../imVS/IMG_9652.jpeg)
 
 **Figura 1. Área de cortadoras láser CAMFive:** Instalaciones del laboratorio equipadas con máquinas de corte y grabado láser CNC para prototipado rápido.
 
@@ -384,6 +384,6 @@ A continuación se presenta el registro visual del reconocimiento de equipo e in
 
 **Figura 2. Cabezal y riel de desplazamiento láser:** Vista en detalle del sistema de emisión láser y mecanismo de movimiento sobre la cama de trabajo.
 
-![Software de vectorización para corte](../imVS/IMG_9651.jpg)
+![Software de vectorización para corte](../imVS/IMG_9651.jpeg)
 
 **Figura 3. Maquetación y distribución de piezas (Nesting):** Preparación del plano vectorial en el software de control para optimización de material en corte láser.
