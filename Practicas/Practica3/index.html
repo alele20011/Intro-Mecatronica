@@ -1,0 +1,1634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../practica2/">
+      
+      
+        <link rel="next" href="../../Proyectos/Proyecto1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 3 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-motor-dc-puente-h-servomotores" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-materiales-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Materiales Utilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigos-implementados-con-comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Códigos Implementados (con Comentarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuito-1-control-de-motores-dc-con-puente-h-l293d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 1: Control de Motores DC con Puente H (L293D)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuito 1: Control de Motores DC con Puente H (L293D)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-esquematico-del-circuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Esquemático del Circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evidencia-de-codigo-capturas-de-pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Evidencia de Código (Capturas de Pantalla)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evidencia de Código (Capturas de Pantalla)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-definicion-de-pines-y-funciones-de-control-motora-motorb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1: Definición de pines y funciones de control (motorA, motorB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-configuracion-del-setup-y-prueba-de-pwm-minimo-de-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2: Configuración del setup() y prueba de PWM mínimo de arranque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-ciclo-principal-loop-con-velocidades-y-reversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3: Ciclo principal (loop()) con velocidades y reversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-video-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuito-2-control-de-servomotores-0circ-90circ-y-180circ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 2: Control de Servomotores (\(0^\circ\), \(90^\circ\) y \(180^\circ\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuito 2: Control de Servomotores (\(0^\circ\), \(90^\circ\) y \(180^\circ\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-esquematico-del-circuito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Esquemático del Circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evidencia-de-codigo-capturas-de-pantalla_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Evidencia de Código (Capturas de Pantalla)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evidencia de Código (Capturas de Pantalla)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-completo-libreria-servoh-definicion-de-pines-y-secuencia-de-angulos-0circ-90circ-180circ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código Completo: Librería Servo.h, definición de pines y secuencia de ángulos (\(0^\circ\), \(90^\circ\), \(180^\circ\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-video-de-funcionamiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-explicacion-teorica-y-analisis-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Explicación Teórica y Análisis de Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Explicación Teórica y Análisis de Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-del-motor-dc-y-puente-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control del Motor DC y Puente H
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medicion-de-corriente-prueba-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medición de Corriente (Prueba de Carga)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medición de Corriente (Prueba de Carga)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-corrientes-cual-es-mayor-y-por-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación de Corrientes: ¿Cuál es mayor y por qué?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos-del-ciclo-de-trabajo-duty-cycle-en-servomotores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos del Ciclo de Trabajo (Duty Cycle) en Servomotores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reporte-de-fallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reporte de Fallas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-materiales-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Materiales Utilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigos-implementados-con-comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Códigos Implementados (con Comentarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuito-1-control-de-motores-dc-con-puente-h-l293d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 1: Control de Motores DC con Puente H (L293D)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuito 1: Control de Motores DC con Puente H (L293D)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-esquematico-del-circuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Esquemático del Circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evidencia-de-codigo-capturas-de-pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Evidencia de Código (Capturas de Pantalla)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evidencia de Código (Capturas de Pantalla)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-definicion-de-pines-y-funciones-de-control-motora-motorb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1: Definición de pines y funciones de control (motorA, motorB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-configuracion-del-setup-y-prueba-de-pwm-minimo-de-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2: Configuración del setup() y prueba de PWM mínimo de arranque
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-ciclo-principal-loop-con-velocidades-y-reversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3: Ciclo principal (loop()) con velocidades y reversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-video-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuito-2-control-de-servomotores-0circ-90circ-y-180circ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuito 2: Control de Servomotores (\(0^\circ\), \(90^\circ\) y \(180^\circ\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuito 2: Control de Servomotores (\(0^\circ\), \(90^\circ\) y \(180^\circ\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-esquematico-del-circuito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Esquemático del Circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evidencia-de-codigo-capturas-de-pantalla_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Evidencia de Código (Capturas de Pantalla)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Evidencia de Código (Capturas de Pantalla)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-completo-libreria-servoh-definicion-de-pines-y-secuencia-de-angulos-0circ-90circ-180circ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código Completo: Librería Servo.h, definición de pines y secuencia de ángulos (\(0^\circ\), \(90^\circ\), \(180^\circ\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-video-de-funcionamiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Video de Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-explicacion-teorica-y-analisis-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Explicación Teórica y Análisis de Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Explicación Teórica y Análisis de Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-del-motor-dc-y-puente-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control del Motor DC y Puente H
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medicion-de-corriente-prueba-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medición de Corriente (Prueba de Carga)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medición de Corriente (Prueba de Carga)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-corrientes-cual-es-mayor-y-por-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación de Corrientes: ¿Cuál es mayor y por qué?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos-del-ciclo-de-trabajo-duty-cycle-en-servomotores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos del Ciclo de Trabajo (Duty Cycle) en Servomotores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reporte-de-fallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reporte de Fallas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-motor-dc-puente-h-servomotores">Reporte de Práctica: Motor DC, Puente H &amp; Servomotores</h1>
+<h2 id="1-objetivos">1. Objetivos</h2>
+<ul>
+<li><strong>Control de Dirección y Velocidad (Motor DC):</strong></li>
+<li>Controlar el giro del motor DC en ambos sentidos mediante pines lógicos (<code>IN1</code>/<code>IN2</code> e <code>IN3</code>/<code>IN4</code>).</li>
+<li>Implementar control de velocidad utilizando modulación por ancho de pulso (PWM) con al menos 3 velocidades distintas.</li>
+<li>Identificar experimentalmente el valor de PWM mínimo requerido para el arranque del motor.</li>
+<li><strong>Prueba de Carga y Medición de Corriente:</strong></li>
+<li>Medir el consumo de corriente durante el arranque y en estado de giro libre intercalando un multímetro en serie.</li>
+<li>Comparar ambos valores de corriente y justificar teóricamente cuál es mayor y por qué.</li>
+<li><strong>Control de Servomotores:</strong></li>
+<li>Demostrar el posicionamiento angular de dos servomotores a <span class="arithmatex">\(0^\circ\)</span>, <span class="arithmatex">\(90^\circ\)</span> y <span class="arithmatex">\(180^\circ\)</span>.</li>
+<li>Explicar y calcular el ciclo de trabajo (<em>Duty Cycle</em>) de la señal PWM para cada una de las posiciones angulares.</li>
+</ul>
+<hr />
+<h2 id="2-materiales-utilizados">2. Materiales Utilizados</h2>
+<ul>
+<li>Microcontrolador Arduino Uno R3 (o ESP32 DevKit V1 según implementación)</li>
+<li>Driver Puente H (L293D / TB6612)</li>
+<li>2× Motores DC TT con caja reductora</li>
+<li>2× Servomotores SG90</li>
+<li>Fuente de alimentación regulada de <span class="arithmatex">\(5\text{ V}\)</span> (independiente / compartida con GND común)</li>
+<li>Multímetro digital</li>
+<li>Protoboard y jumpers de conexión</li>
+</ul>
+<hr />
+<h2 id="3-codigos-implementados-con-comentarios">3. Códigos Implementados (con Comentarios)</h2>
+<h2 id="circuito-1-control-de-motores-dc-con-puente-h-l293d">Circuito 1: Control de Motores DC con Puente H (L293D)</h2>
+<h3 id="1-esquematico-del-circuito">1. Esquemático del Circuito</h3>
+<p><img alt="Esquemático del Circuito 1 - Puente H y Motores DC" src="../../imVS/esq1.3.png" /></p>
+<hr />
+<h3 id="2-evidencia-de-codigo-capturas-de-pantalla">2. Evidencia de Código (Capturas de Pantalla)</h3>
+<h4 id="parte-1-definicion-de-pines-y-funciones-de-control-motora-motorb">Parte 1: Definición de pines y funciones de control (<code>motorA</code>, <code>motorB</code>)</h4>
+<p><img alt="Código - Parte 1" src="../../imVS/Code3.1.png" /></p>
+<h4 id="parte-2-configuracion-del-setup-y-prueba-de-pwm-minimo-de-arranque">Parte 2: Configuración del <code>setup()</code> y prueba de PWM mínimo de arranque</h4>
+<p><img alt="Código - Parte 2" src="../../imVS/Code3.2.png" /></p>
+<h4 id="parte-3-ciclo-principal-loop-con-velocidades-y-reversa">Parte 3: Ciclo principal (<code>loop()</code>) con velocidades y reversa</h4>
+<p><img alt="Código - Parte 3" src="../../imVS/Code3.3.png" /></p>
+<hr />
+<h3 id="3-video-de-funcionamiento">3. Video de Funcionamiento</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CPCe9-si-k0?si=0s8W-HsXutDYohqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="circuito-2-control-de-servomotores-0circ-90circ-y-180circ">Circuito 2: Control de Servomotores (<span class="arithmatex">\(0^\circ\)</span>, <span class="arithmatex">\(90^\circ\)</span> y <span class="arithmatex">\(180^\circ\)</span>)</h2>
+<h3 id="1-esquematico-del-circuito_1">1. Esquemático del Circuito</h3>
+<p><img alt="Esquemático del Circuito 2 - Servomotores y Arduino Uno" src="../../imVS/esq3.2.png" /></p>
+<hr />
+<h3 id="2-evidencia-de-codigo-capturas-de-pantalla_1">2. Evidencia de Código (Capturas de Pantalla)</h3>
+<h4 id="codigo-completo-libreria-servoh-definicion-de-pines-y-secuencia-de-angulos-0circ-90circ-180circ">Código Completo: Librería <code>Servo.h</code>, definición de pines y secuencia de ángulos (<span class="arithmatex">\(0^\circ\)</span>, <span class="arithmatex">\(90^\circ\)</span>, <span class="arithmatex">\(180^\circ\)</span>)</h4>
+<p><img alt="Código Servomotores - Arduino IDE" src="../../imVS/Code3.4.png" /></p>
+<hr />
+<h3 id="3-video-de-funcionamiento_1">3. Video de Funcionamiento</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YNzye6SADzc?si=_5QC_2yTv_B-fqeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="4-explicacion-teorica-y-analisis-de-resultados">4. Explicación Teórica y Análisis de Resultados</h2>
+<h3 id="control-del-motor-dc-y-puente-h">Control del Motor DC y Puente H</h3>
+<p>El driver L293D nos permite controlar el sentido de giro mediante una configuración en puente H. Al colocar el pin <code>IN1</code> en nivel ALTO y el <code>IN2</code> en BAJO, la corriente fluye en un sentido a través de los devanados del motor. Invertir estos estados conmuta la polaridad aplicada y cambia el sentido de giro. </p>
+<p>La velocidad se regula variando el ciclo de trabajo de la señal PWM aplicada a los pines de habilitación (<code>ENA</code> / <code>ENB</code>). Durante las pruebas en Tinkercad se identificaron 3 niveles operativos claros:
+1. <strong>Velocidad Baja (<code>PWM = 100</code>):</strong> <span class="arithmatex">\(39\%\)</span> del ciclo de trabajo.
+2. <strong>Velocidad Media (<code>PWM = 180</code>):</strong> <span class="arithmatex">\(70\%\)</span> del ciclo de trabajo.
+3. <strong>Velocidad Alta (<code>PWM = 255</code>):</strong> <span class="arithmatex">\(100\%\)</span> del ciclo de trabajo.</p>
+<h3 id="medicion-de-corriente-prueba-de-carga">Medición de Corriente (Prueba de Carga)</h3>
+<p>Con el multímetro configurado en amperímetro e intercalado en serie entre la línea de alimentación positiva (<span class="arithmatex">\(V_{CC}\)</span>) y el puente H, se registraron las siguientes lecturas:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Estado del Motor</th>
+<th style="text-align: left;">Corriente Medida (<span class="arithmatex">\(\text{mA}\)</span>)</th>
+<th style="text-align: left;">Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Paro / Reposo</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.04\text{ mA} - 4.89\text{ mA}\)</span></td>
+<td style="text-align: left;">Consumo estático de la lógica del integrado L293D</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Giro Libre (PWM 100 - 180)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(58.1\text{ mA} - 108.0\text{ mA}\)</span></td>
+<td style="text-align: left;">Motor A/B girando libremente sin carga</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Giro Libre (PWM 255)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(151.0\text{ mA}\)</span></td>
+<td style="text-align: left;">Motores girando a velocidad máxima</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arranque / Inrush Current</strong></td>
+<td style="text-align: left;"><strong>Pico Máximo Instantáneo</strong></td>
+<td style="text-align: left;">Consumo pico al vencer la inercia del eje</td>
+</tr>
+</tbody>
+</table>
+<h4 id="comparacion-de-corrientes-cual-es-mayor-y-por-que">Comparación de Corrientes: ¿Cuál es mayor y por qué?</h4>
+<p>La <strong>corriente de arranque</strong> es significativamente <strong>mayor</strong> que la corriente en giro libre.</p>
+<p><strong>Justificación física:</strong>
+1. <strong>Fuerza Electromotriz Nula (Sin contra-FEM):</strong> Cuando el motor está completamente detenido, no existe rotación del inducido dentro del campo magnético y la Fuerza Electromotriz opuesta (contra-FEM) es cero. Por lo tanto, en el instante exacto de arranque, la corriente depende únicamente de la resistencia pura de los devanados del motor (<span class="arithmatex">\(I = \frac{V}{R}\)</span>), generando un consumo de corriente muy elevado.
+2. <strong>Inercia Mecánica:</strong> El motor debe consumir mayor torque para vencer la inercia del rotor detenido y la fricción estática inicial de las partes mecánicas.
+3. <strong>Estabilización:</strong> Una vez que el motor alcanza una velocidad de régimen estable en giro libre, la contra-FEM generada se opone al voltaje de entrada, reduciendo drásticamente el flujo de corriente hasta quedar únicamente la energía necesaria para vencer la fricción dinámica.</p>
+<hr />
+<h3 id="calculos-del-ciclo-de-trabajo-duty-cycle-en-servomotores">Cálculos del Ciclo de Trabajo (<em>Duty Cycle</em>) en Servomotores</h3>
+<p>Los servomotores estándar (como el SG90) operan con una señal PWM que tiene un período estandarizado de <span class="arithmatex">\(T = 20\text{ ms}\)</span> (<span class="arithmatex">\(50\text{ Hz}\)</span>). La posición angular depende de la duración del pulso en estado ALTO (<span class="arithmatex">\(t_{on}\)</span>):</p>
+<div class="arithmatex">\[T = \frac{1}{f} = \frac{1}{50\text{ Hz}} = 20\text{ ms}\]</div>
+<div class="arithmatex">\[\text{Duty Cycle (\%)} = \left( \frac{t_{on}}{T} \right) \times 100\]</div>
+<ol>
+<li>
+<p><strong>Posición a <span class="arithmatex">\(0^\circ\)</span> (<span class="arithmatex">\(t_{on} = 1.0\text{ ms}\)</span>):</strong>
+   $<span class="arithmatex">\(\text{Duty Cycle} = \left( \frac{1.0\text{ ms}}{20.0\text{ ms}} \right) \times 100 = 5\%\)</span>$</p>
+</li>
+<li>
+<p><strong>Posición a <span class="arithmatex">\(90^\circ\)</span> (<span class="arithmatex">\(t_{on} = 1.5\text{ ms}\)</span>):</strong>
+   $<span class="arithmatex">\(\text{Duty Cycle} = \left( \frac{1.5\text{ ms}}{20.0\text{ ms}} \right) \times 100 = 7.5\%\)</span>$</p>
+</li>
+<li>
+<p><strong>Posición a <span class="arithmatex">\(180^\circ\)</span> (<span class="arithmatex">\(t_{on} = 2.0\text{ ms}\)</span>):</strong>
+   $<span class="arithmatex">\(\text{Duty Cycle} = \left( \frac{2.0\text{ ms}}{20.0\text{ ms}} \right) \times 100 = 10\%\)</span>$</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-reporte-de-fallas">5. Reporte de Fallas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th style="text-align: left;">Síntoma de la Falla</th>
+<th style="text-align: left;">Cómo se encontró</th>
+<th style="text-align: left;">Solución Aplicada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">El multímetro en Tinkercad mostraba <span class="arithmatex">\(25.0\text{ kA}\)</span> y hacía cortocircuito.</td>
+<td style="text-align: left;">Se observó una lectura erronea en el amperímetro al arrancar la simulación.</td>
+<td style="text-align: left;">El multímetro estaba conectado en paralelo entre <span class="arithmatex">\(+5\text{V}\)</span> y <code>GND</code>. Se corrigió la conexión abriendo el cable positivo del puente H y conectándolo <strong>en serie</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Lectura del multímetro fija en microamperios (<span class="arithmatex">\(40.0\text{ }\mu\text{A}\)</span>) mientras los motores funcionaban.</td>
+<td style="text-align: left;">La corriente indicada no cambiaba al modificar la velocidad de los motores.</td>
+<td style="text-align: left;">Había un cable positivo directo de la fuente que se saltaba el multímetro. Se eliminó la línea directa obligando a que toda la corriente fluya a través del amperímetro.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Inconsistencia en la asignación de pines de los servomotores.</td>
+<td style="text-align: left;">Al revisar el código del <code>setup()</code>, las directivas <code>#define pinServo1 11</code> y <code>#define pinServo2 10</code> estaban invertidas (<code>attach(10)</code> y <code>attach(11)</code>).</td>
+<td style="text-align: left;">Se modificó el código para llamar directamente a las variables definidas: <code>miServo1.attach(pinServo1);</code> y <code>miServo2.attach(pinServo2);</code>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Solamente uno de los dos servomotores se movía durante el ciclo.</td>
+<td style="text-align: left;">En la primera versión del código se incluyeron las instrucciones <code>write()</code> únicamente para un solo servomotor.</td>
+<td style="text-align: left;">Se duplicaron y ajustaron las instrucciones agregando las líneas correspondientes para <code>miServo2.write()</code> en las 3 posiciones del ciclo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-conclusiones">6. Conclusiones</h2>
+<ul>
+<li>El control de sentido y velocidad en motores DC fue implementado de forma satisfactoria mediante el puente H L293D y modulación PWM, logrando transiciones entre paro, 3 velocidades y reversa.</li>
+<li>Se comprobó de manera experimental la teoría de motores de corriente continua: la corriente de arranque es significativamente mayor a la corriente de giro libre debido a la ausencia inicial de la Fuerza Electromotriz opuesta (contra-FEM) y al esfuerzo mecánico necesario para vencer la inercia estática.</li>
+<li>El posicionamiento angular de servomotores depende directamente de la modulación del ancho del pulso (<span class="arithmatex">\(t_{on}\)</span>) en un ciclo fijo de <span class="arithmatex">\(20\text{ ms}\)</span>, validando experimentalmente las relaciones de <em>duty cycle</em> de <span class="arithmatex">\(5\%\)</span>, <span class="arithmatex">\(7.5\%\)</span> y <span class="arithmatex">\(10\%\)</span> para los ángulos de <span class="arithmatex">\(0^\circ\)</span>, <span class="arithmatex">\(90^\circ\)</span> y <span class="arithmatex">\(180^\circ\)</span> respectivamente.</li>
+</ul>
+<p>//se uso Claude para la estructuralizacion de este reporte</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
