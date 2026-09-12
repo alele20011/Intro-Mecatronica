@@ -31,20 +31,20 @@
 ## Circuito 1: Control de Motores DC con Puente H (L293D)
 
 ### 1. Esquemático del Circuito
-![Esquemático del Circuito 1 - Puente H y Motores DC](esq1.3.png)
+![Esquemático del Circuito 1 - Puente H y Motores DC](../imVS/esq1.3.png)
 
 ---
 
 ### 2. Evidencia de Código (Capturas de Pantalla)
 
 #### Parte 1: Definición de pines y funciones de control (`motorA`, `motorB`)
-![Código - Parte 1](Code3.1.png)
+![Código - Parte 1](../imVS/Code3.1.png)
 
 #### Parte 2: Configuración del `setup()` y prueba de PWM mínimo de arranque
-![Código - Parte 2](Code3.2.png)
+![Código - Parte 2](../imVS/Code3.2.png)
 
 #### Parte 3: Ciclo principal (`loop()`) con velocidades y reversa
-![Código - Parte 3](Code3.3.png)
+![Código - Parte 3](../imVS/Code3.3.png)
 
 ---
 
