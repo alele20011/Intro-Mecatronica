@@ -52,6 +52,23 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CPCe9-si-k0?si=0s8W-HsXutDYohqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Circuito 2: Control de Servomotores ($0^\circ$, $90^\circ$ y $180^\circ$)
+
+### 1. Esquemático del Circuito
+![Esquemático del Circuito 2 - Servomotores y Arduino Uno](../imVS/esq3.2.png)
+
+---
+
+### 2. Evidencia de Código (Capturas de Pantalla)
+
+#### Código Completo: Librería `Servo.h`, definición de pines y secuencia de ángulos ($0^\circ$, $90^\circ$, $180^\circ$)
+![Código Servomotores - Arduino IDE](../imVS/Code3.4.png)
+
+---
+
+### 3. Video de Funcionamiento
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YNzye6SADzc?si=_5QC_2yTv_B-fqeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## 4. Explicación Teórica y Análisis de Resultados
