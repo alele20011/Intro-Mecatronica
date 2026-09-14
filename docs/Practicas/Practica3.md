@@ -89,7 +89,7 @@ Con el multímetro configurado en amperímetro e intercalado en serie entre la l
 | **Paro / Reposo** | $1.04\text{ mA} - 4.89\text{ mA}$ | Consumo estático de la lógica del integrado L293D |
 | **Giro Libre (PWM 100 - 180)** | $58.1\text{ mA} - 108.0\text{ mA}$ | Motor A/B girando libremente sin carga |
 | **Giro Libre (PWM 255)** | $151.0\text{ mA}$ | Motores girando a velocidad máxima |
-| **Arranque / Inrush Current** | **Pico Máximo Instantáneo** | Consumo pico al vencer la inercia del eje |
+| **Arranque / Inrush Current** | $435.0\text{ mA}$ *(Pico inicial)* | Consumo pico al vencer la inercia del eje |
 
 #### Comparación de Corrientes: ¿Cuál es mayor y por qué?
 La **corriente de arranque** es significativamente **mayor** que la corriente en giro libre.
