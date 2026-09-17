@@ -190,7 +190,10 @@
     <li><strong>Comandos y Acciones Básicas:</strong> Reconocimiento de los comandos esenciales del entorno de trabajo, selección de planos de referencia y comprensión de las acciones dentro del árbol de operaciones.</li>
   </ul>
 
-### Figura 1: Modelado 3D de bloque escalonado en SolidWorks
+
+## Figura 1: Modelado 3D de bloque escalonado en SolidWorks
+
+
 
 ![Bloque escalonado en SolidWorks](../imVS/solidesc.png)
 
@@ -199,7 +202,7 @@
 
 ---
 
-### Figura 2: Modelado de componente de sujeción / horquilla
+## Figura 2: Modelado de componente de sujeción / horquilla
 
 ![Horquilla mecanica en SolidWorks](../imVS/SolidMani.png)
 
