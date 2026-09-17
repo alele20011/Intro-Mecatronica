@@ -182,13 +182,13 @@
     </ul>
   </div>
 
- ## 3. Fundamentos de CAD: Diseño Paramétrico en SolidWorks (Sesión con Prof. Oliver)
-
-En la asignatura impartida por el profesor Oliver Ochoa García, se abordaron las bases metodológicas del diseño asistido por computadora (CAD) y el modelado sólido paramétrico mediante **SolidWorks**:
-
-* **Definición de Cotas y Restricciones Geométricas:** Aplicación de acotado inteligente para parametrizar perfiles 2D, definiendo dimensiones exactas y garantizando que el croquis quede completamente definido antes de la generación de operaciones tridimensionales.
-* **Operaciones de Extrusión y Geometría 3D:** Generación de volúmenes a partir de contornos cerrados en el plano de trabajo (*Alzado*, *Planta* o *Vista lateral*), comprendiendo las condiciones finales de extruido y corte de material.
-* **Flujo de Trabajo y Árbol de Operaciones:** Uso e interpretación del árbol de diseño (*FeatureManager*), optimización de flujos de trabajo mediante simetrías y matrices, así como el reconocimiento de las herramientas fundamentales del entorno de modelado mecánico.
+ <h2>3. Fundamentos de CAD: SolidWorks (Clase con Prof. Oliver)</h2>
+  <p>En la clase del profesor Oliver comenzamos a conocer las bases del diseño en computadora usando el programa <strong>SolidWorks</strong>. La idea principal de esta primera parte fue entender cómo se construye una pieza desde cero, empezando por un dibujo plano hasta convertirlo en una figura con volumen. A continuación se explican los conceptos que se trabajaron:</p>
+  <ul>
+  <li><strong>Definición de Cotas:</strong> Antes de darle forma a una pieza, hay que dibujarla con medidas exactas. Las cotas son los números que indican el tamaño de cada línea o ángulo del dibujo, y sirven para que la figura no se pueda mover ni deformar por error. Es como poner reglas fijas que le dicen al programa "esta línea siempre debe medir esto".</li>
+  <li><strong>Operación de Extrusión:</strong> Una vez que se tiene un dibujo plano (como una silueta o contorno), la extrusión es el proceso que le da "altura" o "grosor" a ese dibujo, convirtiéndolo en un objeto de tres dimensiones. Por ejemplo, si dibujamos un círculo y le aplicamos esta operación, se convierte en un cilindro.</li>
+  <li><strong>Comandos y Acciones Básicas:</strong> También se revisaron las herramientas más comunes del programa: cómo moverse dentro del espacio de trabajo, cómo elegir la superficie o plano sobre el cual se va a empezar a dibujar, y cómo entender el listado de pasos (llamado árbol de operaciones) donde SolidWorks va guardando el orden en que se hizo cada modificación a la pieza. Esto es útil porque permite regresar a un paso anterior y corregir algo sin tener que empezar de nuevo.</li>
+  </ul>
 
 
 
