@@ -202,8 +202,8 @@
 
 ### Figura 2: Modelado de componente de sujeción / horquilla
 
-![Horquilla mecánica en SolidWorks](../imVS/SolidMani.png)
 
+![Horquilla mecanica en SolidWorks](../imVS/SolidMani.png)
 
 * **Descripción:** Vista isométrica de un componente mecánico con alojamientos cilíndricos, cuerpo cónico de transición y perilla/pasador transversal. 
 
