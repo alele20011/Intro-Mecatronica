@@ -192,6 +192,7 @@
 
 ### Figura 1: Modelado 3D de bloque escalonado en SolidWorks
 
+
 ![Bloque escalonado en SolidWorks](../imVS/solidesc.png)
 
 * **Descripción:** Vista tridimensional en perspectiva del modelado de una pieza en forma de prisma. Se observa activo el plano de trabajo de referencia (*Alzado*).
@@ -202,6 +203,7 @@
 ### Figura 2: Modelado de componente de sujeción / horquilla
 
 ![Horquilla mecánica en SolidWorks](../imVS/SolidMani.png)
+
 
 * **Descripción:** Vista isométrica de un componente mecánico con alojamientos cilíndricos, cuerpo cónico de transición y perilla/pasador transversal. 
 
