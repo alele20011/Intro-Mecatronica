@@ -206,7 +206,6 @@
 * **Descripción:** Vista isométrica de un componente mecánico con alojamientos cilíndricos, cuerpo cónico de transición y perilla/pasador transversal.
 
 
-
   <h2>4. Fundamentos de CAD: Dibujo por Computadora en CATIA</h2>
   <p>De forma paralela, en la clase de Dibujo por Computadora se introdujo el software <strong>CATIA</strong>, revisando los conceptos fundamentales para el desarrollo de geometrías vectoriales:</p>
   <table class="data-table">
