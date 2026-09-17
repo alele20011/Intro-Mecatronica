@@ -192,26 +192,6 @@
 
 
 
-  ## Figura 1: Modelado 3D de bloque escalonado en SolidWorks
-
-
-
-  ![Bloque escalonado en SolidWorks](../imVS/solidesc.png)
-
-  * **Descripción:** Vista tridimensional en perspectiva del modelado de una pieza en forma de prisma. Se observa activo el plano de trabajo de referencia (*Alzado*).
-  * **Fase del proceso:** Generación de boceto base, extrusión de volúmenes por niveles y aplicación de operación de corte cilíndrico.
-
-  ---
-
-  ## Figura 2: Modelado de componente de sujeción / horquilla
-
-  ![Horquilla mecanica en SolidWorks](../imVS/SolidMani.png)
-
-  * **Descripción:** Vista isométrica de un componente mecánico con alojamientos cilíndricos, cuerpo cónico de transición y perilla/pasador transversal.
-
-
-
-
   <h2>4. Fundamentos de CAD: Dibujo por Computadora en CATIA</h2>
   <p>De forma paralela, en la clase de Dibujo por Computadora se introdujo el software <strong>CATIA</strong>, revisando los conceptos fundamentales para el desarrollo de geometrías vectoriales:</p>
   <table class="data-table">
@@ -252,10 +232,21 @@ A continuación se presenta el registro visual de las actividades desarrolladas 
 
 **Figura 1. Escaneo 3D del robot cuadrúpedo:** Digitalización de las extremidades del Unitree Air 2 mediante escáner handheld Creality para el proyecto de rodilleras.
 
+
+**Figura 2: Modelado 3D de bloque escalonado en SolidWorks**
+![Bloque escalonado en SolidWorks](../imVS/solidesc.png)
+**Descripción:** Vista tridimensional en perspectiva del modelado de una pieza en forma de prisma. Se observa activo el plano de trabajo de referencia (*Alzado*).
+**Fase del proceso:** Generación de boceto base, extrusión de volúmenes por niveles y aplicación de operación de corte cilíndrico.
+
+
+**Figura 3: Modelado de componente de sujeción / horquilla**
+![Horquilla mecanica en SolidWorks](../imVS/SolidMani.png)
+**Descripción:** Vista isométrica de un componente mecánico con alojamientos cilíndricos, cuerpo cónico de transición y perilla/pasador transversal.
+
 ![Croquis en CATIA](../imVS/CroquisCATIA.jpg)
 
-**Figura 2. Trazo geométrico acotado en CATIA V5:** Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.
+**Figura 4. Trazo geométrico acotado en CATIA V5:** Uso del módulo Sketcher aplicando cotas (radio R30, longitud 150 mm) y restricciones de coincidencia.
 
 ![Perfil técnico en CAD](../imVS/IMG_9096.jpeg)
 
-**Figura 3. Definición de perfil técnico en CAD:** Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.
+**Figura 5. Definición de perfil técnico en CAD:** Verificación visual de tangencias, arcos y simetrías en la interfaz de diseño bidimensional.
