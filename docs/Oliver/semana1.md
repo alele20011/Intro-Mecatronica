@@ -182,13 +182,13 @@
     </ul>
   </div>
 
-  <h2>3. Fundamentos de CAD: SolidWorks (Clase con Prof. Oliver)</h2>
-  <p>En la asignatura impartida por el profesor Oliver, se inició la revisión técnica de las bases de diseño paramétrico utilizando <strong>SolidWorks</strong>:</p>
-  <ul>
-    <li><strong>Definición de Cotas:</strong> Uso de acotado para establecer las dimensiones exactas y restringir la geometría en el croquis.</li>
-    <li><strong>Operación de Extrusión:</strong> Generación de volúmenes tridimensionales a partir de perfiles 2D mediante la función de extrusión.</li>
-    <li><strong>Comandos y Acciones Básicas:</strong> Reconocimiento de los comandos esenciales del entorno de trabajo, selección de planos de referencia y comprensión de las acciones dentro del árbol de operaciones.</li>
-  </ul>
+ ## 3. Fundamentos de CAD: Diseño Paramétrico en SolidWorks (Sesión con Prof. Oliver)
+
+En la asignatura impartida por el profesor Oliver Ochoa García, se abordaron las bases metodológicas del diseño asistido por computadora (CAD) y el modelado sólido paramétrico mediante **SolidWorks**:
+
+* **Definición de Cotas y Restricciones Geométricas:** Aplicación de acotado inteligente para parametrizar perfiles 2D, definiendo dimensiones exactas y garantizando que el croquis quede completamente definido antes de la generación de operaciones tridimensionales.
+* **Operaciones de Extrusión y Geometría 3D:** Generación de volúmenes a partir de contornos cerrados en el plano de trabajo (*Alzado*, *Planta* o *Vista lateral*), comprendiendo las condiciones finales de extruido y corte de material.
+* **Flujo de Trabajo y Árbol de Operaciones:** Uso e interpretación del árbol de diseño (*FeatureManager*), optimización de flujos de trabajo mediante simetrías y matrices, así como el reconocimiento de las herramientas fundamentales del entorno de modelado mecánico.
 
 
 
