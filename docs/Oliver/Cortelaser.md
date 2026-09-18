@@ -387,3 +387,19 @@ A continuación se presenta el registro visual del reconocimiento de equipo e in
 ![Software de vectorización para corte](../imVS/IMG_9651.jpeg)
 
 **Figura 3. Maquetación y distribución de piezas (Nesting):** Preparación del plano vectorial en el software de control para optimización de material en corte láser.
+
+![Acotación y geometría del croquis en SolidWorks](../imVS/Solidmed.png)
+
+**Figura 4. Acotación y definición de croquis 2D:** Parametrización del perfil rectangular con uniones tipo almena en SolidWorks, definiendo tolerancias geométricas y dimensiones principales (50 mm x 50 mm).
+
+![Modelado 3D de pieza base en SolidWorks](../imVS/solp1.png)
+
+**Figura 5. Extrusión 3D del componente:** Generación del sólido mediante la operación Saliente-Extruir a partir del croquis almenado en plano frontal.
+
+![Perspectiva e inspección geométrica de la pieza](../imVS/solp2.png)
+
+**Figura 6. Inspección de geometría exterior:** Vista isométrica de la segunda pieza terminada, verificando la continuidad de las pestañas de ensamble.
+
+![Ensamblaje tridimensional en SolidWorks](../imVS/solen.png)
+
+**Figura 7. Entorno de ensamblaje (Assembly):** Disposición de las piezas modulares y definición de relaciones de posición para el acoplamiento tridimensional de las caras.
