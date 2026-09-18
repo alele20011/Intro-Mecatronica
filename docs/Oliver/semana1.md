@@ -169,7 +169,7 @@
   </table>
 
   <h2>1. Introducción y Presentación de Cursos</h2>
-  <p>Durante los primeros días de la semana universitaria, se llevaron a cabo las sesiones introductorias y la presentación oficial de los <em>syllabi</em> correspondientes a las asignaturas del semestre. Se definieron los criterios de evaluación, reglamentos de laboratorio, fechas de entregas clave y los objetivos generales de aprendizaje.</p>
+  <p>Durante los primeros días de la semana universitaria, se llevaron a cabo las sesiones introductorias y la presentación oficial de los <em>syllabus</em> correspondientes a las asignaturas del semestre. Se definieron los criterios de evaluación, reglamentos de laboratorio, fechas de entregas clave y los objetivos generales de aprendizaje.</p>
 
   <h2>2. Proyecto del Servicio Becario: Cuadrúpedo Unitree Air 2</h2>
   <p>En el marco del servicio becario, se asignó la responsabilidad de trabajar con el robot cuadrúpedo de la universidad (<strong>Unitree Air 2</strong>). El proyecto principal consiste en el diseño y manufactura de protecciones anatómicas (rodilleras) para evitar el desgaste o raspaduras mecánicas en las articulaciones del robot durante sus maniobras.</p>
