@@ -396,7 +396,7 @@ A continuación se presenta el registro visual del reconocimiento de equipo e in
 
 **Figura 5. Extrusión 3D del componente:** Generación del sólido mediante la operación Saliente-Extruir a partir del croquis almenado en plano frontal.
 
-![Perspectiva e inspección geométrica de la pieza](../imVS/solp2.png)
+![Perspectiva e inspección geométrica de la pieza](../imVS/Solp2.png)
 
 **Figura 6. Inspección de geometría exterior:** Vista isométrica de la segunda pieza terminada, verificando la continuidad de las pestañas de ensamble.
 
