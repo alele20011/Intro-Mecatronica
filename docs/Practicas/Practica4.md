@@ -14,7 +14,8 @@ La señal del limpiador del potenciómetro se conectó al **GPIO 34** del bloque
 ![Esquemático del Potenciómetro](../imVS/esqpote.png)
 
 Circuito en la vida real:
-![Esquemático del Potenciómetro](../imVS/cirpote.png)
+![Esquemático del Potenciómetro](../imVS/cirpote.jpeg)
+
 ### Diagrama de Pinout
 | Componente | Pin Potenciómetro | Pin ESP32 | Función |
 | :--- | :--- | :--- | :--- |
@@ -49,7 +50,7 @@ El pin de salida de señal del sensor de temperatura se conectó al **GPIO 35** 
 ![Esquemático del Sensor de Temperatura](../imVS/esqtemp.png)
 
 Circuito en la vida real:
-![Esquemático del Sensor de Temperatura](../imVS/cirtemp.png)
+![Esquemático del Sensor de Temperatura](../imVS/cirtemp.jpeg)
 
 ### Diagrama de Pinout
 | Componente | Pin Sensor | Pin ESP32 | Función |
@@ -102,8 +103,9 @@ En esta sección se implementó la lectura de un acelerómetro analógico de 3 e
 
 ## 2. Esquemático de Conexión
 Las salidas analógicas de los tres ejes del módulo se conectaron a los pines del bloque **ADC1** del ESP32 para realizar las lecturas de voltaje.
+![Esquemático del Sensor de Temperatura](../imVS/esqace.jpg)
+![Esquemático del Sensor de Temperatura](../imVS/esqreal.jpeg)
 
-![Esquemático del Acelerómetro](Captura%20de%20pantalla%202026-09-18%20Acelerometro_Esquema.png)
 
 ### Diagrama de Pinout
 | Componente | Pin Módulo | Pin ESP32 | Función |
@@ -114,8 +116,7 @@ Las salidas analógicas de los tres ejes del módulo se conectaron a los pines d
 | | Y | GPIO 35 | Lectura analógica eje Y (ADC1) |
 | | Z | GPIO 32 | Lectura analógica eje Z (ADC1) |
 | | ST | Sin conectar | Autoprueba (*Self-Test*) |
-![Esquemático del Sensor de Temperatura](../imVS/esqace.png)
-![Esquemático del Sensor de Temperatura](../imVS/esqreal.png)
+
 
 ---
 
@@ -128,7 +129,7 @@ Código fuente en C++ para realizar la lectura analógica de los tres ejes, la c
 ## 4. Tabla de Datos Experimentales
 Se validaron los ángulos medidos por el acelerómetro contrastándolos contra la aplicación de nivelación del teléfono celular en 3 posiciones distintas:
 
-![Esquemático del Sensor de Temperatura](../imVS/po1.png)
+![Esquemático del Sensor de Temperatura](../imVS/pos1.png)
 ![Esquemático del Sensor de Temperatura](../imVS/pos2.png)
 ![Esquemático del Sensor de Temperatura](../imVS/pos3.png)
 
