@@ -135,6 +135,9 @@ Se validaron los ángulos medidos por el acelerómetro contrastándolos contra l
 
 ## 5. Detección de Impactos y Ajuste de Umbral
 Se realizaron pruebas mecánicas aplicando pequeñas perturbaciones y golpes sobre la superficie de trabajo para evaluar la respuesta de la magnitud escalar ($\vert{}g\vert{}$)
+![Esquemático del Sensor de Temperatura](../imVS/impacto.png)
+
+
 ## 6. Observaciones y Bitácora del Acelerómetro
 Calibración del punto cero ($0g$): Debido a las tolerancias de fabricación del sensor analógico y las variaciones de la fuente de $3.3\text{ V}$, se observó un pequeño nivel de offset (desvío) en reposo que se corrigió mediante la constante ZERO_G_VOLTS.Detección de Golpes vs. Inclinación: La magnitud escalar de aceleración permanece estable cerca de $1.0g$ durante rotaciones lentas (inclinación puramente gravitatoria). Al aplicar un golpe mecánico seco, los picos de aceleración inercial superaron el umbral de $1.8g$, permitiendo detectar choques de manera efectiva y sin falsas alarmas provocadas por el movimiento continuo del vehículo.
 
