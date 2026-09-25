@@ -27,37 +27,23 @@ Diseñar y construir un robot móvil tipo carrito para competir y ganar el torne
 ---
 
 ## 3. Arquitectura del Sistema (Diagrama en Bloques)
-+-----------------------------------------------------------------------+
-|                            MÓVIL / APP                                |
-|           [ Interfaz de Control App Personalizada ]                   |
-+-----------------------------------------------------------------------+
-                                   |
-                                   | (Bluetooth / SPP)
-                                   v
-+-----------------------------------------------------------------------+
-|                         SISTEMA PRINCIPAL                             |
-|                                                                       |
-|  +-------------------+        PWM / GPIO       +-------------------+  |
-|  |                   | ----------------------> | Driver TB6612FNG  |  |
-|  | Microcontrolador  |                         +-------------------+  |
-|  |   ESP32 DevKit    |                                   |            |
-|  |   (Failsafe 1s)   |                                   | Salida     |
-|  |                   |                                   v            |
-|  +-------------------+                         +-------------------+  |
-|            ^                                   |  Motores TT con   |  |
-|            |                                   | Caja Reductora y  |  |
-|            | Status / Alimentación             |  Ruedas Omni      |  |
-|            |                                   +-------------------+  |
-+-----------------------------------------------------------------------+
-             ^                                             ^
-             |                                             |
-+--------------------------+                 +--------------------------+
-|  Fuente Alimentación     |                 |  Fuente Alimentación     |
-|  Lógica (ESP32)          |                 |  Motores (Independiente) |
-+--------------------------+                 +--------------------------+
-             |                                             |
-             +------------------- GND ---------------------+
-                                (Común)
+## 3. Arquitectura del Sistema (Diagrama en Bloques)
+
+* **1. Capa de Control (Interfaz de Usuario)**
+  * **Móvil / App:** Aplicación personalizada para el control del vehículo.
+  * **Enlace de Comunicación:** Envió de comandos vía Bluetooth (protocolo SPP).
+
+* **2. Capa de Procesamiento y Lógica**
+  * **Microcontrolador ESP32 DevKit V1:** Recibe instrucciones por Bluetooth, procesa la velocidad PWM y ejecuta la rutina *Failsafe* (detención automática si la desconexión es \(\ge 1\) s).
+
+* **3. Capa de Etapa de Potencia y Actuación**
+  * **Driver TB6612FNG:** Recibe señales PWM/GPIO del ESP32 para controlar dirección y velocidad.
+  * **Actuadores:** 2 Motores TT con caja reductora y ruedas omnidireccionales.
+
+* **4. Sistema de Alimentación (Líneas Separadas con GND Común)**
+  * **Línea de Lógica:** Fuente independiente para alimentar el ESP32 DevKit V1.
+  * **Línea de Potencia:** Fuente independiente para alimentar el driver TB6612FNG y motores.
+  * **Referencia Común:** Conexión de masa compartida (GND Común) entre ambas fuentes.
 ---
 
 ## 4. Presupuesto Preliminar y BOM (Bill of Materials)
