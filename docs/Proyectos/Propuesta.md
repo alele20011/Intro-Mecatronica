@@ -31,9 +31,9 @@ Diseñar y construir un robot móvil tipo carrito para competir y ganar el torne
 |                            MÓVIL / APP                                |
 |           [ Interfaz de Control App Personalizada ]                   |
 +-----------------------------------------------------------------------+
-|
-| (Bluetooth / SPP)
-v
+                                   |
+                                   | (Bluetooth / SPP)
+                                   v
 +-----------------------------------------------------------------------+
 |                         SISTEMA PRINCIPAL                             |
 |                                                                       |
@@ -49,16 +49,15 @@ v
 |            | Status / Alimentación             |  Ruedas Omni      |  |
 |            |                                   +-------------------+  |
 +-----------------------------------------------------------------------+
-^                                             ^
-|                                             |
+             ^                                             ^
+             |                                             |
 +--------------------------+                 +--------------------------+
 |  Fuente Alimentación     |                 |  Fuente Alimentación     |
 |  Lógica (ESP32)          |                 |  Motores (Independiente) |
 +--------------------------+                 +--------------------------+
-|                                             |
-+------------------- GND ---------------------+
-(Común)
-
+             |                                             |
+             +------------------- GND ---------------------+
+                                (Común)
 ---
 
 ## 4. Presupuesto Preliminar y BOM (Bill of Materials)
