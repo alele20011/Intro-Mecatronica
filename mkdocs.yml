@@ -55,6 +55,7 @@ nav:
       - "Practica 4": Practicas/Practica4.md
       
   - "Proyectos":
+      - "Propuestas": Proyectos/Propuestas.md
       - "Proyecto 1": Proyectos/Proyecto1.md
   - "Reflexiones":
       - "Vision Mecatronica": Reflexiones/VisionMecatronica.md
