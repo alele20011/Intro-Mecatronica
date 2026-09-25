@@ -1,0 +1,1770 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica3/">
+      
+      
+        <link rel="next" href="../../Proyectos/Propuesta/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 4 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-4-sensores101-adc-acondicionamiento" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del ADC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-grafica-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gráfica Comparativa:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gráfica Comparativa:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#justificacion-de-la-eleccion-de-n-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación de la elección de \(N = 10\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-filtrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del Filtrado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-deteccion-de-impactos-y-ajuste-de-umbral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Detección de Impactos y Ajuste de Umbral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-acelerometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del Acelerómetro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Observaciones y Bitácora del Acelerómetro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-bitacora-de-laboratorio-analisis-y-problemas-encontrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bitácora de Laboratorio: Análisis y Problemas Encontrados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Bitácora de Laboratorio: Análisis y Problemas Encontrados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-adc-es-tan-lineal-como-prometia-la-formula-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿El ADC es tan lineal como prometía la fórmula teórica?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufactura Aditiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del ADC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-grafica-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gráfica Comparativa:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gráfica Comparativa:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#justificacion-de-la-eleccion-de-n-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación de la elección de \(N = 10\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-filtrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del Filtrado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-actividad_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Descripción de la Actividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esquematico-de-conexion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esquemático de Conexión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Esquemático de Conexión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-pinout_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Pinout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-codigo-implementado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Código Implementado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-de-datos-experimentales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla de Datos Experimentales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-deteccion-de-impactos-y-ajuste-de-umbral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Detección de Impactos y Ajuste de Umbral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observaciones-y-bitacora-del-acelerometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observaciones y Bitácora del Acelerómetro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Observaciones y Bitácora del Acelerómetro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-bitacora-de-laboratorio-analisis-y-problemas-encontrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bitácora de Laboratorio: Análisis y Problemas Encontrados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Bitácora de Laboratorio: Análisis y Problemas Encontrados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-adc-es-tan-lineal-como-prometia-la-formula-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿El ADC es tan lineal como prometía la fórmula teórica?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-4-sensores101-adc-acondicionamiento">Práctica 4: Sensores101: ADC &amp; Acondicionamiento</h1>
+<p><strong>Módulo:</strong> Introducción a la Mecatrónica    </p>
+<hr />
+<h2 id="1-descripcion-de-la-actividad">1. Descripción de la Actividad</h2>
+<p>Se realizó la lectura de una señal analógica proveniente de un potenciómetro de <span class="arithmatex">\(10\text{ k}\Omega\)</span> conectado al conversor analógico-digital (ADC) del ESP32. Se implementó un código en C++ dentro del entorno Arduino IDE para procesar el valor crudo en cuentas de 12 bits (<span class="arithmatex">\(0 - 4095\)</span>), escalándolo a voltaje de operación (<span class="arithmatex">\(0 - 3.3\text{ V}\)</span>), porcentaje de giro (<span class="arithmatex">\(0 - 100\%\)</span>) y ángulo estimado (<span class="arithmatex">\(0 - 270^\circ\)</span>).</p>
+<hr />
+<h2 id="2-esquematico-de-conexion">2. Esquemático de Conexión</h2>
+<p>La señal del limpiador del potenciómetro se conectó al <strong>GPIO 34</strong> del bloque <strong>ADC1</strong> del ESP32 para garantizar compatibilidad con comunicaciones inalámbricas sin interferencias.</p>
+<p><img alt="Esquemático del Potenciómetro" src="../../imVS/esqpote.png" /></p>
+<p>Circuito en la vida real:
+<img alt="Esquemático del Potenciómetro" src="../../imVS/cirpote.jpeg" /></p>
+<h3 id="diagrama-de-pinout">Diagrama de Pinout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Componente</th>
+<th style="text-align: left;">Pin Potenciómetro</th>
+<th style="text-align: left;">Pin ESP32</th>
+<th style="text-align: left;">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Potenciómetro <span class="arithmatex">\(10\text{ k}\Omega\)</span></strong></td>
+<td style="text-align: left;">VCC</td>
+<td style="text-align: left;">3.3V</td>
+<td style="text-align: left;">Alimentación del divisor de voltaje</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SIG (Centro)</td>
+<td style="text-align: left;">GPIO 34</td>
+<td style="text-align: left;">Entrada analógica (ADC1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">Tierra común</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-codigo-implementado">3. Código Implementado</h2>
+<p>Código fuente cargado en el ESP32 para realizar la adquisición de datos y la conversión de unidades:
+<img alt="Codigo del POtenciometro" src="../../imVS/codepote.png" /></p>
+<h2 id="4-tabla-de-datos-experimentales">4. Tabla de Datos Experimentales</h2>
+<p>Se registraron las lecturas tomadas directamente del Monitor Serial situando la perilla del potenciómetro en 5 puntos de referencia mecánicos junto con la relación entre el ángulo de referencia estimado y la lectura obtenida por el ADC de 12 bits del ESP32:
+<img alt="Esquemático del Potenciómetro" src="../../imVS/Tabygraf.png" /></p>
+<h2 id="6-observaciones-y-bitacora-del-adc">6. Observaciones y Bitácora del ADC</h2>
+<p>Comportamiento en los extremos: En <span class="arithmatex">\(0^\circ\)</span> y <span class="arithmatex">\(270^\circ\)</span>, la respuesta digital alcanza perfectamente los límites de <span class="arithmatex">\(0\)</span> y <span class="arithmatex">\(4095\)</span> cuentas respectivamente.Evaluación de Linealidad: Aunque la gráfica muestra una tendencia marcadamente lineal, existe una ligera desviación en el rango intermedio (<span class="arithmatex">\(25\%\)</span>), donde se registró el error máximo de <span class="arithmatex">\(2.5^\circ\)</span>. Esto demuestra que el periférico ADC integrado en el ESP32 presenta ciertas no linealidades inherentes causadas por la atenuación interna de la tarjeta de desarrollo, separándose levemente del modelo teórico ideal.</p>
+<hr />
+<h2 id="1-descripcion-de-la-actividad_1">1. Descripción de la Actividad</h2>
+<p>En esta sección se realizó la adquisición de señales provenientes de un sensor analógico de temperatura. Debido a que las lecturas del conversor ADC del ESP32 presentan ruido eléctrico y fluctuaciones indeseadas, se implementó un algoritmo de <strong>Filtro de Promedio Móvil</strong> con un buffer circular de <span class="arithmatex">\(N = 10\)</span> muestras. Este algoritmo atenúa los picos de ruido y entrega una medición suave y estable en grados Celsius (<span class="arithmatex">\(^\circ\text{C}\)</span>).</p>
+<hr />
+<h2 id="2-esquematico-de-conexion_1">2. Esquemático de Conexión</h2>
+<p>El pin de salida de señal del sensor de temperatura se conectó al <strong>GPIO 35</strong> (perteneciente al bloque <strong>ADC1</strong> del ESP32) para asegurar lecturas estables sin interferencias con las funciones de conectividad inalámbrica.</p>
+<p><img alt="Esquemático del Sensor de Temperatura" src="../../imVS/esqtemp.png" /></p>
+<p>Circuito en la vida real:
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/cirtemp.jpeg" /></p>
+<h3 id="diagrama-de-pinout_1">Diagrama de Pinout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Componente</th>
+<th style="text-align: left;">Pin Sensor</th>
+<th style="text-align: left;">Pin ESP32</th>
+<th style="text-align: left;">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sensor de Temperatura</strong></td>
+<td style="text-align: left;">VCC</td>
+<td style="text-align: left;">3.3V</td>
+<td style="text-align: left;">Alimentación del sensor</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">VOUT / Signal</td>
+<td style="text-align: left;">GPIO 35</td>
+<td style="text-align: left;">Entrada analógica (ADC1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">Tierra común</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-codigo-implementado_1">3. Código Implementado</h2>
+<p>Código en C++ cargado en el ESP32 que realiza la conversión de ADC a voltaje, el cálculo de temperatura y la aplicación del filtro de promedio móvil:
+<img alt="Codigo del Sensor de Temperatura" src="../../imVS/codetemp2.png" />
+<img alt="Codigo del Sensor de Temperatura" src="../../imVS/codetemp1.png" /></p>
+<h2 id="4-tabla-de-datos-experimentales_1">4. Tabla de Datos Experimentales</h2>
+<p>Se tomaron lecturas instantáneas y filtradas bajo difrenetes condiciones térmicas diferentes para evaluar el desempeño de la atenuación de ruido:
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/gyttemp.png" /></p>
+<h2 id="5-grafica-comparativa">5. Gráfica Comparativa:</h2>
+<p>Señal Cruda vs. FiltradaLa siguiente imagen (obtenida mediante el Serial Plotter / Excel) muestra el efecto de suavizado del filtro de promedio móvil respecto a los picos de ruido bruscos de la señal cruda:</p>
+<p>Señal cuando N=3:</p>
+<p><img alt="Esquemático del Sensor de Temperatura" src="../../imVS/gr3.png" /></p>
+<p>Señal cuando N=10:
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/fr10.png" /></p>
+<p>Señal cuando N=50:
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/gr50.png" /></p>
+<h4 id="justificacion-de-la-eleccion-de-n-10">Justificación de la elección de <span class="arithmatex">\(N = 10\)</span>:</h4>
+<ul>
+<li><strong>Atenuación del ruido:</strong> Un valor de <span class="arithmatex">\(N = 10\)</span> en el filtro de promedio móvil permite promediar una ventana de <span class="arithmatex">\(100\text{ ms}\)</span> (con un tiempo de muestreo de <span class="arithmatex">\(10\text{ ms}\)</span>). Esto elimina eficazmente los picos de ruido electromagnético de alta frecuencia producidos por el multiplexor interno del ADC y la fluctuación de la fuente.</li>
+<li><strong>Tiempo de respuesta:</strong> Si aumentáramos el valor a <span class="arithmatex">\(N = 50\)</span> o <span class="arithmatex">\(N = 100\)</span>, aunque la señal se vería más suave, introduciría un retardo (<em>delay</em>) significativo en la medición. Esto impediría detectar cambios térmicos o de inclinación rápidos en tiempo real dentro del vehículo.</li>
+<li><strong>Uso de memoria:</strong> Un buffer circular de <span class="arithmatex">\(N = 10\)</span> elementos consumirá poca memoria RAM en el microcontrolador, optimizando el rendimiento general del sistema.</li>
+</ul>
+<h2 id="6-observaciones-y-bitacora-del-filtrado">6. Observaciones y Bitácora del Filtrado</h2>
+<p>Eliminación de ruido de alta frecuencia: La señal cruda del sensor presenta fluctuaciones rápidas debido a la atenuación del ADC del ESP32 y la interferencia electromagnética. La señal filtrada elimina estas oscilaciones sin perder la tendencia real de la temperatura.Tiempo de respuesta vs. Suavizado: Al utilizar un tamaño de ventana <span class="arithmatex">\(N = 10\)</span>, se logra un excelente equilibrio entre estabilidad y velocidad de respuesta. Aumentar el valor de <span class="arithmatex">\(N\)</span> agregaría un retardo perceptible al detectar cambios rápidos de temperatura.</p>
+<hr />
+<h2 id="1-descripcion-de-la-actividad_2">1. Descripción de la Actividad</h2>
+<p>En esta sección se implementó la lectura de un acelerómetro analógico de 3 ejes (X, Y, Z) para determinar la orientación en el espacio mediante los ángulos de <strong>Roll</strong> (rotación sobre el eje longitudinal) y <strong>Pitch</strong> (rotación sobre el eje lateral). Adicionalmente, se calculó la magnitud vectorial de la aceleración total para detectar picos dinámicos causados por golpes o impactos en la estructura, aplicando un umbral configurable para evitar falsas alarmas.</p>
+<hr />
+<h2 id="2-esquematico-de-conexion_2">2. Esquemático de Conexión</h2>
+<p>Las salidas analógicas de los tres ejes del módulo se conectaron a los pines del bloque <strong>ADC1</strong> del ESP32 para realizar las lecturas de voltaje.
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/esqace.jpg" />
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/esqreal.jpeg" /></p>
+<h3 id="diagrama-de-pinout_2">Diagrama de Pinout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Componente</th>
+<th style="text-align: left;">Pin Módulo</th>
+<th style="text-align: left;">Pin ESP32</th>
+<th style="text-align: left;">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Acelerómetro Analógico</strong></td>
+<td style="text-align: left;">VCC</td>
+<td style="text-align: left;">3.3V</td>
+<td style="text-align: left;">Alimentación del sensor</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">GND</td>
+<td style="text-align: left;">Tierra común</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">GPIO 34</td>
+<td style="text-align: left;">Lectura analógica eje X (ADC1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y</td>
+<td style="text-align: left;">GPIO 35</td>
+<td style="text-align: left;">Lectura analógica eje Y (ADC1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Z</td>
+<td style="text-align: left;">GPIO 32</td>
+<td style="text-align: left;">Lectura analógica eje Z (ADC1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ST</td>
+<td style="text-align: left;">Sin conectar</td>
+<td style="text-align: left;">Autoprueba (<em>Self-Test</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-codigo-implementado_2">3. Código Implementado</h2>
+<p>Código fuente en C++ para realizar la lectura analógica de los tres ejes, la conversión a fuerza g (<span class="arithmatex">\(g\)</span>), el cálculo trigonométrico de <strong>Roll</strong> y <strong>Pitch</strong>, y la magnitud para detección de impacto:
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/codeace1.png" />
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/codeace2.png" />
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/codeace3.png" /></p>
+<h2 id="4-tabla-de-datos-experimentales_2">4. Tabla de Datos Experimentales</h2>
+<p>Se validaron los ángulos medidos por el acelerómetro contrastándolos contra la aplicación de nivelación del teléfono celular en 3 posiciones distintas:</p>
+<p><img alt="Esquemático del Sensor de Temperatura" src="../../imVS/pos1.png" />
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/pos2.png" />
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/pos3.png" /></p>
+<h2 id="5-deteccion-de-impactos-y-ajuste-de-umbral">5. Detección de Impactos y Ajuste de Umbral</h2>
+<p>Se realizaron pruebas mecánicas aplicando pequeñas perturbaciones y golpes sobre la superficie de trabajo para evaluar la respuesta de la magnitud escalar (<span class="arithmatex">\(\vert{}g\vert{}\)</span>)
+<img alt="Esquemático del Sensor de Temperatura" src="../../imVS/impacto.png" /></p>
+<h2 id="6-observaciones-y-bitacora-del-acelerometro">6. Observaciones y Bitácora del Acelerómetro</h2>
+<p>Calibración del punto cero (<span class="arithmatex">\(0g\)</span>): Debido a las tolerancias de fabricación del sensor analógico y las variaciones de la fuente de <span class="arithmatex">\(3.3\text{ V}\)</span>, se observó un pequeño nivel de offset (desvío) en reposo que se corrigió mediante la constante ZERO_G_VOLTS.Detección de Golpes vs. Inclinación: La magnitud escalar de aceleración permanece estable cerca de <span class="arithmatex">\(1.0g\)</span> durante rotaciones lentas (inclinación puramente gravitatoria). Al aplicar un golpe mecánico seco, los picos de aceleración inercial superaron el umbral de <span class="arithmatex">\(1.8g\)</span>, permitiendo detectar choques de manera efectiva y sin falsas alarmas provocadas por el movimiento continuo del vehículo.</p>
+<h3 id="7-bitacora-de-laboratorio-analisis-y-problemas-encontrados">7. Bitácora de Laboratorio: Análisis y Problemas Encontrados</h3>
+<h4 id="el-adc-es-tan-lineal-como-prometia-la-formula-teorica">¿El ADC es tan lineal como prometía la fórmula teórica?</h4>
+<p><strong>No.</strong> Teóricamente, un ADC de 12 bits bajo la ecuación <span class="arithmatex">\(V = \text{ADC} \times \left(\frac{3.3}{4095}\right)\)</span> debería presentar una respuesta totalmente recta (lineal). Sin embargo, en la práctica con el ESP32 se observó lo siguiente:
+1. <strong>Zonas muertas en los extremos (<em>Non-linearity</em>):</strong> El ADC del ESP32 presenta no-linealidad en los extremos inferior (cerca de <span class="arithmatex">\(0\text{ V}\)</span>) y superior (cerca de <span class="arithmatex">\(3.3\text{ V}\)</span>), donde las lecturas se saturan antes de alcanzar el valor límite mecánico.
+2. <strong>Desviación en rango medio:</strong> Durante las mediciones del potenciómetro al <span class="arithmatex">\(25\%\)</span> del recorrido, se obtuvo un error de <span class="arithmatex">\(2.5^\circ\)</span>, comprobando la presencia de una ligera curva de atenuación en los atenuadores internos del canal ADC.</p>
+<p><em>Se usó Claude para la elaboracion del codigo en Visual Studio y formato de la practica</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
