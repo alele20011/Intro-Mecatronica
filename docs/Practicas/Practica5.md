@@ -11,7 +11,7 @@
 ## 2. Diagrama de Conexión
 A continuación se ilustra la conexión del circuito físico entre la tarjeta ESP32, la resistencia limitadora de corriente (220 Ω - 330 Ω) y el LED.
 
-![Diagrama de conexión del LED al ESP32] (../imVS/ledesp.png)
+![Diagrama de conexión del LED al ESP32](../imVS/ledesp.png)
 
 ---
 
