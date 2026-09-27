@@ -73,7 +73,9 @@ Durante la práctica se tomaron lecturas dimensionales de 5 cubos de prueba (ide
 1. **Límite de Rango:** Para la dimensión $h$ del Cubo 10, la apertura del arco del micrómetro utilizado resultó insuficiente para abrazar la pieza, evidenciando una limitación operativa en el rango de alcance del micrómetro frente a la versatilidad de apertura del vernier.
 2. **Diferencia de Resolución:** Las lecturas del micrómetro aportan tres decimales de precisión ($\pm 0.001\text{ mm}$), mientras que el vernier registra hasta dos decimales ($\pm 0.01\text{ mm}$), adecuado para inspecciones dimensionales rápidas.
 
+![Uso de micrómetro mecánico y digital](../imVS/medmic%20(1).JPG)
 
+![Uso de micrómetro mecánico y digital](../imVS/medvern.jpg)
 ---
 
 ## 3. Maquinaria de Corte y Maquinado
