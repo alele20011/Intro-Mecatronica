@@ -45,6 +45,35 @@ Ofrece una precisión superior a la del vernier, siendo idóneo para medir espes
 
 *Figura 2: Demostración de lectura y manipulación de micrómetro mecánico y digital en la mesa de trabajo.*
 
+### 2.3. Registro Experimental de Mediciones en Cubos de Prueba
+
+Durante la práctica se tomaron lecturas dimensionales de 5 cubos de prueba (identificados como Cubos 3, 8, 10, 11 y 12), evaluando el ancho ($a$), largo ($l$) y alto ($h$) mediante el uso consecutivo del micrómetro y del calibrador vernier.
+
+#### Mediciones con Micrómetro (Resolución en milésimas de milímetro, $\text{mm}$)
+
+| Identificador de Cubo | Ancho ($a$) | Largo ($l$) | Alto ($h$) |
+| :--- | :--- | :--- | :--- |
+| **Cubo 3** | $26.623\text{ mm}$ | $34.520\text{ mm}$ | $22.528\text{ mm}$ |
+| **Cubo 8** | $29.792\text{ mm}$ | $43.448\text{ mm}$ | $29.868\text{ mm}$ |
+| **Cubo 10** | $38.865\text{ mm}$ | $38.834\text{ mm}$ | *Excede la capacidad de apertura del micrómetro* |
+| **Cubo 11** | $31.277\text{ mm}$ | $27.156\text{ mm}$ | $28.459\text{ mm}$ |
+| **Cubo 12** | $29.209\text{ mm}$ | $33.839\text{ mm}$ | $26.892\text{ mm}$ |
+
+#### Mediciones con Calibrador Vernier (Resolución en centésimas de milímetro, $\text{mm}$)
+
+| Identificador de Cubo | Ancho ($a$) | Largo ($l$) | Alto ($h$) |
+| :--- | :--- | :--- | :--- |
+| **Cubo 3** | $28.38\text{ mm}$ | $36.98\text{ mm}$ | $24.12\text{ mm}$ |
+| **Cubo 8** | $31.51\text{ mm}$ | $45.14\text{ mm}$ | $32.55\text{ mm}$ |
+| **Cubo 10** | $40.81\text{ mm}$ | $40.48\text{ mm}$ | $19.33\text{ mm}$ |
+| **Cubo 11** | $33.01\text{ mm}$ | $28.80\text{ mm}$ | $30.24\text{ mm}$ |
+| **Cubo 12** | $30.90\text{ mm}$ | $35.54\text{ mm}$ | $28.89\text{ mm}$ |
+
+#### Observaciones Metrológicas:
+1. **Límite de Rango:** Para la dimensión $h$ del Cubo 10, la apertura del arco del micrómetro utilizado resultó insuficiente para abrazar la pieza, evidenciando una limitación operativa en el rango de alcance del micrómetro frente a la versatilidad de apertura del vernier.
+2. **Diferencia de Resolución:** Las lecturas del micrómetro aportan tres decimales de precisión ($\pm 0.001\text{ mm}$), mientras que el vernier registra hasta dos decimales ($\pm 0.01\text{ mm}$), adecuado para inspecciones dimensionales rápidas.
+
+
 ---
 
 ## 3. Maquinaria de Corte y Maquinado
