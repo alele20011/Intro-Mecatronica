@@ -110,6 +110,7 @@ En esta prueba, el bucle `loop()` se ejecuta sin interrupciones. El tiempo de re
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w9_F6HntLNY?si=U2B9AWoBFLGfyV99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Señal y datos recibidos:
+
 ![Recepción de cadena y parsing con trim()](../imVS/Sr1.png)
 
 ### Funcionamiento con latencia inducida (`activarDelayLatencia = true`)
@@ -118,6 +119,7 @@ Al introducir la función `delay(1000)`, la ejecución del programa se bloquea d
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xdn0YzC4I3Y?si=48v_F1HZ2z49whNi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Señal y datos recibidos:
+
 ![Recepción de cadena y parsing con trim()](../imVS/sr2.png)
 ---
 
