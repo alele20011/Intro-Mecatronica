@@ -409,7 +409,7 @@ A continuación se presenta el registro visual del reconocimiento de equipo e in
 ### 6.1. Diseño Asistido por Inteligencia Artificial y Digitalización
 Para el desarrollo y maquetación de las piezas tridimensionales del zepelín, se implementó un flujo de trabajo híbrido apoyado en herramientas de inteligencia artificial como Gemini, ChatGPT y Claude. A través de este proceso, se analizaron fotografías, videos de referencia y bocetos trazados a mano sobre papel para desglosar la estructura geométrica del modelo en componentes individuales de ensamble.
 
-Posteriormente, las plantillas visuales y esquemas trazados fueron importados como imágenes de fondo (croquis de referencia) en SolidWorks. Utilizando herramientas de bocetado como *Spline*, *Arcos* y *Líneas*, se realizaron los trazos vectoriales directos sobre las imágenes para digitalizar cada perfil. Durante este proceso de croquizado, se prestó especial atención a la congruencia de los puntos de acoplamiento y muescas de encaje (*slots*), garantizando una dimensión nominal constante de **3.00 mm** en los alojamientos para asegurar un ajuste preciso por presión (*press-fit*), correspondiente al espesor del material MDF utilizado.
+Posteriormente, las plantillas visuales y esquemas trazados fueron importados como imágenes de fondo (croquis de referencia) en SolidWorks. Utilizando herramientas de bocetado como *Spline*, *Arcos* y *Líneas*, se realizaron los trazos directos sobre las imágenes para digitalizar cada perfil. Durante este proceso de croquizado, se prestó especial atención a la congruencia de los puntos de acoplamiento y muescas de encaje, garantizando una dimensión constante de **3.00 mm** en los alojamientos para asegurar un ajuste preciso por presión (*press-fit*), correspondiente al espesor del material MDF utilizado.
 
 ![Plano general de piezas en SolidWorks Drawing](../imVS/dibusld.PNG)
 
@@ -417,7 +417,7 @@ Posteriormente, las plantillas visuales y esquemas trazados fueron importados co
 
 ---
 
-### 6.2. Anidado (Nesting) y Optimización de Material
+### 6.2. Anidado y Optimización de Material
 Una vez exportados los contornos en formato vectorial, se cargaron en el software de control de la cortadora láser. Se realizó una maquetación y acomodo estratégico de las piezas (*nesting*) para maximizar el aprovechamiento de la lámina de MDF de 3 mm. Este proceso permitió reducir los espacios muertos entre contornos complejos, minimizando el desperdicio de material y optimizando los tiempos de trayectoria de corte del cabezal CNC.
 
 ![Distribución y nesting en el software de corte](../imVS/corpro.jpeg)
@@ -445,3 +445,4 @@ Tras completar el proceso de corte y remoción de material sobrante, se llevó a
 ![Ensamble final del Zepelín 3D - Vista general](../imVS/zepelinb.jpeg)
 
 **Figura 11. Prototipo terminado en área de laboratorio:** Vista general del modelo a escala concluido, mostrando el acoplamiento final de todos los componentes mecánicos.
+
