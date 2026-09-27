@@ -107,7 +107,7 @@ void loop() {
 ### Funcionamiento sin retraso (`activarDelayLatencia = false`)
 En esta prueba, el bucle `loop()` se ejecuta sin interrupciones. El tiempo de respuesta entre el envío del comando desde el dispositivo móvil y la respuesta del LED es instantáneo.
 
-[![LED Bluetooth Sin Delay](https://img.youtube.com/vi/w9_F6HntLNY/0.jpg)](https://www.youtube.com/watch?v=w9_F6HntLNY "Ver video: LED Bluetooth sin delay")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w9_F6HntLNY?si=U2B9AWoBFLGfyV99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Señal y datos recibidos:
 ![Recepción de cadena y parsing con trim()](../imVS/Sr1.png)
@@ -115,7 +115,7 @@ Señal y datos recibidos:
 ### Funcionamiento con latencia inducida (`activarDelayLatencia = true`)
 Al introducir la función `delay(1000)`, la ejecución del programa se bloquea durante 1 segundo por ciclo. Esto ocasiona que los comandos enviados se acumulen en el búfer serial, generando un retraso significativo entre la orden enviada y la reacción del LED.
 
-[![LED Bluetooth Con Delay](https://img.youtube.com/vi/xdn0YzC4I3Y/0.jpg)](https://www.youtube.com/watch?v=xdn0YzC4I3Y "Ver video: LED Bluetooth con delay")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xdn0YzC4I3Y?si=48v_F1HZ2z49whNi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Señal y datos recibidos:
 ![Recepción de cadena y parsing con trim()](../imVS/sr2.png)
