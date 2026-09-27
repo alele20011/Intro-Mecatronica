@@ -403,3 +403,45 @@ A continuación se presenta el registro visual del reconocimiento de equipo e in
 ![Ensamblaje tridimensional en SolidWorks](../imVS/solen.png)
 
 **Figura 7. Entorno de ensamblaje (Assembly):** Disposición de las piezas modulares y definición de relaciones de posición para el acoplamiento tridimensional de las caras.
+
+## 6. ENTREGABLE DEL PROYECTO: ZEPPELIN 3D
+
+### 6.1. Diseño Asistido por Inteligencia Artificial y Digitalización
+Para el desarrollo y maquetación de las piezas tridimensionales del zepelín, se implementó un flujo de trabajo híbrido apoyado en herramientas de inteligencia artificial como Gemini, ChatGPT y Claude. A través de este proceso, se analizaron fotografías, videos de referencia y bocetos trazados a mano sobre papel para desglosar la estructura geométrica del modelo en componentes individuales de ensamble.
+
+Posteriormente, las plantillas visuales y esquemas trazados fueron importados como imágenes de fondo (croquis de referencia) en SolidWorks. Utilizando herramientas de bocetado como *Spline*, *Arcos* y *Líneas*, se realizaron los trazos vectoriales directos sobre las imágenes para digitalizar cada perfil. Durante este proceso de croquizado, se prestó especial atención a la congruencia de los puntos de acoplamiento y muescas de encaje (*slots*), garantizando una dimensión nominal constante de **3.00 mm** en los alojamientos para asegurar un ajuste preciso por presión (*press-fit*), correspondiente al espesor del material MDF utilizado.
+
+![Plano general de piezas en SolidWorks Drawing](../imVS/dibusld.PNG)
+
+**Figura 8. Plano de piezas en SolidWorks Drawing:** Distribución y proyección 2D de la totalidad de componentes vectorizados del zepelín, mostrando perfiles de ensamble, hélices, costillas estructurales y soportes.
+
+---
+
+### 6.2. Anidado (Nesting) y Optimización de Material
+Una vez exportados los contornos en formato vectorial, se cargaron en el software de control de la cortadora láser. Se realizó una maquetación y acomodo estratégico de las piezas (*nesting*) para maximizar el aprovechamiento de la lámina de MDF de 3 mm. Este proceso permitió reducir los espacios muertos entre contornos complejos, minimizando el desperdicio de material y optimizando los tiempos de trayectoria de corte del cabezal CNC.
+
+![Distribución y nesting en el software de corte](../imVS/corpro.jpeg)
+
+**Figura 9. Vectorización y nesting para corte láser:** Disposición optimizada de las piezas en la interfaz de la cortadora láser para reducción de residuos de MDF.
+
+---
+
+### 6.3. Manufactura y Proceso de Corte
+El proceso de manufactura se llevó a cabo en la cortadora láser CAMFive del laboratorio. A continuación se presenta el registro en video del proceso de corte automatizado de los componentes:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hTHzK2qrLiA?si=TLOQkATwnuxN1q6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Video 1. Manufactura por corte láser:** Maquinado y grabado CNC de las piezas de MDF de 3 mm para la estructura del zepelín.
+
+---
+
+### 6.4. Ensamble Final del Prototipo
+Tras completar el proceso de corte y remoción de material sobrante, se llevó a cabo el ensamble manual de la estructura tridimensional. La precisión en las ranuras de 3 mm permitió la unión sólida de los anillos transversales, largueros longitudinales, la góndola inferior, las hélices traseras y la base de exhibición sin necesidad de modificaciones mecánicas posteriores.
+
+![Ensamble final del Zepelín 3D - Vista lateral](../imVS/zepelina.jpeg)
+
+**Figura 10. Prototipo ensamblado del Zepelín 3D (Vista lateral):** Estructura terminada montada sobre su base de soporte, apreciando el entramado de costillas y cubierta de MDF de 3 mm.
+
+![Ensamble final del Zepelín 3D - Vista general](../imVS/zepelinb.jpeg)
+
+**Figura 11. Prototipo terminado en área de laboratorio:** Vista general del modelo a escala concluido, mostrando el acoplamiento final de todos los componentes mecánicos.
