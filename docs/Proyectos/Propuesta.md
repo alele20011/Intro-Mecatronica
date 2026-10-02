@@ -98,3 +98,7 @@ Diseñar y construir un robot móvil tipo carrito para competir y ganar el torne
 | Pérdida de paquetes o latencia en Bluetooth | Medio | Optimizar el buffer de recepción en el ESP32 y reajustar el intervalo de envío de comandos en la App. |
 | Deslizamiento o falta de tracción en ruedas omnidireccionales | Medio | Añadir bandas de alta fricción en los rodillos o sustituir temporalmente por ruedas estándar de goma. |
 | Ruido eléctrico o reinicios del ESP32 por consumo de motores | Alto | Instalar capacitores de desacoplo y verificar el aislamiento eléctrico estricto con GND común. |
+
+
+Imagen del carro propuesto:
+![Recepción de cadena y parsing con trim()](../imVS/sketch.jpeg)
