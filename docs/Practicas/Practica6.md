@@ -42,6 +42,119 @@ En lugar de utilizar un mecanismo físico de **Diferencial (Mecanismo 1)**, el p
 
 
 
+# Anexo: Galería de Mecanismos Mecánicos
+
+En esta sección se presentan los modelos físicos impresos en 3D correspondientes a los distintos mecanismos analizados en este reporte.
+
+> **Nota para VS Code:** Asegúrate de guardar las imágenes dentro de una carpeta llamada `assets` o `images` en la misma raíz que este archivo `.md`.
+
+---
+
+## 1. Rueda de Ginebra (Geneva Drive)
+
+![Rueda de Ginebra](../imVS/cgin.jpeg)
+
+* **Tipo de mecanismo:** Mecanismo de movimiento intermitente.
+* **Descripción:** Transforma un movimiento de rotación continuo en un movimiento de rotación intermitente. Es utilizado frecuentemente en proyectores de cine, contadores mecánicos y maquinaria de envasado.
+
+---
+
+## 2. Engranaje Intermitente (Intermittent Gear)
+
+![Engranaje Intermitente](../imVS/inter.jpeg)
+
+* **Tipo de mecanismo:** Transmisión discontinua.
+* **Descripción:** Diseñado con sectores lisos sin dientes para detener temporalmente la rotación del engranaje conducido durante la marcha constante del engranaje conductor.
+
+---
+
+## 3. Piñón y Cremallera (Rack & Pinion)
+
+![Piñón y Cremallera](./images/IMG_0650.jpeg)
+
+* **Tipo de mecanismo:** Transformación de movimiento rotativo a lineal.
+* **Descripción:** Transforma un movimiento de rotación en un movimiento de traslación lineal (o viceversa) mediante el acoplamiento de una rueda dentada circular (piñón) sobre una barra dentada recta (cremallera). Ampliamente utilizado en sistemas de dirección automotriz y ferrocarriles de cremallera.
+
+---
+
+## 4. Junta Cardán (Universal Joint)
+
+![Junta Cardán](../imVS/card.jpeg)
+
+* **Tipo de mecanismo:** Acoplamiento flexible de ejes.
+* **Descripción:** Permite la transmisión de par y movimiento de rotación entre dos ejes que no están alineados y cuyo ángulo de trabajo puede variar.
+
+---
+
+## 5. Diafragma Iris (Iris Mechanism)
+
+![Diafragma Iris](../imVS/op.jpeg)
+
+* **Tipo de mecanismo:** Obturador regulable de apertura.
+* **Descripción:** Conjunto de mallas u hojas superpuestas que ajustan circularmente el tamaño de una apertura central, utilizado principalmente en sistemas ópticos y cámaras.
+
+---
+
+## 6. Reductor Cicloidal (Cycloidal Drive)
+
+![Reductor Cicloidal](../imVS/ciclo.jpeg)
+
+* **Tipo de mecanismo:** Reductor de velocidad de alta precisión.
+* **Descripción:** Mecanismo reductor de gran relación de transmisión basado en el perfil de dientes cicloidales. Ofrece alta rigidez, baja holgura (*backlash*) y alta capacidad de carga.
+
+---
+
+## 7. Diferencial (Differential Gear)
+
+![Diferencial](../imVS/dif.jpeg)
+
+* **Tipo de mecanismo:** Tren cónico de transmisión.
+* **Descripción:** Permite que las ruedas o ejes de salida giren a diferentes velocidades angulares mientras se mantiene la transmisión de par desde una fuente común.
+
+---
+
+## 8. Engranaje Corona (Crown Gear)
+
+![Engranaje Corona](../imVS/crown.jpeg)
+
+* **Tipo de mecanismo:** Engranaje de ejes perpendiculares.
+* **Descripción:** Engranaje cuya dentadura se proyecta perpendicularmente a la cara de la rueda, permitiendo cambiar la dirección del eje de rotación $90^\circ$.
+
+---
+
+## 9. Tornillo Sin Fin y Corona (Worm & Wormwheel)
+
+![Tornillo Sin Fin y Corona](../imVS/WW.jpeg)
+
+* **Tipo de mecanismo:** Transmisión por tornillo sin fin.
+* **Descripción:** Ofrece una alta relación de reducción en un espacio compacto y, en la mayoría de los casos, cuenta con la propiedad de autobloqueo (no reversible desde la corona hacia el tornillo).
+
+---
+
+## 10. Engranaje Cónico (Bevel Gear)
+
+![Engranaje Cónico](../imVS/IMG_0650.jpeg)
+
+* **Tipo de mecanismo:** Transmisión cónica angular.
+* **Descripción:** Empleado para transmitir potencia entre ejes que se intersectan, comúnmente a $90^\circ$, mediante dientes cónicos o helicoidales.
+
+---
+
+## 11. Engranaje Planetario (Planetary Gear)
+
+![Engranaje Planetario](../imVS/planet.jpeg)
+
+* **Tipo de mecanismo:** Tren de engranajes epicicloidal.
+* **Descripción:** Compuesto por un engranaje solar central, satélites (planetas) y una corona exterior. Proporciona altas relaciones de reducción en un espacio concéntrico y compacto.
+
+
+Video de su funcionamiento:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oMKeSQRYoyo?si=81yReZKp_H0KJE1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+---
+
+
+
 
 # Resolució́n de Ejercicios de Mecá́nica y Reducciones
 
