@@ -55,7 +55,7 @@ nav:
       - "Practica 4": Practicas/Practica4.md
       - "Practica 5": Practicas/Practica5.md
       - "Practica 6": Practicas/Practica6.md
-      
+
       
   - "Proyectos":
       - "Propuestas": Proyectos/Propuesta.md
@@ -69,6 +69,8 @@ nav:
       - "Reporte 1": Oliver/semana1.md 
       - "Manufactura Aditiva": Oliver/3d.md
       - "Maquinas del IDIT": Oliver/midit.md
+      - "Computer Numerical Control": Oliver/CN
+
       
       
 
