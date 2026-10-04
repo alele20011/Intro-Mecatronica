@@ -208,35 +208,9 @@ Para la verificación de trayectorias complejas en 3D antes del maquinado real, 
 
 #### Ejemplo: Trazo de Estrella de 5 Puntas
 
-![Simulación de G-Code en NC Viewer](Captura%20de%20pantalla%202026-10-03%20004651.jpg)
+![Simulación de G-Code en NC Viewer](../imVS/estcnc.png)
 
-```gcode
-G90             ; Coordenadas absolutas
-G54             ; Seleccionar sistema de coordenadas de trabajo 1
-G00 Z10.0       ; Levantar eje Z a distancia de seguridad (10 mm)
-M3 S18000       ; Encender el spindle en sentido horario a 18,000 RPM
-G00 X0 Y25.0    ; Posicionamiento rápido sobre el punto de inicio
 
-G01 Z-2.0 F180  ; Penetración lineal en Z a -2.0 mm con avance F180
-
-; Trayectoria de contorno de la estrella
-G01 X7.3 Y7.7 F300
-G01 X23.8 Y7.7
-G01 X10.5 Y-2.5
-G01 X15.6 Y-18.2
-G01 X0 Y-8.0
-G01 X-15.6 Y-18.2
-G01 X-10.5 Y-2.5
-G01 X-23.8 Y7.7
-G01 X-7.3 Y7.7
-G01 X0 Y25.0
-
-G01 Z5.0 F180   ; Retraer herramienta fuera del material
-G00 Z10.0       ; Elevación rápida de seguridad
-M5              ; Apagar el husillo
-G00 X0 Y0       ; Retorno al origen de trabajo
-M30             ; Fin del programa y reinicio
-```
 
 ---
 
