@@ -446,3 +446,6 @@ Tras completar el proceso de corte y remoción de material sobrante, se llevó a
 
 **Figura 11. Prototipo terminado en área de laboratorio:** Vista general del modelo a escala concluido, mostrando el acoplamiento final de todos los componentes mecánicos.
 
+**Para descargar los archivos:**
+[Descargar los archivos realizados en clase (.zip)](../Archi/Clase%20Corte%20Laser.zip)
+
