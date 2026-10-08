@@ -1,0 +1,2101 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../midit/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>CNC Machines - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practicas-maquinado-controlado-por-computadora-cnc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CNC Machines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufactura Aditiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquinas del IDIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNC Machines
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNC Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-y-protocolo-de-seguridad-labs-safety-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y Protocolo de Seguridad (Lab's Safety Training)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción y Protocolo de Seguridad (Lab&#39;s Safety Training)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-equipo-de-proteccion-personal-epp-y-vestimenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Equipo de Protección Personal (EPP) y Vestimenta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-reglas-de-operacion-y-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Reglas de Operación y Entorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-extraccion-de-polvo-y-gestion-de-carga-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Extracción de Polvo y Gestión de Carga Estática
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-especificaciones-de-los-routers-cnc-fab-lab-puebla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Especificaciones de los Routers CNC (Fab Lab Puebla)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-catalogo-de-materiales-y-recomendaciones-de-maquinado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Catálogo de Materiales y Recomendaciones de Maquinado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pruebas-de-calibracion-y-caracterizacion-de-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pruebas de Calibración y Caracterización de Parámetros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Pruebas de Calibración y Caracterización de Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-prueba-de-descentramiento-runout-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Prueba de Descentramiento (Runout Test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tabla-de-avances-y-velocidades-feeds-and-speeds-shopbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Tabla de Avances y Velocidades (Feeds and Speeds - ShopBot)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Tabla de Avances y Velocidades (Feeds and Speeds - ShopBot)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracterizacion-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caracterización de Herramientas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reglas-de-diseno-y-estrategias-de-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reglas de Diseño y Estrategias de Corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reglas de Diseño y Estrategias de Corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ensamble-y-modificaciones-geometricas-dogbones-y-t-bones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Ensamble y Modificaciones Geométricas (Dogbones y T-bones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-tipos-de-operaciones-en-software-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Tipos de Operaciones en Software CAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sistemas-de-fijacion-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Sistemas de Fijación (Fixtures)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-programacion-y-control-en-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Programación y Control en G-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Programación y Control en G-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sintaxis-y-diccionario-de-comandos-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sintaxis y Diccionario de Comandos G-Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-interpretacion-practica-de-codigo-g-trayectoria-con-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Interpretación Práctica de Código G (Trayectoria con Arco)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-simulacion-en-plataforma-digital-nc-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Simulación en Plataforma Digital (NC Viewer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Simulación en Plataforma Digital (NC Viewer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-trazo-de-estrella-de-5-puntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo: Trazo de Estrella de 5 Puntas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-y-protocolo-de-seguridad-labs-safety-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y Protocolo de Seguridad (Lab's Safety Training)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción y Protocolo de Seguridad (Lab&#39;s Safety Training)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-equipo-de-proteccion-personal-epp-y-vestimenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Equipo de Protección Personal (EPP) y Vestimenta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-reglas-de-operacion-y-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Reglas de Operación y Entorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-extraccion-de-polvo-y-gestion-de-carga-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Extracción de Polvo y Gestión de Carga Estática
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-especificaciones-de-los-routers-cnc-fab-lab-puebla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Especificaciones de los Routers CNC (Fab Lab Puebla)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-catalogo-de-materiales-y-recomendaciones-de-maquinado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Catálogo de Materiales y Recomendaciones de Maquinado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pruebas-de-calibracion-y-caracterizacion-de-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pruebas de Calibración y Caracterización de Parámetros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Pruebas de Calibración y Caracterización de Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-prueba-de-descentramiento-runout-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Prueba de Descentramiento (Runout Test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tabla-de-avances-y-velocidades-feeds-and-speeds-shopbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Tabla de Avances y Velocidades (Feeds and Speeds - ShopBot)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Tabla de Avances y Velocidades (Feeds and Speeds - ShopBot)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracterizacion-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caracterización de Herramientas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reglas-de-diseno-y-estrategias-de-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reglas de Diseño y Estrategias de Corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reglas de Diseño y Estrategias de Corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ensamble-y-modificaciones-geometricas-dogbones-y-t-bones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Ensamble y Modificaciones Geométricas (Dogbones y T-bones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-tipos-de-operaciones-en-software-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Tipos de Operaciones en Software CAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sistemas-de-fijacion-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Sistemas de Fijación (Fixtures)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-programacion-y-control-en-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Programación y Control en G-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Programación y Control en G-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sintaxis-y-diccionario-de-comandos-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sintaxis y Diccionario de Comandos G-Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-interpretacion-practica-de-codigo-g-trayectoria-con-arco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Interpretación Práctica de Código G (Trayectoria con Arco)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-simulacion-en-plataforma-digital-nc-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Simulación en Plataforma Digital (NC Viewer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Simulación en Plataforma Digital (NC Viewer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-trazo-de-estrella-de-5-puntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo: Trazo de Estrella de 5 Puntas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practicas-maquinado-controlado-por-computadora-cnc">Reporte de Prácticas: Maquinado Controlado por Computadora (CNC)</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla (Ibero Puebla)<br />
+<strong>Asignatura:</strong> Proyectos de Ingeniería<br />
+<strong>Profesor:</strong> Mtro. Oliver<br />
+<strong>Ubicación:</strong> Fab Lab Puebla<br />
+<strong>Fecha:</strong> 2 de octubre de 2026<br />
+<strong>Tema:</strong> Computer Controlled Machining (Maquinado CNC)</p>
+<hr />
+<h2 id="1-introduccion-y-protocolo-de-seguridad-labs-safety-training">1. Introducción y Protocolo de Seguridad (Lab's Safety Training)</h2>
+<p>El uso de máquinas CNC (<em>Computer Numerical Control</em>) involucra riesgos significativos debido al uso de herramientas de corte giratorias a altas velocidades, bordes afilados, componentes de alto voltaje y piezas pesadas.</p>
+<h3 id="11-equipo-de-proteccion-personal-epp-y-vestimenta">1.1 Equipo de Protección Personal (EPP) y Vestimenta</h3>
+<ul>
+<li><strong>Gafas de seguridad resistentes a impactos:</strong> Protección contra virutas y residuos proyectados durante el corte.</li>
+<li><strong>Protección auditiva:</strong> Los niveles de ruido pueden alcanzar o superar los <span class="arithmatex">\(70\text{ dBA}\)</span> cerca de la máquina.</li>
+<li><strong>Bata / Overol 100% algodón:</strong> Evita quemaduras o enganches.</li>
+<li><strong>Calzado de seguridad:</strong> Botas con casquillo de protección contra la caída de piezas u objetos pesados.</li>
+<li><strong>Máscara de respiración:</strong> Filtra polvo fino generado según el material procesado.</li>
+<li><strong>Sin accesorios colgantes:</strong> Prohibido el uso de joyería, bufandas, prendas sueltas o cabello desatado.</li>
+<li><strong>Prohibición estricta:</strong> NO usar pantalones cortos (<em>shorts</em>) ni guantes durante la operación de la máquina (evita riesgos de atrapamiento).</li>
+</ul>
+<hr />
+<h3 id="12-reglas-de-operacion-y-entorno">1.2 Reglas de Operación y Entorno</h3>
+<ol>
+<li><strong>Atención continua:</strong> El operador debe permanecer atento y cerca de la máquina mientras esta se encuentre en funcionamiento.</li>
+<li><strong>Personal capacitado:</strong> La máquina debe ser operada exclusivamente por personal autorizado y entrenado.</li>
+<li><strong>Área de corte:</strong> Queda estrictamente prohibido introducir las manos o cualquier objeto cerca de la herramienta de corte mientras gira.</li>
+<li><strong>Protección del gabinete:</strong> La puerta del gabinete eléctrico/mando debe permanecer cerrada mientras esté encendida.</li>
+<li><strong>Limpieza del entorno:</strong> El piso debe estar limpio y libre de residuos para evitar resbalones o caídas.</li>
+<li><strong>Distancia de seguridad:</strong> Mantener distancia debido a los desplazamientos rápidos e intempestivos de la máquina en los ejes <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span>, <span class="arithmatex">\(Z\)</span>.</li>
+<li><strong>Parada de emergencia:</strong> Toda máquina automatizada puede iniciar movimiento repentinamente a menos que el botón de paro de emergencia (<em>E-stop</em>) esté activado.</li>
+<li><strong>Riesgo eléctrico:</strong> Presencia de componentes de alto voltaje en los armarios de control y motores.</li>
+<li><strong>Inspección de herramientas y sujeción:</strong> Asegurar que la herramienta esté bien ajustada y centrada, así como verificar que el material esté bien fijado sin obstáculos (clavos, prensas o nudos duros) en la trayectoria.</li>
+</ol>
+<hr />
+<h3 id="13-extraccion-de-polvo-y-gestion-de-carga-estatica">1.3 Extracción de Polvo y Gestión de Carga Estática</h3>
+<ul>
+<li><strong>Sistema de extracción (Vacuum Extractor):</strong> Se utiliza para la recolección de polvo y viruta durante y al finalizar el proceso.</li>
+<li><strong>Instrucciones de operación:</strong></li>
+<li>Se activa/desactiva mediante un interruptor dedicado.</li>
+<li><strong>¡Atención!</strong> No presionar el botón verde redondo contiguo, ya que desactiva el eje <span class="arithmatex">\(X\)</span> para habilitar el módulo rotatorio (<em>rotary add-on</em>).</li>
+<li><strong>Carga estática:</strong> Durante el aspirado se genera una alta cantidad de electricidad estática. Evite tocar cualquier superficie aterrizada (<em>grounded</em>) sin la debida precaución.</li>
+</ul>
+<hr />
+<h2 id="2-especificaciones-de-los-routers-cnc-fab-lab-puebla">2. Especificaciones de los Routers CNC (Fab Lab Puebla)</h2>
+<p>En Fab Lab Puebla disponemos de dos Routers CNC de gran formato:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atributo</th>
+<th style="text-align: left;">Máquina 1 (Asia Robótica)</th>
+<th style="text-align: left;">Máquina 2 (Genérica / Universidad)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Modelo</strong></td>
+<td style="text-align: left;">Asia Robótica Shop-1325</td>
+<td style="text-align: left;">Generic Made by University</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dimensiones</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(3.0 \times 1.8 \times 1.7\text{ m}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(3.0 \times 1.8 \times 1.7\text{ m}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Potencia del Motor</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(4\text{ HP} \ @ \ 24,000\text{ RPM}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(4\text{ HP} \ @ \ 24,000\text{ RPM}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Suministro Eléctrico</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(220\text{V} / 2\text{F} / 3.5\text{ kW}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(220\text{V} / 2\text{F} / 3.5\text{ kW}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fijación de Material</strong></td>
+<td style="text-align: left;">Clamps (Prensas/Bridas)</td>
+<td style="text-align: left;">Nails (Clavos/Tornillos)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>URL de referencia</strong></td>
+<td style="text-align: left;"><a href="https://www.asiarobotica.com/router-cnc-shop-pro">Asia Robótica Shop Pro</a></td>
+<td style="text-align: left;">N/A</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-catalogo-de-materiales-y-recomendaciones-de-maquinado">3. Catálogo de Materiales y Recomendaciones de Maquinado</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Material</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Recomendaciones de Maquinado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ABS</strong></td>
+<td style="text-align: left;">Plástico duradero y resistente usado industrialmente.</td>
+<td style="text-align: left;">Usar herramientas afiladas de 1 filo (<em>single-flute</em>) para acabado suave.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Acrílico</strong></td>
+<td style="text-align: left;">Plástico transparente de alta claridad y resistencia a la intemperie.</td>
+<td style="text-align: left;">Usar herramientas de carburo y refrigeración/aire para evitar fusión o grietas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Alucobond / Dibond®</strong></td>
+<td style="text-align: left;">Panel compuesto por dos láminas de aluminio y núcleo no metálico.</td>
+<td style="text-align: left;">Usar herramientas afiladas con alta velocidad de corte para bordes limpios.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Aluminio</strong></td>
+<td style="text-align: left;">Metal ligero y resistente a la corrosión.</td>
+<td style="text-align: left;">Cortadores afilados de múltiples filos (<em>multi-flute</em>) y refrigerante.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cobre</strong></td>
+<td style="text-align: left;">Metal altamente conductor.</td>
+<td style="text-align: left;">Cortadores afilados de 1 o 2 filos para cortes limpios.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Estireno (Styrene)</strong></td>
+<td style="text-align: left;">Plástico frágil y transparente usado en maquetación.</td>
+<td style="text-align: left;">Asegurar buena sujeción y usar herramientas afiladas para evitar astillamiento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Estaño</strong></td>
+<td style="text-align: left;">Metal blando y maleable.</td>
+<td style="text-align: left;">Usar velocidades de avance reducidas (<em>low feed rate</em>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Madera Sólida</strong></td>
+<td style="text-align: left;">Madera natural para uso estructural o estético.</td>
+<td style="text-align: left;">Cortadores espirales de 2 filos (<em>two-flute spiral</em>) para extracción de viruta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maderas Blandas</strong></td>
+<td style="text-align: left;">Pino, cedro, etc.</td>
+<td style="text-align: left;">Fresa espiral ascendente (<em>upcut</em>) para remover viruta y evitar desgarres.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maderas Duras</strong></td>
+<td style="text-align: left;">Roble, arce, etc.</td>
+<td style="text-align: left;">Fresa espiral descendente (<em>downcut</em>) para un acabado superficial más suave.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Triplay (Plywood)</strong></td>
+<td style="text-align: left;">Madera laminada por capas contraplacadas.</td>
+<td style="text-align: left;">Fresa de compresión (<em>compression bits</em>) para evitar delaminación.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MDF</strong></td>
+<td style="text-align: left;">Tablero de fibra de densidad media.</td>
+<td style="text-align: left;">Herramientas de HSS o carburo para tolerar el polvo abrasivo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MDF Enchapado</strong></td>
+<td style="text-align: left;">MDF cubierto con chapa de madera real.</td>
+<td style="text-align: left;">Fresa descendente (<em>downcut</em>) para no rasgar la chapa exterior.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MDF Laminado</strong></td>
+<td style="text-align: left;">MDF con recubrimiento plástico/melamínico.</td>
+<td style="text-align: left;">Brocas con punta de carburo para cortes limpios en la capa plástica.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Melamina s/ Aglomerado</strong></td>
+<td style="text-align: left;">Aglomerado recubierto de capa melamínica.</td>
+<td style="text-align: left;">Hoja o broca TCG (<em>Triple-Chip Grind</em>) para evitar despostillado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nylon</strong></td>
+<td style="text-align: left;">Polímero sintético flexible y resistente.</td>
+<td style="text-align: left;">Brocas de 1 o 2 filos a alta velocidad para evitar que se derrita.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OSB</strong></td>
+<td style="text-align: left;">Tablero de virutas orientadas.</td>
+<td style="text-align: left;">Herramientas con punta de carburo por la alta abrasividad del pegamento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Metales No Ferrosos</strong></td>
+<td style="text-align: left;">Latón, bronce, aluminio.</td>
+<td style="text-align: left;">Lubricación obligatoria y geometría de corte especial para no ferrosos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Policarbonato Sólido</strong></td>
+<td style="text-align: left;">Plástico transparente de muy alta resistencia a impactos.</td>
+<td style="text-align: left;">Herramientas afiladas y enfriamiento activo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polietileno</strong></td>
+<td style="text-align: left;">Plástico flexible de alta durabilidad.</td>
+<td style="text-align: left;">Brocas afiladas de 1 filo (<em>single-flute</em>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PVC (Sólido/Espumado)</strong></td>
+<td style="text-align: left;">Plástico de construcción versátil.</td>
+<td style="text-align: left;">Pocos filos (<em>low flute count</em>) y control de temperatura.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Baquelita</strong></td>
+<td style="text-align: left;">Plástico termoestable de alta resistencia térmica.</td>
+<td style="text-align: left;">Herramientas de carburo a velocidades moderadas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resinas</strong></td>
+<td style="text-align: left;">Compuestos sintéticos o naturales.</td>
+<td style="text-align: left;">Herramientas afiladas a alta velocidad.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-pruebas-de-calibracion-y-caracterizacion-de-parametros">4. Pruebas de Calibración y Caracterización de Parámetros</h2>
+<h3 id="41-prueba-de-descentramiento-runout-test">4.1 Prueba de Descentramiento (Runout Test)</h3>
+<p>Para determinar la excentricidad o descentramiento del Husillo (<em>Spindle</em>), se utilizó un <strong>reloj comparador Starrett</strong>:
+1. Se midió la concentricidad en estado de reposo (husillo apagado).
+2. Se midió nuevamente con el husillo encendido a velocidad nominal.
+3. <strong>Resultado:</strong> El instrumento con resolución de <span class="arithmatex">\(0.01\text{ mm}\)</span> no presentó variación apreciable, confirmando la alineación y calidad del sistema.</p>
+<hr />
+<h3 id="42-tabla-de-avances-y-velocidades-feeds-and-speeds-shopbot">4.2 Tabla de Avances y Velocidades (Feeds and Speeds - ShopBot)</h3>
+<p>Para calcular la velocidad de avance (<span class="arithmatex">\(\text{Feed Rate}\)</span>) y la carga de viruta por diente (<span class="arithmatex">\(\text{Chip Load}\)</span>), se utilizan las siguientes fórmulas fundamentales de maquinado CNC:</p>
+<div class="arithmatex">\[\text{Feed Rate (ipm)} = \text{RPM} \times \text{Número de Filos} \times \text{Chip Load}\]</div>
+<div class="arithmatex">\[\text{Chip Load} = \frac{\text{Feed Rate (ipm)}}{\text{RPM} \times \text{Número de Filos}}\]</div>
+<h4 id="caracterizacion-de-herramientas">Caracterización de Herramientas:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nombre / Herramienta</th>
+<th style="text-align: left;">Serie Onsrud</th>
+<th style="text-align: left;">Prof. Corte Max</th>
+<th style="text-align: left;">Chip Load (in/diente)</th>
+<th style="text-align: left;">Filos</th>
+<th style="text-align: left;">Feed Rate (ips)</th>
+<th style="text-align: left;">Feed Rate (ipm)</th>
+<th style="text-align: left;">RPM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1" 60° Carbide V Cutter</strong></td>
+<td style="text-align: left;">48-37</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.004 - 0.006\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="arithmatex">\(2.4 - 3.6\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(90 - 126\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/4" Straight V End Mill</strong></td>
+<td style="text-align: left;">48-005</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.005 - 0.007\)</span></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><span class="arithmatex">\(1.5 - 2.1\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(90 - 126\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/2" Straight V End Mill</strong></td>
+<td style="text-align: left;">48-072</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.005 - 0.007\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="arithmatex">\(3.0 - 4.2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(180 - 252\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/4" Upcut Carbide End Mill</strong></td>
+<td style="text-align: left;">52-910</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.005 - 0.008\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="arithmatex">\(3.6 - 4.8\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(180 - 252\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/4" Downcut Carbide End Mill</strong></td>
+<td style="text-align: left;">57-910</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.005 - 0.008\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="arithmatex">\(3.6 - 4.8\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(180 - 252\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/4" Upcut Carbide End Mill</strong></td>
+<td style="text-align: left;">65-025</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.004 - 0.006\)</span></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><span class="arithmatex">\(1.2 - 1.8\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(72 - 108\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1/8" Tapered Ball End Mill</strong></td>
+<td style="text-align: left;">77-102</td>
+<td style="text-align: left;"><span class="arithmatex">\(1 \times D\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.003 - 0.005\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="arithmatex">\(1.8 - 3.0\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(108 - 180\)</span></td>
+<td style="text-align: left;">18,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1-1/4" Surfacing Cutter</strong></td>
+<td style="text-align: left;">91-000</td>
+<td style="text-align: left;"><span class="arithmatex">\(1/2 - 3/4 \times D\)</span></td>
+<td style="text-align: left;">Variable</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Variable</td>
+<td style="text-align: left;"><span class="arithmatex">\(200 - 600\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(12,000 - 16,000\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-reglas-de-diseno-y-estrategias-de-corte">5. Reglas de Diseño y Estrategias de Corte</h2>
+<h3 id="51-ensamble-y-modificaciones-geometricas-dogbones-y-t-bones">5.1 Ensamble y Modificaciones Geométricas (Dogbones y T-bones)</h3>
+<p>Dado que las fresas cilíndricas dejan un radio interno proporcional al diámetro de la herramienta al realizar cajeados o cortes interiores, no es posible lograr esquinas interiores de <span class="arithmatex">\(90^\circ\)</span> de forma directa. Para permitir ensambles tipo <strong>Finger Joint</strong>:
+* <strong>Dogbones / T-bones:</strong> Son alivios o sobre-cortes circulares añadidos en los vértices interiores de las muescas para asegurar el encaje preciso de las piezas ensambladas.</p>
+<hr />
+<h3 id="52-tipos-de-operaciones-en-software-cam">5.2 Tipos de Operaciones en Software CAM</h3>
+<ol>
+<li><strong>Pocketing (Cajeado):</strong> Desbaste total del material dentro de una geometría cerrada hasta una profundidad determinada.</li>
+<li><strong>Profile / Cutting (Contorneado/Corte):</strong> Trayectoria a lo largo de un vector. Puede configurarse como:</li>
+<li><strong>Inside (Por dentro):</strong> La herramienta compensa su radio hacia el interior.</li>
+<li><strong>Outside (Por fuera):</strong> La herramienta compensa su radio hacia el exterior.</li>
+<li><strong>On Line (Sobre la línea):</strong> El centro de la herramienta sigue exactamente el vector.</li>
+<li><strong>Tabs (Puentes de sujeción):</strong> Pequeñas pestañas de material no cortado que mantienen fija la pieza a la lámina principal durante la última pasada, evitando que salga proyectada.</li>
+</ol>
+<hr />
+<h3 id="53-sistemas-de-fijacion-fixtures">5.3 Sistemas de Fijación (Fixtures)</h3>
+<ul>
+<li><strong>Clamps (Bridas/Prensas):</strong> Se deslizan a lo largo de los rieles o canales de la cama de la máquina.</li>
+<li><strong>Mesa con Insertos Roscados:</strong> Permite una alineación precisa y repetible para trabajos de <strong>doble cara</strong> (maquinado por ambos lados manteniendo el mismo origen <span class="arithmatex">\(X, Y, Z\)</span>).</li>
+</ul>
+<hr />
+<h2 id="6-programacion-y-control-en-g-code">6. Programación y Control en G-Code</h2>
+<h3 id="61-sintaxis-y-diccionario-de-comandos-g-code">6.1 Sintaxis y Diccionario de Comandos G-Code</h3>
+<p>El código <span class="arithmatex">\(G\)</span> es el lenguaje estandarizado utilizado para indicarle a la máquina CNC las trayectorias, velocidades y funciones auxiliares.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Comando / Variable</th>
+<th style="text-align: left;">Descripción / Función</th>
+<th style="text-align: left;">Clasificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>G0</code> / <code>G00</code></td>
+<td style="text-align: left;">Movimiento rápido de posicionamiento (sin realizar corte).</td>
+<td style="text-align: left;">Movimiento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G1</code> / <code>G01</code></td>
+<td style="text-align: left;">Movimiento lineal controlado con avance definido por <code>F</code>.</td>
+<td style="text-align: left;">Interpolación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G2</code> / <code>G02</code></td>
+<td style="text-align: left;">Interpolación circular en sentido horario (CW - <em>Clockwise</em>).</td>
+<td style="text-align: left;">Interpolación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G3</code> / <code>G03</code></td>
+<td style="text-align: left;">Interpolación circular en sentido antihorario (CCW - <em>Counter-Clockwise</em>).</td>
+<td style="text-align: left;">Interpolación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G17</code></td>
+<td style="text-align: left;">Selecciona el plano de trabajo <span class="arithmatex">\(XY\)</span>.</td>
+<td style="text-align: left;">Selección de Plano</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G20</code></td>
+<td style="text-align: left;">Define el sistema de unidades en <strong>pulgadas</strong>.</td>
+<td style="text-align: left;">Unidades</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G21</code></td>
+<td style="text-align: left;">Define el sistema de unidades en <strong>milímetros</strong>.</td>
+<td style="text-align: left;">Unidades</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G90</code></td>
+<td style="text-align: left;">Programación en <strong>Coordenadas Absolutas</strong> (referenciadas al origen fijado).</td>
+<td style="text-align: left;">Modo Coordenadas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G91</code></td>
+<td style="text-align: left;">Programación en <strong>Coordenadas Incrementales</strong> (referenciadas a la posición actual).</td>
+<td style="text-align: left;">Modo Coordenadas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G53</code></td>
+<td style="text-align: left;">Cero Máquina (<em>Machine Coordinate System</em> - MCS).</td>
+<td style="text-align: left;">Origen / Referencia</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>G54</code></td>
+<td style="text-align: left;">Cero Pieza / Sistema de Coordenadas de Trabajo (<em>Workpiece Coordinate System</em> - WCS).</td>
+<td style="text-align: left;">Origen / Referencia</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>X, Y, Z</code></td>
+<td style="text-align: left;">Coordenadas de posición de los ejes del espacio tridimensional.</td>
+<td style="text-align: left;">Posición</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>F</code></td>
+<td style="text-align: left;">Velocidad de avance (<em>Feed Rate</em>), ej. <code>F180</code> o <code>F300</code>.</td>
+<td style="text-align: left;">Parámetro de Corte</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>S</code></td>
+<td style="text-align: left;">Velocidad del husillo (<em>Spindle Speed</em> en RPM), ej. <code>S18000</code>.</td>
+<td style="text-align: left;">Parámetro de Corte</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>M3</code> / <code>M03</code></td>
+<td style="text-align: left;">Encender el husillo en sentido horario.</td>
+<td style="text-align: left;">Función M (Auxiliar)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>M4</code> / <code>M04</code></td>
+<td style="text-align: left;">Encender el husillo en sentido antihorario.</td>
+<td style="text-align: left;">Función M (Auxiliar)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>M5</code> / <code>M05</code></td>
+<td style="text-align: left;">Apagar el husillo.</td>
+<td style="text-align: left;">Función M (Auxiliar)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>M30</code></td>
+<td style="text-align: left;">Fin del programa y reinicio al inicio del archivo.</td>
+<td style="text-align: left;">Función M (Auxiliar)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="62-interpretacion-practica-de-codigo-g-trayectoria-con-arco">6.2 Interpretación Práctica de Código G (Trayectoria con Arco)</h3>
+<p>A continuación se muestra la estructura detallada del programa simulado para realizar un contorno con perfil lineal y curva con arco horario:</p>
+<div class="language-gcode highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">M3 </span><span class="k">S</span><span class="m">1000</span><span class="w">          </span><span class="c">; Encender el husillo en sentido horario a 1,000 RPM (o S18000 según material)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">G0 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w">          </span><span class="c">; Movimiento rápido al punto inicial (0,0)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">G1 </span><span class="k">Z</span><span class="m">-2</span><span class="w"> </span><span class="k">F</span><span class="m">180</span><span class="w">       </span><span class="c">; Bajar la herramienta a una profundidad de -2.0 mm con avance F180</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c">; Trayectoria de corte perimetral</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">G1 </span><span class="k">X</span><span class="m">40</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w"> </span><span class="k">F</span><span class="m">300</span><span class="w">    </span><span class="c">; Línea recta lineal hasta X=40, Y=0 con avance F300</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">G1 </span><span class="k">X</span><span class="m">40</span><span class="w"> </span><span class="k">Y</span><span class="m">30</span><span class="w">        </span><span class="c">; Línea recta lineal hasta Y=30</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">G1 </span><span class="k">X</span><span class="m">10</span><span class="w"> </span><span class="k">Y</span><span class="m">30</span><span class="w">        </span><span class="c">; Línea recta lineal hasta X=10</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">G2 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">20</span><span class="w"> </span><span class="k">I</span><span class="m">0</span><span class="w"> </span><span class="k">J</span><span class="m">-10</span><span class="w"> </span><span class="c">; Arco en sentido horario hacia (0,20) con centro relativo en I=0, J=-10</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">G1 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w">          </span><span class="c">; Línea recta de regreso al punto inicial (0,0)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c">; Finalización de ciclo</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">G0 </span><span class="k">Z</span><span class="m">10</span><span class="w">            </span><span class="c">; Retirar herramienta a distancia de seguridad (Z=10 mm)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">M5 </span><span class="w">               </span><span class="c">; Apagar el husillo</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">G0 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w">          </span><span class="c">; Regresar ejes X e Y al origen</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">M30 </span><span class="w">              </span><span class="c">; Fin del programa y reinicio</span>
+</span></code></pre></div>
+<hr />
+<h3 id="63-simulacion-en-plataforma-digital-nc-viewer">6.3 Simulación en Plataforma Digital (NC Viewer)</h3>
+<p>Para la verificación de trayectorias complejas en 3D antes del maquinado real, utilizamos la herramienta web <strong>NC Viewer</strong> (<code>ncviewer.com</code>).</p>
+<h4 id="ejemplo-trazo-de-estrella-de-5-puntas">Ejemplo: Trazo de Estrella de 5 Puntas</h4>
+<p><img alt="Simulación de G-Code en NC Viewer" src="../../imVS/estcnc.png" /></p>
+<hr />
+<h2 id="7-conclusion">7. Conclusión</h2>
+<p>La práctica impartida en Fab Lab Puebla por el Mtro. Oliver permitió comprender de manera integral el proceso de maquinado CNC:
+1. <strong>Seguridad operacional:</strong> Normativa estricta sobre EPP y prevención de riesgos mecánicos y mecánicos-eléctricos.
+2. <strong>Parámetros de corte:</strong> Selección informada de velocidades de avance (<span class="arithmatex">\(Feed\ Rate\)</span>) y rotación (<span class="arithmatex">\(Spindle\ Speed\)</span>) ajustadas a las propiedades del material.
+3. <strong>Estrategia CAD/CAM:</strong> Implementación de t-bones/dogbones y puentes de sujeción (<em>tabs</em>).
+4. <strong>Programación G-Code:</strong> Comprensión e interpretación de comandos G y M para movimientos lineales, arcos y simulación previa mediante herramientas virtuales como NC Viewer.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
