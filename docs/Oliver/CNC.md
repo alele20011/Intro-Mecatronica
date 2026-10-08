@@ -177,32 +177,8 @@ El código $G$ es el lenguaje estandarizado utilizado para indicarle a la máqui
 
 ---
 
-### 6.2 Interpretación Práctica de Código G (Trayectoria con Arco)
 
-A continuación se muestra la estructura detallada del programa simulado para realizar un contorno con perfil lineal y curva con arco horario:
-
-```gcode
-M3 S1000          ; Encender el husillo en sentido horario a 1,000 RPM (o S18000 según material)
-G0 X0 Y0          ; Movimiento rápido al punto inicial (0,0)
-G1 Z-2 F180       ; Bajar la herramienta a una profundidad de -2.0 mm con avance F180
-
-; Trayectoria de corte perimetral
-G1 X40 Y0 F300    ; Línea recta lineal hasta X=40, Y=0 con avance F300
-G1 X40 Y30        ; Línea recta lineal hasta Y=30
-G1 X10 Y30        ; Línea recta lineal hasta X=10
-G2 X0 Y20 I0 J-10 ; Arco en sentido horario hacia (0,20) con centro relativo en I=0, J=-10
-G1 X0 Y0          ; Línea recta de regreso al punto inicial (0,0)
-
-; Finalización de ciclo
-G0 Z10            ; Retirar herramienta a distancia de seguridad (Z=10 mm)
-M5                ; Apagar el husillo
-G0 X0 Y0          ; Regresar ejes X e Y al origen
-M30               ; Fin del programa y reinicio
-```
-
----
-
-### 6.3 Simulación en Plataforma Digital (NC Viewer)
+### 6.2 Simulación en Plataforma Digital (NC Viewer)
 
 Para la verificación de trayectorias complejas en 3D antes del maquinado real, utilizamos la herramienta web **NC Viewer** (`ncviewer.com`).
 
