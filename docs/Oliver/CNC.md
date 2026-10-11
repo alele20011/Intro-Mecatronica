@@ -196,3 +196,39 @@ La práctica impartida en Fab Lab Puebla por el Mtro. Oliver permitió comprende
 2. **Parámetros de corte:** Selección informada de velocidades de avance ($Feed\ Rate$) y rotación ($Spindle\ Speed$) ajustadas a las propiedades del material.
 3. **Estrategia CAD/CAM:** Implementación de t-bones/dogbones y puentes de sujeción (*tabs*).
 4. **Programación G-Code:** Comprensión e interpretación de comandos G y M para movimientos lineales, arcos y simulación previa mediante herramientas virtuales como NC Viewer.
+
+
+# Galería Fotográfica y Evidencia de Práctica - Maquinado CNC
+
+A continuación se presentan las evidencias visuales del proceso completo realizado en el Fab Lab Puebla (Ibero Puebla):
+
+### 1. Software CAD/CAM (VCarve Pro)
+![VCarve Pro](../imVS/Vcarve.png)
+*Software **VCarve Pro** utilizado para el diseño vectorial, configuración de trayectorias CAM y generación de los códigos de maquinado para los routers CNC.*
+
+---
+
+### 2. Router CNC y Cama de Sacrificio
+![Router CNC y Cama](../imVS/camacnc.jpeg)
+*Vista general del Router CNC Asia Robótica Shop-1325 en el Fab Lab Puebla. Se aprecia la lámina de material sobre la **cama de sacrificio** (tablero de madera inferior diseñado para recibir posibles sobrecortes o pasadas en profundidad de la fresa sin dañar la estructura metálica de la máquina).*
+
+---
+
+### 3. Cambio y Ajuste de Herramienta
+![Ajuste de Cabezal](../imVS/cabcnc.jpeg)
+*Procedimiento de cambio y apriete de la herramienta de corte en el husillo empleando **llaves inglesas / ajustables** para asegurar el correcto bloqueo del mandril (*collet*) y la fresa.*
+
+---
+
+### 4. Consola de Control y Calibración (NK105)
+![Control CNC](../imVS/concnc.jpeg)
+*Controlador portátil **NK105** utilizado para el posicionamiento manual de los ejes (*Jog*), definición de ceros de pieza, calibración y supervisión de las coordenadas de trabajo ($X, Y, Z$).*
+
+---
+
+### 5. Sistema de Extracción de Viruta y Polvo
+![Extracción de Polvo](../imVS/imcnc.jpeg)
+*Operación del sistema de aspirado (*Vacuum Extractor*) mediante manguera flexible para la recolección continua de residuos y polvo fino durante el maquinado de polímeros y tableros.*
+
+**descargas:**
+[Descargar Modelo code G hecho en clase (.zip)](../Archi/CNC.zip)
