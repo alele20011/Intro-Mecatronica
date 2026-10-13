@@ -230,5 +230,19 @@ A continuación se presentan las evidencias visuales del proceso completo realiz
 ![Extracción de Polvo](../imVS/imcnc.jpeg)
 *Operación del sistema de aspirado (*Vacuum Extractor*) mediante manguera flexible para la recolección continua de residuos y polvo fino durante el maquinado de polímeros y tableros.*
 
+### 6. Segundo corte
+![Extracción de Polvo](../imVS/Torta2d.jpeg)
+*Visualizacion en 2D de la tortuga en VcarvePro*
+
+![Extracción de Polvo](../imVS/Torta3d.jpeg)
+*Visualizacion en 3D de la tortuga en VcarvePro*
+
+![Extracción de Polvo](../imVS/Torta.jpeg)
+*VResultado del corte en la maquina CNC*
+
+Video del proceso:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_vCUqMYiC2Q?si=z2w5lXxL_bDVHB3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 **descargas:**
 [Descargar Modelo code G hecho en clase (.zip)](../Archi/CNC.zip)
