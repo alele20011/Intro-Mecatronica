@@ -48,6 +48,48 @@ Diseñar y construir un robot móvil tipo carrito para competir y ganar el torne
    - **Línea de Potencia:** 4 pilas AA recargables para alimentar el driver TB6612FNG, motores y servo.
    - **Referencia Común:** Conexión de masa compartida (GND Común) entre ambas fuentes.
 
+
+
+## Esquemático de Conexiones Eléctricas
+
+Para garantizar un montaje compacto, libre de vibraciones y sin falsos contactos por protoboard, se realizó soldadura al aire utilizando cables jumper hembra-hembra:
+
+- **ESP32 DevKit V1 (Alimentación Lógica):**
+  - Conectado mediante cable USB a la **PowerBank** independiente.
+- **Driver TB6612FNG (Potencia y Motores):**
+  - Pin `VM` $\to$ Positivo del Portapilas AA (4 pilas AA recargables / $6\text{V}$).
+  - Pin `VCC` $\to$ Línea de 3.3V del ESP32 (o lógica común).
+  - Pin `GND` $\to$ GND Común (unido al GND de la PowerBank y del ESP32).
+  - Pines `PWMA` $\to$ GPIO 14 (ESP32)
+  - Pines `AIN1`, `AIN2` $\to$ GPIO 27, GPIO 26 (ESP32)
+  - Pines `BIN1`, `BIN2` $\to$ GPIO 25, GPIO 33 (ESP32)
+  - Pines `PWMB` $\to$ GPIO 32 (ESP32)
+  - Pin `STBY` $\to$ GPIO 4 (mantenido en `HIGH` para habilitar el driver).
+- **Servomotor SG90 (Mecanismo de Tiro):**
+  - Cable de Señal (Naranja/Amarillo) $\to$ GPIO 13 (ESP32).
+  - Cable de VCC (Rojo) $\to$ Positivo de la línea de potencia / 5V.
+  - Cable de GND (Café/Negro) $\to$ GND Común.
+- **Decoración Opcional:**
+  - 2 LEDs con resistencia limitadora conectados a una pila de $9\text{V}$ auxiliar para iluminación estética del chasis.
+
+---
+
+## Protocolo de Comandos de Control (Mando de Xbox por BLE)
+
+El mapeo de entradas del control inalámbrico sobre el firmware del ESP32 opera de la siguiente manera:
+
+| Elemento del Mando | Acción / Comando Asociado | Función en el Robot |
+| :--- | :--- | :--- |
+| **Palanca Izquierda (Eje Y)** | `s.leftStickY` | Avance lineal (adelante / atrás) con zona muerta de $0.12$. |
+| **Palanca Izquierda (Eje X)** | `s.leftStickX` | Giro diferencial tipo arcade (izquierda / derecha). |
+| **Botón RB** | `rightBumper` | Sube el nivel de velocidad actual (`NIVELES[0] $\to$ [1] $\to$ [2]`). |
+| **Botón LB** | `leftBumper` | Baja el nivel de velocidad actual (`NIVELES[2] $\to$ [1] $\to$ [0]`). |
+| **Gatillo Izquierdo (LT)** | `leftTrigger > 0.5` | Activa el modo **TURBO** (`PWM_TURBO = 255`, aceleración rápida). |
+| **Botón A / Gatillo Derecho (RT)** | `buttonA` / `rightTrigger > 0.5` | Acciona el **Mecanismo de Tiro** (servo SG90 de reposo a $90^\circ$). |
+| **Botón B** | `buttonB` | **Paro de emergencia** inmediato (corta PWM a los motores). |
+| **Conexión Inalámbrica** | `controller.isConnected()` | **Sistema Failsafe (R4):** Si se pierde el enlace Bluetooth, detiene los motores de inmediato y parpadea el LED indicador. |
+
+---
 ---
 
 ## 4. Presupuesto Real y BOM (Bill of Materials)
