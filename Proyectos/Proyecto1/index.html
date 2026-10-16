@@ -1,0 +1,1813 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Propuesta/">
+      
+      
+        <link rel="next" href="../../Reflexiones/VisionMecatronica/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Proyecto 1 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#carrito-de-futbol-robotico-esp32" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Requisitos del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Requisitos del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-requisitos-obligatorios-funcionales-y-de-restriccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Requisitos Obligatorios (Funcionales y de Restricción)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-requisitos-propios-e-innovaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Requisitos Propios e Innovaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arquitectura-del-sistema-diagrama-en-bloques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arquitectura del Sistema (Diagrama en Bloques)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esquematico-de-conexiones-electricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquemático de Conexiones Eléctricas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-de-comandos-de-control-mando-de-xbox-por-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Comandos de Control (Mando de Xbox por BLE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ---
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-presupuesto-real-y-bom-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Presupuesto Real y BOM (Bill of Materials)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-implementacion-del-codigo-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Implementación del Código (Firmware)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decisiones-de-diseno-e-innovacion-durante-el-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Decisiones de Diseño e Innovación Durante el Desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-criterios-de-exito-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Criterios de Éxito y Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-evidencias-fotograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Evidencias Fotográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bitacora-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bitacora video:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-hitos-y-entregables-del-proyecto-viernes-16102026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mediciones-y-analisis-requisitos-vs-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mediciones y Análisis (Requisitos vs. Resultados)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lecciones-aprendidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lecciones Aprendidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufactura Aditiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/midit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquinas del IDIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/CNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNC Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Requisitos del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Requisitos del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-requisitos-obligatorios-funcionales-y-de-restriccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Requisitos Obligatorios (Funcionales y de Restricción)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-requisitos-propios-e-innovaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Requisitos Propios e Innovaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arquitectura-del-sistema-diagrama-en-bloques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arquitectura del Sistema (Diagrama en Bloques)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esquematico-de-conexiones-electricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquemático de Conexiones Eléctricas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-de-comandos-de-control-mando-de-xbox-por-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Comandos de Control (Mando de Xbox por BLE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ---
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-presupuesto-real-y-bom-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Presupuesto Real y BOM (Bill of Materials)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-implementacion-del-codigo-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Implementación del Código (Firmware)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decisiones-de-diseno-e-innovacion-durante-el-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Decisiones de Diseño e Innovación Durante el Desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-criterios-de-exito-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Criterios de Éxito y Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-evidencias-fotograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Evidencias Fotográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bitacora-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bitacora video:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-hitos-y-entregables-del-proyecto-viernes-16102026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mediciones-y-analisis-requisitos-vs-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mediciones y Análisis (Requisitos vs. Resultados)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lecciones-aprendidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lecciones Aprendidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="carrito-de-futbol-robotico-esp32">Carrito de Fútbol Robótico - ESP32</h1>
+<p>Repositorio oficial del proyecto de robot móvil tipo carrito desarrollado para la competencia de fútbol robótico. Este sistema integra un control inalámbrico mediante un mando de Xbox vía Bluetooth, tracción de alta precisión, un chasis defensivo diseñado en SolidWorks y un mecanismo de tiro dinámico accionado por servomotor.</p>
+<hr />
+<h2 id="1-objetivo-del-proyecto">1. Objetivo del Proyecto</h2>
+<p>Diseñar y construir un robot móvil tipo carrito para competir y ganar el torneo de fútbol robótico. El sistema integra un control inalámbrico preciso mediante Bluetooth (control de Xbox), un chasis ergonómico y defensivo, y mecanismos específicos para maniobrar y anotar goles, garantizando una alta competitividad y el cumplimiento estricto de los estándares de seguridad y funcionamiento.</p>
+<hr />
+<h2 id="2-requisitos-del-sistema">2. Requisitos del Sistema</h2>
+<h3 id="21-requisitos-obligatorios-funcionales-y-de-restriccion">2.1. Requisitos Obligatorios (Funcionales y de Restricción)</h3>
+<ul>
+<li><strong>R1. Control Bluetooth:</strong> Movimiento en direcciones básicas (adelante, atrás, izquierda, derecha y alto) mediante comandos del mando de Xbox por Bluetooth.</li>
+<li><strong>R2. Control de Velocidad:</strong> Variación de velocidad mediante PWM con 3 niveles definidos, gestionados mediante los botones superiores (RB para subir, LB para bajar).</li>
+<li><strong>R3. Documentación del Protocolo:</strong> Documentación técnica completa en el repositorio sobre el mapeo de comandos y código fuente.</li>
+<li><strong>R4. Sistema Failsafe:</strong> Detención automática inmediata del vehículo si se pierde la conexión inalámbrica con el control.</li>
+<li><strong>R5. Interruptor Físico:</strong> Interruptor principal de encendido/apagado accesible desde el exterior sin necesidad de desarmar la estructura.</li>
+<li><strong>R6. Alimentación Separada:</strong> Líneas de alimentación independientes para motores (pilas AA) y para el microcontrolador ESP32 (PowerBank), compartiendo una línea de tierra (GND) común.</li>
+<li><strong>R7. Cableado Ordenado:</strong> Enrutamiento de cables protegido y optimizado sin protoboard, soldando al aire y uniendo pines mediante jumpers hembra-hembra para ahorrar espacio.</li>
+<li><strong>R8. Superficie Plana Superior:</strong> Área plana horizontal despejada en la parte superior para colocar el marcador ArUco del proyecto.</li>
+<li><strong>Restricción de Dimensiones:</strong> Huella máxima de <span class="arithmatex">\(20 \times 20\text{ cm}\)</span> para asegurar maniobrabilidad en cancha.</li>
+</ul>
+<h3 id="22-requisitos-propios-e-innovaciones">2.2. Requisitos Propios e Innovaciones</h3>
+<ul>
+<li><strong>Tracción Omnidireccional / Ruedas Especiales:</strong> Integración de llantas con desplazamiento fluido y rueda loca delantera.</li>
+<li><strong>Control Inalámbrico Avanzado (Mando de Xbox):</strong> Sustitución de la aplicación móvil original por un control de Xbox para eliminar problemas de latencia y pérdida de conexión.</li>
+<li><strong>Mecanismo de Tiro Dinámico:</strong> Sistema de pateo frontal accionado por un servomotor SG90 (simulando la palanca de un pinball) y activado mediante el gatillo derecho. Boost de velocidad con el gatillo izquierdo.</li>
+<li><strong>Chasis Defensivo y Protegido:</strong> Diseño exterior ergonómico con una pinza frontal para la portabilidad del balón, protegiendo la electrónica y diseñado en SolidWorks.</li>
+</ul>
+<hr />
+<h2 id="3-arquitectura-del-sistema-diagrama-en-bloques">3. Arquitectura del Sistema (Diagrama en Bloques)</h2>
+<ol>
+<li><strong>Capa de Control (Interfaz de Usuario)</strong></li>
+<li><strong>Mando Inalámbrico:</strong> Control de Xbox conectado por Bluetooth (BLE).</li>
+<li>
+<p><strong>Mapeo de Entradas:</strong> Palanca izquierda para movimiento direccional, RB/LB para velocidad, LT para Turbo, RT/Botón A para mecanismo de tiro, Botón B para paro de emergencia.</p>
+</li>
+<li>
+<p><strong>Capa de Procesamiento y Lógica</strong></p>
+</li>
+<li>
+<p><strong>Microcontrolador ESP32 DevKit V1:</strong> Procesa las señales del control, calcula los valores PWM de los motores, controla el servo de tiro y ejecuta la rutina Failsafe.</p>
+</li>
+<li>
+<p><strong>Capa de Etapa de Potencia y Actuación</strong></p>
+</li>
+<li><strong>Driver TB6612FNG:</strong> Recibe señales PWM y GPIO del ESP32 para controlar la velocidad y dirección de los motores.</li>
+<li>
+<p><strong>Actuadores:</strong> 2 Motores TT con caja reductora y servomotor SG90 para el mecanismo de tiro.</p>
+</li>
+<li>
+<p><strong>Sistema de Alimentación (Líneas Separadas con GND Común)</strong></p>
+</li>
+<li><strong>Línea de Lógica:</strong> PowerBank independiente para alimentar el ESP32 DevKit V1.</li>
+<li><strong>Línea de Potencia:</strong> 4 pilas AA recargables para alimentar el driver TB6612FNG, motores y servo.</li>
+<li><strong>Referencia Común:</strong> Conexión de masa compartida (GND Común) entre ambas fuentes.</li>
+</ol>
+<h2 id="esquematico-de-conexiones-electricas">Esquemático de Conexiones Eléctricas</h2>
+<p>Para garantizar un montaje compacto, libre de vibraciones y sin falsos contactos por protoboard, se realizó soldadura al aire utilizando cables jumper hembra-hembra:</p>
+<ul>
+<li><strong>ESP32 DevKit V1 (Alimentación Lógica):</strong></li>
+<li>Conectado mediante cable USB a la <strong>PowerBank</strong> independiente.</li>
+<li><strong>Driver TB6612FNG (Potencia y Motores):</strong></li>
+<li>Pin <code>VM</code> <span class="arithmatex">\(\to\)</span> Positivo del Portapilas AA (4 pilas AA recargables / <span class="arithmatex">\(6\text{V}\)</span>).</li>
+<li>Pin <code>VCC</code> <span class="arithmatex">\(\to\)</span> Línea de 3.3V del ESP32 (o lógica común).</li>
+<li>Pin <code>GND</code> <span class="arithmatex">\(\to\)</span> GND Común (unido al GND de la PowerBank y del ESP32).</li>
+<li>Pines <code>PWMA</code> <span class="arithmatex">\(\to\)</span> GPIO 14 (ESP32)</li>
+<li>Pines <code>AIN1</code>, <code>AIN2</code> <span class="arithmatex">\(\to\)</span> GPIO 27, GPIO 26 (ESP32)</li>
+<li>Pines <code>BIN1</code>, <code>BIN2</code> <span class="arithmatex">\(\to\)</span> GPIO 25, GPIO 33 (ESP32)</li>
+<li>Pines <code>PWMB</code> <span class="arithmatex">\(\to\)</span> GPIO 32 (ESP32)</li>
+<li>Pin <code>STBY</code> <span class="arithmatex">\(\to\)</span> GPIO 4 (mantenido en <code>HIGH</code> para habilitar el driver).</li>
+<li><strong>Servomotor SG90 (Mecanismo de Tiro):</strong></li>
+<li>Cable de Señal (Naranja/Amarillo) <span class="arithmatex">\(\to\)</span> GPIO 13 (ESP32).</li>
+<li>Cable de VCC (Rojo) <span class="arithmatex">\(\to\)</span> Positivo de la línea de potencia / 5V.</li>
+<li>Cable de GND (Café/Negro) <span class="arithmatex">\(\to\)</span> GND Común.</li>
+<li><strong>Decoración Opcional:</strong></li>
+<li>2 LEDs con resistencia limitadora conectados a una pila de <span class="arithmatex">\(9\text{V}\)</span> auxiliar para iluminación estética del chasis.</li>
+</ul>
+<hr />
+<h2 id="protocolo-de-comandos-de-control-mando-de-xbox-por-ble">Protocolo de Comandos de Control (Mando de Xbox por BLE)</h2>
+<p>El mapeo de entradas del control inalámbrico sobre el firmware del ESP32 opera de la siguiente manera:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Elemento del Mando</th>
+<th style="text-align: left;">Acción / Comando Asociado</th>
+<th style="text-align: left;">Función en el Robot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Palanca Izquierda (Eje Y)</strong></td>
+<td style="text-align: left;"><code>s.leftStickY</code></td>
+<td style="text-align: left;">Avance lineal (adelante / atrás) con zona muerta de <span class="arithmatex">\(0.12\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Palanca Izquierda (Eje X)</strong></td>
+<td style="text-align: left;"><code>s.leftStickX</code></td>
+<td style="text-align: left;">Giro diferencial tipo arcade (izquierda / derecha).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Botón RB</strong></td>
+<td style="text-align: left;"><code>rightBumper</code></td>
+<td style="text-align: left;">Sube el nivel de velocidad actual (<code>NIVELES[0] $\to$ [1] $\to$ [2]</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Botón LB</strong></td>
+<td style="text-align: left;"><code>leftBumper</code></td>
+<td style="text-align: left;">Baja el nivel de velocidad actual (<code>NIVELES[2] $\to$ [1] $\to$ [0]</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gatillo Izquierdo (LT)</strong></td>
+<td style="text-align: left;"><code>leftTrigger &gt; 0.5</code></td>
+<td style="text-align: left;">Activa el modo <strong>TURBO</strong> (<code>PWM_TURBO = 255</code>, aceleración rápida).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Botón A / Gatillo Derecho (RT)</strong></td>
+<td style="text-align: left;"><code>buttonA</code> / <code>rightTrigger &gt; 0.5</code></td>
+<td style="text-align: left;">Acciona el <strong>Mecanismo de Tiro</strong> (servo SG90 de reposo a <span class="arithmatex">\(90^\circ\)</span>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Botón B</strong></td>
+<td style="text-align: left;"><code>buttonB</code></td>
+<td style="text-align: left;"><strong>Paro de emergencia</strong> inmediato (corta PWM a los motores).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexión Inalámbrica</strong></td>
+<td style="text-align: left;"><code>controller.isConnected()</code></td>
+<td style="text-align: left;"><strong>Sistema Failsafe (R4):</strong> Si se pierde el enlace Bluetooth, detiene los motores de inmediato y parpadea el LED indicador.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">---</h2>
+<h2 id="4-presupuesto-real-y-bom-bill-of-materials">4. Presupuesto Real y BOM (Bill of Materials)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Componente</th>
+<th style="text-align: left;">Función / Descripción</th>
+<th style="text-align: left;">Estado / Origen</th>
+<th style="text-align: left;">Costo Real (MXN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ESP32 DevKit V1</strong></td>
+<td style="text-align: left;">Microcontrolador principal</td>
+<td style="text-align: left;">Prestado / Universidad</td>
+<td style="text-align: left;">$0.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Driver TB6612FNG</strong></td>
+<td style="text-align: left;">Controlador de potencia para motores</td>
+<td style="text-align: left;">Prestado / Universidad</td>
+<td style="text-align: left;">$0.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Motores TT (2 uds.)</strong></td>
+<td style="text-align: left;">Sistema de tracción con caja reductora</td>
+<td style="text-align: left;">Prestado / Universidad</td>
+<td style="text-align: left;">$0.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Llantas y Ruedas</strong></td>
+<td style="text-align: left;">Desplazamiento y tracción</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$40.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rueda Loca</strong></td>
+<td style="text-align: left;">Soporte y giro frontal</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$15.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Servomotor SG90</strong></td>
+<td style="text-align: left;">Mecanismo de tiro (pateador)</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$30.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pilas Recargables AA (4 uds.)</strong></td>
+<td style="text-align: left;">Alimentación de motores y potencia</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$300.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Portapilas AA</strong></td>
+<td style="text-align: left;">Contenedor de baterías</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$20.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Jumpers (Hembra-Hembra)</strong></td>
+<td style="text-align: left;">Conexiones eléctricas sin protoboard</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$30.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Barras de Silicón</strong></td>
+<td style="text-align: left;">Sujeción y seguridad estructural</td>
+<td style="text-align: left;">Comprado</td>
+<td style="text-align: left;">$5.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Chasis Impreso en 3D</strong></td>
+<td style="text-align: left;">Estructura defensiva (<span class="arithmatex">\(20 \times 20\text{ cm}\)</span>)</td>
+<td style="text-align: left;">Impresión propia (Ibero Puebla)</td>
+<td style="text-align: left;">$0.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pintura Acrílica y Soldadura</strong></td>
+<td style="text-align: left;">Estética y uniones fijas</td>
+<td style="text-align: left;">Reutilizado / Material escolar</td>
+<td style="text-align: left;">$0.00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOTAL REAL GASTADO</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$440.00 MXN</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-implementacion-del-codigo-firmware">5. Implementación del Código (Firmware)</h2>
+<p>El código fuente principal desarrollado en C++ (Arduino IDE / VS Code) para el ESP32 se encuentra en la carpeta <code>src/</code> o en el archivo principal. A continuación se muestra un resumen de las librerías y configuración base utilizadas:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BLEGamepadClient.h&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP32Servo.h&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BluetoothSerialConnect.h&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Definición de pines para el driver TB6612FNG y servomotor SG90</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinPWMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinAIN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">27</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinAIN2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinBIN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinBIN2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinPWMB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinSTBY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinSERVO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="6-decisiones-de-diseno-e-innovacion-durante-el-desarrollo">6. Decisiones de Diseño e Innovación Durante el Desarrollo</h2>
+<ul>
+<li><strong>Cambio de App Móvil a Control de Xbox:</strong> Durante las pruebas iniciales se diseñó una aplicación en MIT App Inventor; sin embargo, se identificó alta latencia y pérdida de conexión Bluetooth. Se migró exitosamente a un mando de Xbox por BLE, garantizando un control firme, ergonómico y con respuesta inmediata.</li>
+<li><strong>Optimización de Espacio (Sin Protoboard):</strong> Se eliminó el uso de protoboards para evitar falsos contactos por vibración en la cancha. Todo el circuito se ensambló mediante soldadura al aire y unión directa de pines con cables jumper hembra-hembra.</li>
+<li><strong>Mecanismo de Tiro Tipo Pinball:</strong> Se implementó un brazo accionado por un servo SG90 en la parte frontal del carrito, integrado con una pinza recolectora para facilitar el transporte del balón de fútbol.</li>
+<li><strong>Alimentación Aislada:</strong> Se empleó una PowerBank dedicada exclusivamente al ESP32 para evitar reinicios por picos de corriente generados al arrancar los motores de corriente directa alimentados por las pilas AA.</li>
+</ul>
+<hr />
+<h2 id="7-criterios-de-exito-y-conclusiones">7. Criterios de Éxito y Conclusiones</h2>
+<ul>
+<li>Cumplimiento exitoso de los requisitos funcionales (R1 a R8) y restricciones de dimensiones (<span class="arithmatex">\(20 \times 20\text{ cm}\)</span>).</li>
+<li>Excelente estabilidad de conexión inalámbrica gracias al control de Xbox y el sistema Failsafe.</li>
+<li>Desempeño óptimo en cancha, logrando una estructura defensiva robusta, bajo costo de producción ($440 MXN totales) y gran agilidad ofensiva.</li>
+</ul>
+<p>se uso claude para el diseño del codigo del carrito y su programación</p>
+<h2 id="8-evidencias-fotograficas">8. Evidencias Fotográficas</h2>
+<p>A continuación se presentan las evidencias fotográficas del desarrollo, ensamble y pruebas finales del carrito de fútbol robótico:</p>
+<p><img alt="Circuito inicial montado sin protoboard, realizando soldadura al aire y unión por jumpers" src="../../imVS/solcar.jpg" />
+<em>Figura 1: Circuito inicial montado sin protoboard, realizando soldadura al aire y unión por jumpers.</em></p>
+<p><img alt="Carrito terminado y pintado con acabado inspirado en temática de carreras" src="../../imVS/carsemi.jpg" />
+<em>Figura 2: Carrito terminado y pintado con acabado inspirado en temática de carreras.</em></p>
+<p><img alt="Proceso de soldadura de componentes y conexiones de energía" src="../../imVS/solding.jpg" />
+<em>Figura 3: Proceso de soldadura de componentes y conexiones de energía.</em></p>
+<p><img alt="Detalle del servomotor SG90 utilizado para el mecanismo de tiro tipo pinball" src="../../imVS/servito.jpg" />
+<em>Figura 4: Detalle del servomotor SG90 utilizado para el mecanismo de tiro tipo pinball.</em></p>
+<p><img alt="Vista inferior del chasis impreso en 3D mostrando el montaje y cableado" src="../../imVS/conph.jpg" />
+<em>Figura 5: Vista inferior del chasis impreso en 3D mostrando el montaje y cableado.</em></p>
+<p><img alt="Plano de diseño CAD en SolidWorks con acotaciones del chasis (20 x 20 cm)" src="../../imVS/carsld.jpg" />
+<em>Figura 6: Plano de diseño CAD en SolidWorks con acotaciones del chasis (20 x 20 cm).</em></p>
+<p><img alt="Medición de dimensiones de rueda mediante vernier" src="../../imVS/llanm.jpg" />
+<em>Figura 7: Medición de dimensiones de rueda mediante vernier.</em></p>
+<p><img alt="Validación física de las ranuras y dimensiones del chasis impreso" src="../../imVS/carhoyo.jpg" />
+<em>Figura 8: Validación física de las ranuras y dimensiones del chasis impreso.</em></p>
+<p><img alt="Vista lateral del carrito con su pinza recolectora frontal y acabado final" src="../../imVS/Carfin.jpg" />
+<em>Figura 9: Vista lateral del carrito con su pinza recolectora frontal y acabado final.</em></p>
+<p><img alt="Prueba de ensamblaje del chasis en la universidad frente a estación de trabajo" src="../../imVS/dedhoy.jpg" />
+<em>Figura 10: Prueba de ensamblaje del chasis en la universidad frente a estación de trabajo.</em></p>
+<hr />
+<h2 id="8-bitacora-video">8. Bitacora video:</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EX8kxQPZQSs?si=XA1uuw8CVkubjnll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="9-hitos-y-entregables-del-proyecto-viernes-16102026">9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)</h2>
+<ul>
+<li><strong>Carro Funcional:</strong> Operación continua cumpliendo los requisitos R1 a R8, validado mediante rúbrica antes del inicio del torneo.</li>
+<li><strong>Repositorio Publicado:</strong> Código fuente documentado y comentado, diagrama de conexiones, protocolo de comandos de control y este archivo README detallado.</li>
+<li><strong>Video de Demostración:</strong> Grabación de prueba de campo (menor o igual a 2 minutos) integrada en el portafolio del equipo.</li>
+</ul>
+<h3 id="mediciones-y-analisis-requisitos-vs-resultados">Mediciones y Análisis (Requisitos vs. Resultados)</h3>
+<ul>
+<li><strong>Huella del Chasis:</strong> </li>
+<li><em>Requisito:</em> <span class="arithmatex">\(\le 20 \times 20\text{ cm}\)</span>.</li>
+<li><em>Resultado:</em> <span class="arithmatex">\(15 \times 13\text{ cm}\)</span> (diseño optimizado en SolidWorks, cumpliendo holgadamente).</li>
+<li><strong>Velocidad Máxima:</strong></li>
+<li><em>Teórica (según parámetros cinemáticos y ejercicio de Mecanismos):</em> <span class="arithmatex">\(0.80\text{ m/s}\)</span>.</li>
+<li><em>Real Medida con PWM al 100% (Turbo):</em> <span class="arithmatex">\(0.68\text{ m/s}\)</span>. </li>
+<li><em>Análisis:</em> La ligera reducción se debe a la caída de tensión bajo carga en las pilas AA y la fricción del terreno de juego.</li>
+</ul>
+<h3 id="lecciones-aprendidas">Lecciones Aprendidas</h3>
+<ol>
+<li><strong>Conectividad Inalámbrica:</strong> Las apps personalizadas por Bluetooth clásico (SPP) son propensas a latencia en entornos competitivos saturados; el uso de protocolos BLE con mandos comerciales de consola (Xbox) ofrece una robustez muy superior.</li>
+<li><strong>Integridad de Potencia:</strong> Aislar la alimentación lógica (PowerBank) de la etapa de potencia (pilas AA) eliminó por completo los reinicios inesperados del ESP32 por picos inductivos de los motores.</li>
+<li><strong>Robustez Mecánica:</strong> La soldadura al aire con refuerzo de termofusible/silicón previene desconexiones por vibración mejor que las protoboards tradicionales.</li>
+</ol>
+<p>Descargar los documentos usados:
+<a href="../../Archi/Carro%20Proyecto.zip">Descargar los archivos del carrito(.zip)</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

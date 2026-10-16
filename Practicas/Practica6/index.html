@@ -1,0 +1,1714 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica5/">
+      
+      
+        <link rel="next" href="../../Proyectos/Propuesta/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 6 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ficha-de-estacion-mecanismos-aplicados" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-evaluacion-de-estaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Evaluación de Estaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-tecnico-aplicado-al-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis Técnico Aplicado al Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análisis Técnico Aplicado al Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dimensiones-y-restricciones-del-carro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dimensiones y Restricciones del Carro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-direccion-diferencial-por-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dirección Diferencial por Software
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-integracion-de-mecanismos-en-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integración de Mecanismos en el Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/Belemm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Belem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Soldadura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/Cortelaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/semana1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufactura Aditiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/midit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquinas del IDIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Oliver/CNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNC Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-evaluacion-de-estaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Evaluación de Estaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-tecnico-aplicado-al-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis Técnico Aplicado al Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análisis Técnico Aplicado al Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dimensiones-y-restricciones-del-carro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dimensiones y Restricciones del Carro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-direccion-diferencial-por-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dirección Diferencial por Software
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-integracion-de-mecanismos-en-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integración de Mecanismos en el Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ficha-de-estacion-mecanismos-aplicados">Ficha de Estación - Mecanismos Aplicados</h1>
+<p><strong>Asignatura:</strong> Introducción a la Mecatrónica<br />
+<strong>Proyecto:</strong> Mecanismos</p>
+<hr />
+<h2 id="tabla-de-evaluacion-de-estaciones">Tabla de Evaluación de Estaciones</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Estación / Mecanismo</th>
+<th style="text-align: left;">¿Qué transforma? <br> <em>(vel <span class="arithmatex">\(\leftrightarrow\)</span> par, rot <span class="arithmatex">\(\leftrightarrow\)</span> trasl, cont <span class="arithmatex">\(\leftrightarrow\)</span> inter, cambio de eje)</em></th>
+<th style="text-align: left;">Relación estimada <br> <em>(cuenta dientes o vueltas)</em></th>
+<th style="text-align: left;">¿Reversible o autobloqueante?</th>
+<th style="text-align: left;">¿Dónde lo has visto en la vida real? <em>(Ejemplos cotidianos)</em></th>
+<th style="text-align: left;">¿Dónde serviría en el carro de fútbol (<span class="arithmatex">\(20 \times 20\text{ cm}\)</span>)?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Diferencial</strong> <em>(Differential)</em></td>
+<td style="text-align: left;"><strong>Cambio de eje (<span class="arithmatex">\(90^\circ\)</span>) + Reparto de Par:</strong> Distribuye el giro del motor a dos ejes independientes ajustando la velocidad de cada uno según la resistencia.</td>
+<td style="text-align: left;"><span class="arithmatex">\(1:1\)</span> (piñón impulsor a caja diferencial); variación dinámica en las salidas.</td>
+<td style="text-align: left;"><strong>Reversible:</strong> Si giras las ruedas con la mano, el eje de entrada gira.</td>
+<td style="text-align: left;"><strong>Autos familiares / Camionetas:</strong> Permite que la rueda externa gire más rápido que la interna al dar una vuelta en una esquina.</td>
+<td style="text-align: left;"><strong>No se usa físicamente:</strong> El carro usa dirección diferencial por software (2 motores amarillos independientes). Serviría si usáramos 1 solo motor principal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Cicloidal</strong> <em>(Cycloidal drive)</em></td>
+<td style="text-align: left;"><strong>Vel <span class="arithmatex">\(\leftrightarrow\)</span> Par:</strong> Reduce drásticamente la velocidad para multiplicar la fuerza de giro (torque) en un tamaño muy compacto.</td>
+<td style="text-align: left;"><span class="arithmatex">\(10\text{ pernos / lóbulos}\)</span>. Relación aproximada <span class="arithmatex">\(10:1\)</span> (<span class="arithmatex">\(1\text{ paso}\)</span> por vuelta completa).</td>
+<td style="text-align: left;"><strong>Autobloqueante / Difícil de revertir:</strong> Debido al roce y contacto constante de los lóbulos.</td>
+<td style="text-align: left;"><strong>Desarmador eléctrico inalámbrico / Taladros pequeños:</strong> Para entregar mucha fuerza para atornillar en un espacio reducido.</td>
+<td style="text-align: left;"><strong>Mecanismo pateador:</strong> Para acumular suficiente fuerza con un motor pequeño y golpear la pelota de ping-pong hacia la portería.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Cardán</strong> <em>(Universal joint)</em></td>
+<td style="text-align: left;"><strong>Transmisión angular:</strong> Transmite rotación continua entre dos ejes que están desalineados o formando un ángulo.</td>
+<td style="text-align: left;"><span class="arithmatex">\(1:1\)</span> (Gira a la misma velocidad en entrada y salida).</td>
+<td style="text-align: left;"><strong>Reversible:</strong> Al girar un eje, el otro responde inmediatamente.</td>
+<td style="text-align: left;"><strong>Extensión flexible de desarmador / Barra de camioneta:</strong> Para apretar tornillos en esquinas o enviar fuerza a las ruedas traseras.</td>
+<td style="text-align: left;"><strong>Ejes inclinados:</strong> Para conectar los motores a las ruedas si el carro tuviera suspensión o las ruedas estuvieran inclinadas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Obturador de láminas</strong> <em>(Aperture / Iris)</em></td>
+<td style="text-align: left;"><strong>Rotación <span class="arithmatex">\(\rightarrow\)</span> Cierre coordinado:</strong> La rotación de una palanca/anillo abre o cierra varias láminas concéntricamente.</td>
+<td style="text-align: left;"><span class="arithmatex">\(5\text{ láminas}\)</span> sincronizadas por <span class="arithmatex">\(1\text{ palanca/anillo}\)</span>.</td>
+<td style="text-align: left;"><strong>Reversible:</strong> Se abre y cierra manualmente sin trabarse.</td>
+<td style="text-align: left;"><strong>Cámara del celular / Rejilla de aire:</strong> Regula la entrada de luz en la cámara o el paso de aire en una ventilación.</td>
+<td style="text-align: left;"><strong>Atrapador de pelota:</strong> Instalado en el frente para cerrar las láminas levemente sobre la pelota de ping-pong y asegurarla antes de tirar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Cruz de Génova</strong> <em>(Geneva drive)</em></td>
+<td style="text-align: left;"><strong>Cont <span class="arithmatex">\(\rightarrow\)</span> Inter:</strong> Transforma giro continuo en impulsos paso a paso deteniéndose entre cada ciclo.</td>
+<td style="text-align: left;"><span class="arithmatex">\(6\text{ ranuras}\)</span>. <span class="arithmatex">\(1\text{ vuelta}\)</span> del disco mueve la cruz <span class="arithmatex">\(\frac{1}{6}\)</span> de vuelta (<span class="arithmatex">\(60^\circ\)</span>). Relación <span class="arithmatex">\(6:1\)</span>.</td>
+<td style="text-align: left;"><strong>Autobloqueante:</strong> Entre giros la rueda queda fija y trancada mecánicamente.</td>
+<td style="text-align: left;"><strong>Reloj de pared / Dispensador de dulces:</strong> Para mover las manecillas a pasos o soltar una pastilla/dulce a la vez.</td>
+<td style="text-align: left;"><strong>Dispensador de pelotas:</strong> Para alimentar pelotas de ping-pong de una en una al sistema de disparo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6. Corona</strong> <em>(Crown gear)</em></td>
+<td style="text-align: left;"><strong>Cambio de eje (<span class="arithmatex">\(90^\circ\)</span>) + Vel <span class="arithmatex">\(\leftrightarrow\)</span> Par:</strong> Cambia la dirección del giro a <span class="arithmatex">\(90^\circ\)</span> usando un engrane plano.</td>
+<td style="text-align: left;"><span class="arithmatex">\(\approx 28\text{ dientes}\)</span> en la corona y <span class="arithmatex">\(14\)</span> en el piñón. Relación <span class="arithmatex">\(2:1\)</span>.</td>
+<td style="text-align: left;"><strong>Reversible:</strong> Puedes girar el mecanismo desde la corona o desde el piñón.</td>
+<td style="text-align: left;"><strong>Batidora manual de cocina / Taladro de mano:</strong> El mango gira de forma horizontal y mueve los batidores verticales.</td>
+<td style="text-align: left;"><strong>Aprovechamiento de espacio:</strong> Para acostar los motores amarillos dentro del chasis de <span class="arithmatex">\(20 \times 20\text{ cm}\)</span> y transmitir el giro a las ruedas.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="analisis-tecnico-aplicado-al-proyecto">Análisis Técnico Aplicado al Proyecto</h2>
+<h3 id="1-dimensiones-y-restricciones-del-carro">1. Dimensiones y Restricciones del Carro</h3>
+<ul>
+<li><strong>Chasis:</strong> <span class="arithmatex">\(20 \times 20\text{ cm}\)</span>.</li>
+<li><strong>Actuadores:</strong> <span class="arithmatex">\(2\)</span> Motores reductores amarillos (relación interna <span class="arithmatex">\(1:48\)</span>).</li>
+<li><strong>Controlador de Potencia:</strong> Puente H (L298N / TB6612FNG) controlado por Bluetooth.</li>
+<li><strong>Objetivo Dinámico:</strong> Manipular y anotar una pelota de ping-pong (diámetro <span class="arithmatex">\(\approx 40\text{ mm}\)</span>, masa <span class="arithmatex">\(\approx 2.7\text{ g}\)</span>).</li>
+</ul>
+<h3 id="2-direccion-diferencial-por-software">2. Dirección Diferencial por Software</h3>
+<p>En lugar de utilizar un mecanismo físico de <strong>Diferencial (Mecanismo 1)</strong>, el proyecto implementa dirección diferencial electrónica.
+* <strong>Avance en línea recta:</strong><br />
+  $<span class="arithmatex">\(v_{\text{der}} = v_{\text{izq}} \implies \omega = 0\)</span>$
+* <strong>Giro sobre su propio eje (rotación dentro del espacio de <span class="arithmatex">\(20 \times 20\text{ cm}\)</span>):</strong><br />
+  $<span class="arithmatex">\(v_{\text{der}} = -v_{\text{izq}} \implies v_{\text{centro}} = 0, \quad \omega = \frac{2 \cdot v_{\text{der}}}{L}\)</span>$
+  Donde <span class="arithmatex">\(L\)</span> es la distancia entre ruedas (<span class="arithmatex">\(L \approx 0.16\text{ m}\)</span>).</p>
+<h3 id="3-integracion-de-mecanismos-en-el-proyecto">3. Integración de Mecanismos en el Proyecto</h3>
+<ol>
+<li><strong>Reductor Cicloidal (Mecanismo 2):</strong> Permite obtener gran par en un tamaño compacto para accionar el percutor o pateador de la pelota.</li>
+<li><strong>Obturador de Láminas (Mecanismo 4):</strong> Ubicado en la bahía frontal para sujetar la pelota de ping-pong mientras el carro maniobra en la cancha.</li>
+<li><strong>Engranaje Corona (Mecanismo 6):</strong> Ayuda a reorientar la transmisión de potencia a <span class="arithmatex">\(90^\circ\)</span> optimizando la distribución de componentes en el chasis de <span class="arithmatex">\(20 \times 20\text{ cm}\)</span>.</li>
+</ol>
+<h1 id="anexo-galeria-de-mecanismos-mecanicos">Anexo: Galería de Mecanismos Mecánicos</h1>
+<p>En esta sección se presentan los modelos físicos impresos en 3D correspondientes a los distintos mecanismos analizados en este reporte.</p>
+<blockquote>
+<p><strong>Nota para VS Code:</strong> Asegúrate de guardar las imágenes dentro de una carpeta llamada <code>assets</code> o <code>images</code> en la misma raíz que este archivo <code>.md</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-rueda-de-ginebra-geneva-drive">1. Rueda de Ginebra (Geneva Drive)</h2>
+<p><img alt="Rueda de Ginebra" src="../../imVS/cgin.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Mecanismo de movimiento intermitente.</li>
+<li><strong>Descripción:</strong> Transforma un movimiento de rotación continuo en un movimiento de rotación intermitente. Es utilizado frecuentemente en proyectores de cine, contadores mecánicos y maquinaria de envasado.</li>
+</ul>
+<hr />
+<h2 id="2-engranaje-intermitente-intermittent-gear">2. Engranaje Intermitente (Intermittent Gear)</h2>
+<p><img alt="Engranaje Intermitente" src="../../imVS/inter.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Transmisión discontinua.</li>
+<li><strong>Descripción:</strong> Diseñado con sectores lisos sin dientes para detener temporalmente la rotación del engranaje conducido durante la marcha constante del engranaje conductor.</li>
+</ul>
+<hr />
+<h2 id="3-pinon-y-cremallera-rack-pinion">3. Piñón y Cremallera (Rack &amp; Pinion)</h2>
+<p><img alt="Piñón y Cremallera" src="./images/IMG_0650.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Transformación de movimiento rotativo a lineal.</li>
+<li><strong>Descripción:</strong> Transforma un movimiento de rotación en un movimiento de traslación lineal (o viceversa) mediante el acoplamiento de una rueda dentada circular (piñón) sobre una barra dentada recta (cremallera). Ampliamente utilizado en sistemas de dirección automotriz y ferrocarriles de cremallera.</li>
+</ul>
+<hr />
+<h2 id="4-junta-cardan-universal-joint">4. Junta Cardán (Universal Joint)</h2>
+<p><img alt="Junta Cardán" src="../../imVS/card.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Acoplamiento flexible de ejes.</li>
+<li><strong>Descripción:</strong> Permite la transmisión de par y movimiento de rotación entre dos ejes que no están alineados y cuyo ángulo de trabajo puede variar.</li>
+</ul>
+<hr />
+<h2 id="5-diafragma-iris-iris-mechanism">5. Diafragma Iris (Iris Mechanism)</h2>
+<p><img alt="Diafragma Iris" src="../../imVS/op.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Obturador regulable de apertura.</li>
+<li><strong>Descripción:</strong> Conjunto de mallas u hojas superpuestas que ajustan circularmente el tamaño de una apertura central, utilizado principalmente en sistemas ópticos y cámaras.</li>
+</ul>
+<hr />
+<h2 id="6-reductor-cicloidal-cycloidal-drive">6. Reductor Cicloidal (Cycloidal Drive)</h2>
+<p><img alt="Reductor Cicloidal" src="../../imVS/ciclo.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Reductor de velocidad de alta precisión.</li>
+<li><strong>Descripción:</strong> Mecanismo reductor de gran relación de transmisión basado en el perfil de dientes cicloidales. Ofrece alta rigidez, baja holgura (<em>backlash</em>) y alta capacidad de carga.</li>
+</ul>
+<hr />
+<h2 id="7-diferencial-differential-gear">7. Diferencial (Differential Gear)</h2>
+<p><img alt="Diferencial" src="../../imVS/dif.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Tren cónico de transmisión.</li>
+<li><strong>Descripción:</strong> Permite que las ruedas o ejes de salida giren a diferentes velocidades angulares mientras se mantiene la transmisión de par desde una fuente común.</li>
+</ul>
+<hr />
+<h2 id="8-engranaje-corona-crown-gear">8. Engranaje Corona (Crown Gear)</h2>
+<p><img alt="Engranaje Corona" src="../../imVS/crown.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Engranaje de ejes perpendiculares.</li>
+<li><strong>Descripción:</strong> Engranaje cuya dentadura se proyecta perpendicularmente a la cara de la rueda, permitiendo cambiar la dirección del eje de rotación <span class="arithmatex">\(90^\circ\)</span>.</li>
+</ul>
+<hr />
+<h2 id="9-tornillo-sin-fin-y-corona-worm-wormwheel">9. Tornillo Sin Fin y Corona (Worm &amp; Wormwheel)</h2>
+<p><img alt="Tornillo Sin Fin y Corona" src="../../imVS/WW.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Transmisión por tornillo sin fin.</li>
+<li><strong>Descripción:</strong> Ofrece una alta relación de reducción en un espacio compacto y, en la mayoría de los casos, cuenta con la propiedad de autobloqueo (no reversible desde la corona hacia el tornillo).</li>
+</ul>
+<hr />
+<h2 id="10-engranaje-conico-bevel-gear">10. Engranaje Cónico (Bevel Gear)</h2>
+<p><img alt="Engranaje Cónico" src="../../imVS/IMG_0650.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Transmisión cónica angular.</li>
+<li><strong>Descripción:</strong> Empleado para transmitir potencia entre ejes que se intersectan, comúnmente a <span class="arithmatex">\(90^\circ\)</span>, mediante dientes cónicos o helicoidales.</li>
+</ul>
+<hr />
+<h2 id="11-engranaje-planetario-planetary-gear">11. Engranaje Planetario (Planetary Gear)</h2>
+<p><img alt="Engranaje Planetario" src="../../imVS/planet.jpeg" /></p>
+<ul>
+<li><strong>Tipo de mecanismo:</strong> Tren de engranajes epicicloidal.</li>
+<li><strong>Descripción:</strong> Compuesto por un engranaje solar central, satélites (planetas) y una corona exterior. Proporciona altas relaciones de reducción en un espacio concéntrico y compacto.</li>
+</ul>
+<p>Video de su funcionamiento:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oMKeSQRYoyo?si=81yReZKp_H0KJE1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<hr />
+<h1 id="resolucion-de-ejercicios-de-mecanica-y-reducciones">Resolució́n de Ejercicios de Mecá́nica y Reducciones</h1>
+<h2 id="ejercicio-1-tren-simple"><strong>Ejercicio 1: Tren simple</strong></h2>
+<p>Un piñón de <span class="arithmatex">\(10\)</span> dientes mueve un engrane de <span class="arithmatex">\(40\)</span> dientes. El motor entrega <span class="arithmatex">\(300\text{ rpm}\)</span> y <span class="arithmatex">\(0.1\text{ N}\cdot\text{m}\)</span>. ¿A qué velocidad y con qué par gira la salida? <em>(Ignorar pérdidas por fricción)</em>.</p>
+<h3 id="datos"><strong>Datos:</strong></h3>
+<ul>
+<li>
+<p>Número de dientes del piñón (entrada): <span class="arithmatex">\(Z_1 = 10\)</span></p>
+</li>
+<li>
+<p>Número de dientes del engrane (salida): <span class="arithmatex">\(Z_2 = 40\)</span></p>
+</li>
+<li>
+<p>Velocidad de entrada: <span class="arithmatex">\(n_1 = 300\text{ rpm}\)</span></p>
+</li>
+<li>
+<p>Torque/Par de entrada: <span class="arithmatex">\(T_1 = 0.1\text{ N}\cdot\text{m}\)</span></p>
+</li>
+</ul>
+<h3 id="procedimiento"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Relación de transmisión (</strong><span class="arithmatex">\(i\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+i = \frac{Z_2}{Z_1} = \frac{40}{10} = 4
+\]</div>
+<p><em>(La relación es</em> <span class="arithmatex">\(1:4\)</span> <em>o de valor</em> <span class="arithmatex">\(i = 4\)</span><em>)</em></p>
+<ol>
+<li><strong>Velocidad de salida (</strong><span class="arithmatex">\(n_2\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+n_2 = \frac{n_1}{i} = \frac{300\text{ rpm}}{4} = 75\text{ rpm}
+\]</div>
+<ol>
+<li><strong>Par / Torque de salida (</strong><span class="arithmatex">\(T_2\)</span><strong>):</strong>
+   <em>Asumiendo conservación de potencia sin pérdidas (</em><span class="arithmatex">\(P = T \cdot \omega\)</span><em>):</em></li>
+</ol>
+<div class="arithmatex">\[
+T_2 = T_1 \cdot i = 0.1\text{ N}\cdot\text{m} \times 4 = 0.4\text{ N}\cdot\text{m}
+\]</div>
+<h3 id="resultado"><strong>Resultado:</strong></h3>
+<ul>
+<li>
+<p><strong>Velocidad de salida:</strong> <span class="arithmatex">\(75\text{ rpm}\)</span></p>
+</li>
+<li>
+<p><strong>Par de salida:</strong> <span class="arithmatex">\(0.4\text{ N}\cdot\text{m}\)</span></p>
+</li>
+</ul>
+<h2 id="ejercicio-2-tren-compuesto"><strong>Ejercicio 2: Tren compuesto</strong></h2>
+<p>Dos etapas en serie: <span class="arithmatex">\(12 \to 36\)</span> dientes, seguida de <span class="arithmatex">\(10 \to 40\)</span> dientes. ¿Cuál es la relación total? Si la entrada gira a <span class="arithmatex">\(960\text{ rpm}\)</span>, ¿a qué velocidad gira la salida final?</p>
+<h3 id="datos_1"><strong>Datos:</strong></h3>
+<ul>
+<li>
+<p>Etapa 1: <span class="arithmatex">\(Z_1 = 12 \to Z_2 = 36\)</span></p>
+</li>
+<li>
+<p>Etapa 2: <span class="arithmatex">\(Z_3 = 10 \to Z_4 = 40\)</span></p>
+</li>
+<li>
+<p>Velocidad de entrada: <span class="arithmatex">\(n_{\text{entrada}} = 960\text{ rpm}\)</span></p>
+</li>
+</ul>
+<h3 id="procedimiento_1"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Relación de la primera etapa (</strong><span class="arithmatex">\(i_1\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+i_1 = \frac{Z_2}{Z_1} = \frac{36}{12} = 3
+\]</div>
+<ol>
+<li><strong>Relación de la segunda etapa (</strong><span class="arithmatex">\(i_2\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+i_2 = \frac{Z_4}{Z_3} = \frac{40}{10} = 4
+\]</div>
+<ol>
+<li><strong>Relación de transmisión total (</strong><span class="arithmatex">\(i_{\text{total}}\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+i_{\text{total}} = i_1 \times i_2 = 3 \times 4 = 12
+\]</div>
+<ol>
+<li><strong>Velocidad de salida final (</strong><span class="arithmatex">\(n_{\text{salida}}\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+n_{\text{salida}} = \frac{n_{\text{entrada}}}{i_{\text{total}}} = \frac{960\text{ rpm}}{12} = 80\text{ rpm}
+\]</div>
+<h3 id="resultado_1"><strong>Resultado:</strong></h3>
+<ul>
+<li>
+<p><strong>Relación total:</strong> <span class="arithmatex">\(12\)</span> <em>(o</em> <span class="arithmatex">\(1:12\)</span><em>)</em></p>
+</li>
+<li>
+<p><strong>Velocidad de salida final:</strong> <span class="arithmatex">\(80\text{ rpm}\)</span></p>
+</li>
+</ul>
+<h2 id="ejercicio-3-sinfin"><strong>Ejercicio 3: Sinfín</strong></h2>
+<p>Un sinfín de <span class="arithmatex">\(2\)</span> hilos mueve una corona de <span class="arithmatex">\(40\)</span> dientes. <em>(En un sinfín,</em> <span class="arithmatex">\(Z_1\)</span> <em>es el número de hilos)</em>. ¿Cuál es la relación de transmisión? ¿Cuántas vueltas del sinfín se necesitan para una vuelta de la corona?</p>
+<h3 id="datos_2"><strong>Datos:</strong></h3>
+<ul>
+<li>
+<p>Número de hilos del sinfín: <span class="arithmatex">\(Z_1 = 2\)</span></p>
+</li>
+<li>
+<p>Número de dientes de la corona: <span class="arithmatex">\(Z_2 = 40\)</span></p>
+</li>
+</ul>
+<h3 id="procedimiento_2"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Relación de transmisión (</strong><span class="arithmatex">\(i\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+i = \frac{Z_2}{Z_1} = \frac{40}{2} = 20
+\]</div>
+<ol>
+<li><strong>Vueltas del sinfín por vuelta de la corona:</strong>
+   Por definición, la relación de transmisión <span class="arithmatex">\(i = 20\)</span> indica que la entrada (sinfín) debe girar <span class="arithmatex">\(20\)</span> veces para que la salida (corona) gire <span class="arithmatex">\(1\)</span> vez.</li>
+</ol>
+<h3 id="resultado_2"><strong>Resultado:</strong></h3>
+<ul>
+<li>
+<p><strong>Relación de transmisión:</strong> <span class="arithmatex">\(20\)</span> <em>(o</em> <span class="arithmatex">\(1:20\)</span><em>)</em></p>
+</li>
+<li>
+<p><strong>Vueltas del sinfín:</strong> <span class="arithmatex">\(20\)</span> vueltas por cada <span class="arithmatex">\(1\)</span> vuelta de la corona.</p>
+</li>
+</ul>
+<h2 id="ejercicio-4-cruz-de-ginebra"><strong>Ejercicio 4: Cruz de Ginebra</strong></h2>
+<p>Contar las ranuras de la cruz del laboratorio y calcular: grados que avanza por cada paso, y vueltas completas del impulsor necesarias para una vuelta completa de la cruz.</p>
+<blockquote>
+<p><strong>Nota pedagógica / Supuesto estándar:</strong>
+Dado que la cantidad exacta de ranuras depende de la pieza física de laboratorio, tomamos como referencia el modelo más común en laboratorios de ingeniería: <strong>una cruz de</strong> <span class="arithmatex">\(N = 4\)</span> <strong>ranuras</strong>.</p>
+<p><em>(Si tu pieza de laboratorio usa un número diferente, por ejemplo</em> <span class="arithmatex">\(N = 6\)</span><em>, sustituye el valor de</em> <span class="arithmatex">\(N\)</span> <em>en las fórmulas)</em>.</p>
+</blockquote>
+<h3 id="datos-asumiendo-n-4-ranuras"><strong>Datos (Asumiendo</strong> <span class="arithmatex">\(N = 4\)</span> <strong>ranuras):</strong></h3>
+<ul>
+<li>Número de ranuras: <span class="arithmatex">\(N = 4\)</span></li>
+</ul>
+<h3 id="procedimiento_3"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Grados que avanza por cada paso (</strong><span class="arithmatex">\(\theta\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+\theta = \frac{360^\circ}{N} = \frac{360^\circ}{4} = 90^\circ
+\]</div>
+<ol>
+<li><strong>Vueltas del impulsor para</strong> <span class="arithmatex">\(1\)</span> <strong>vuelta completa de la cruz:</strong>
+   Cada vuelta completa (<span class="arithmatex">\(360^\circ\)</span>) del impulsor mueve la cruz un paso (una ranura). Para completar <span class="arithmatex">\(1\)</span> vuelta completa (<span class="arithmatex">\(360^\circ\)</span>) de la cruz:</li>
+</ol>
+<div class="arithmatex">\[
+\text{Vueltas del impulsor} = N = 4\text{ vueltas}
+\]</div>
+<h3 id="resultado-para-n-4"><strong>Resultado (Para</strong> <span class="arithmatex">\(N = 4\)</span><strong>):</strong></h3>
+<ul>
+<li>
+<p><strong>Avance por paso:</strong> <span class="arithmatex">\(90^\circ\)</span></p>
+</li>
+<li>
+<p><strong>Vueltas del impulsor:</strong> <span class="arithmatex">\(4\)</span> vueltas del impulsor por cada <span class="arithmatex">\(1\)</span> vuelta de la cruz.</p>
+</li>
+</ul>
+<p><em>(Para</em> <span class="arithmatex">\(N = 6\)</span><em>: avanza</em> <span class="arithmatex">\(60^\circ\)</span> <em>por paso y requiere</em> <span class="arithmatex">\(6\)</span> <em>vueltas del impulsor).</em></p>
+<h2 id="ejercicio-5-velocidad-del-carro"><strong>Ejercicio 5: Velocidad del carro</strong></h2>
+<p>El motor TT tiene reducción interna <span class="arithmatex">\(1:48\)</span> y, a <span class="arithmatex">\(6\text{ V}\)</span>, la rueda gira aproximadamente <span class="arithmatex">\(200\text{ rpm}\)</span> sin carga. Con ruedas de <span class="arithmatex">\(65\text{ mm}\)</span> de diámetro, usando:</p>
+<div class="arithmatex">\[
+v = \pi \cdot D \cdot \frac{rpm}{60}
+\]</div>
+<p>¿cuál es la velocidad máxima teórica del carro en <span class="arithmatex">\(\text{m/s}\)</span>? ¿Por qué en el piso real será menor que ese valor teórico?</p>
+<h3 id="datos_3"><strong>Datos:</strong></h3>
+<ul>
+<li>
+<p>Velocidad angular de la rueda: <span class="arithmatex">\(rpm = 200\text{ rpm}\)</span></p>
+</li>
+<li>
+<p>Diámetro de la rueda: <span class="arithmatex">\(D = 65\text{ mm} = 0.065\text{ m}\)</span></p>
+</li>
+</ul>
+<h3 id="procedimiento_4"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Cálculo de la velocidad máxima teórica (</strong><span class="arithmatex">\(v\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+v = \pi \cdot (0.065\text{ m}) \cdot \frac{200}{60}
+\]</div>
+<div class="arithmatex">\[
+v = \pi \cdot 0.065 \cdot 3.3333...
+\]</div>
+<div class="arithmatex">\[
+v \approx 3.14159 \cdot 0.065 \cdot 3.3333... \approx 0.68067\text{ m/s}
+\]</div>
+<ol>
+<li>
+<p><strong>Justificación física de la diferencia en el piso real:</strong>
+   En condiciones reales, la velocidad será menor debido a:</p>
+</li>
+<li>
+<p><strong>Fricción y rozamiento:</strong> Fricción mecánica en los ejes, reductora y la resistencia al rodamiento entre la rueda y la superficie.</p>
+</li>
+<li>
+<p><strong>Carga/Peso:</strong> El motor ya no funciona "sin carga"; el peso del vehículo opone resistencia y reduce la velocidad angular real del motor.</p>
+</li>
+<li>
+<p><strong>Deslizamiento:</strong> Pérdida de tracción o patinaje de las ruedas en el piso.</p>
+</li>
+<li>
+<p><strong>Caída de voltaje/eficiencia:</strong> Resistencia interna de la batería o componentes electrónicos bajo carga.</p>
+</li>
+</ol>
+<h3 id="resultado_3"><strong>Resultado:</strong></h3>
+<ul>
+<li><strong>Velocidad máxima teórica:</strong> <span class="arithmatex">\(\approx 0.681\text{ m/s}\)</span> (o <span class="arithmatex">\(68.1\text{ cm/s}\)</span>)</li>
+</ul>
+<h2 id="ejercicio-6-direccion-diferencial"><strong>Ejercicio 6: Dirección diferencial</strong></h2>
+<p>La rueda izquierda va a <span class="arithmatex">\(0.4\text{ m/s}\)</span>, la derecha a <span class="arithmatex">\(0.6\text{ m/s}\)</span>, y la separación entre ruedas es <span class="arithmatex">\(L = 0.12\text{ m}\)</span>. Usando:</p>
+<div class="arithmatex">\[
+v = \frac{v_{der} + v_{izq}}{2}, \quad \omega = \frac{v_{der} - v_{izq}}{L}, \quad R = \frac{v}{\omega}
+\]</div>
+<p>Calcular la velocidad del centro del carro, su velocidad de giro, y el radio de la curva que describe.</p>
+<h3 id="datos_4"><strong>Datos:</strong></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(v_{izq} = 0.4\text{ m/s}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_{der} = 0.6\text{ m/s}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(L = 0.12\text{ m}\)</span></p>
+</li>
+</ul>
+<h3 id="procedimiento_5"><strong>Procedimiento:</strong></h3>
+<ol>
+<li><strong>Velocidad del centro del carro (</strong><span class="arithmatex">\(v\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+v = \frac{0.6 + 0.4}{2} = \frac{1.0}{2} = 0.5\text{ m/s}
+\]</div>
+<ol>
+<li><strong>Velocidad angular/de giro (</strong><span class="arithmatex">\(\omega\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+\omega = \frac{0.6 - 0.4}{0.12} = \frac{0.2}{0.12} = \frac{5}{3} \approx 1.667\text{ rad/s}
+\]</div>
+<ol>
+<li><strong>Radio de curvatura (</strong><span class="arithmatex">\(R\)</span><strong>):</strong></li>
+</ol>
+<div class="arithmatex">\[
+R = \frac{v}{\omega} = \frac{0.5}{1.6667} = 0.5 \times \frac{3}{5} = 0.3\text{ m}
+\]</div>
+<h3 id="resultado_4"><strong>Resultado:</strong></h3>
+<ul>
+<li>
+<p><strong>Velocidad del centro:</strong> <span class="arithmatex">\(0.5\text{ m/s}\)</span></p>
+</li>
+<li>
+<p><strong>Velocidad de giro (</strong><span class="arithmatex">\(\omega\)</span><strong>):</strong> <span class="arithmatex">\(1.67\text{ rad/s}\)</span></p>
+</li>
+<li>
+<p><strong>Radio de la curva (</strong><span class="arithmatex">\(R\)</span><strong>):</strong> <span class="arithmatex">\(0.3\text{ m}\)</span> (o <span class="arithmatex">\(30\text{ cm}\)</span>)</p>
+</li>
+</ul>
+<h2 id="ejercicio-7-diseno"><strong>Ejercicio 7: Diseño</strong></h2>
+<p>Se busca que el carro sea el doble de "fuerte" para empujar la pelota en el torneo, aceptando ir a la mitad de velocidad. Proponer una relación de engranes adicional entre motor y rueda, y calcular la nueva velocidad máxima resultante.</p>
+<h3 id="datos-iniciales"><strong>Datos iniciales:</strong></h3>
+<ul>
+<li>
+<p>Condición deseada: Torque final <span class="arithmatex">\(= 2 \times T_{\text{inicial}}\)</span></p>
+</li>
+<li>
+<p>Velocidad inicial (<span class="arithmatex">\(v_{\text{inicial}}\)</span>): <span class="arithmatex">\(0.681\text{ m/s}\)</span> <em>(del Ejercicio 5)</em></p>
+</li>
+</ul>
+<h3 id="procedimiento_6"><strong>Procedimiento:</strong></h3>
+<ol>
+<li>
+<p><strong>Propuesta de relación de engranes adicional:</strong>
+   Para duplicar la fuerza (torque) y reducir la velocidad a la mitad, se requiere agregar una etapa reductora externa con una relación <span class="arithmatex">\(2:1\)</span> (es decir, <span class="arithmatex">\(i_{\text{adicional}} = 2\)</span>).</p>
+</li>
+<li>
+<p><strong>Propuesta de engranes:</strong></p>
+<ul>
+<li>
+<p>Engrane tractor (piñón acoplado al eje actual): <span class="arithmatex">\(Z_A = 12\)</span> dientes.</p>
+</li>
+<li>
+<p>Engrane conducido (acoplado a la rueda): <span class="arithmatex">\(Z_B = 24\)</span> dientes.</p>
+</li>
+<li>
+<p>Relación: <span class="arithmatex">\(i_{\text{adicional}} = \frac{Z_B}{Z_A} = \frac{24}{12} = 2\)</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Cálculo de la nueva velocidad máxima (</strong><span class="arithmatex">\(v_{\text{nueva}}\)</span><strong>):</strong></p>
+</li>
+</ol>
+<div class="arithmatex">\[
+v_{\text{nueva}} = \frac{v_{\text{inicial}}}{i_{\text{adicional}}} = \frac{0.681\text{ m/s}}{2} \approx 0.3405\text{ m/s}
+\]</div>
+<h3 id="resultado_5"><strong>Resultado:</strong></h3>
+<ul>
+<li>
+<p><strong>Relación de engranes adicional:</strong> <span class="arithmatex">\(2:1\)</span> (por ejemplo, piñón de <span class="arithmatex">\(12\)</span> dientes a rueda de <span class="arithmatex">\(24\)</span> dientes).</p>
+</li>
+<li>
+<p><strong>Nueva velocidad máxima:</strong> <span class="arithmatex">\(\approx 0.341\text{ m/s}\)</span> (o <span class="arithmatex">\(34.1\text{ cm/s}\)</span>).</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
