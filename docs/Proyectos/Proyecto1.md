@@ -144,3 +144,6 @@ A continuación se presentan las evidencias fotográficas del desarrollo, ensamb
 *Figura 10: Prueba de ensamblaje del chasis en la universidad frente a estación de trabajo.*
 
 ---
+
+## 8. Bitacora video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EX8kxQPZQSs?si=XA1uuw8CVkubjnll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
