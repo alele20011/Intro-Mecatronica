@@ -147,3 +147,24 @@ A continuación se presentan las evidencias fotográficas del desarrollo, ensamb
 
 ## 8. Bitacora video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EX8kxQPZQSs?si=XA1uuw8CVkubjnll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## 9. Hitos y Entregables del Proyecto (Viernes 16/10/2026)
+
+- **Carro Funcional:** Operación continua cumpliendo los requisitos R1 a R8, validado mediante rúbrica antes del inicio del torneo.
+- **Repositorio Publicado:** Código fuente documentado y comentado, diagrama de conexiones, protocolo de comandos de control y este archivo README detallado.
+- **Video de Demostración:** Grabación de prueba de campo (menor o igual a 2 minutos) integrada en el portafolio del equipo.
+
+### Mediciones y Análisis (Requisitos vs. Resultados)
+
+- **Huella del Chasis:** 
+  - *Requisito:* $\le 20 \times 20\text{ cm}$.
+  - *Resultado:* $15 \times 13\text{ cm}$ (diseño optimizado en SolidWorks, cumpliendo holgadamente).
+- **Velocidad Máxima:**
+  - *Teórica (según parámetros cinemáticos y ejercicio de Mecanismos):* $0.80\text{ m/s}$.
+  - *Real Medida con PWM al 100% (Turbo):* $0.68\text{ m/s}$. 
+  - *Análisis:* La ligera reducción se debe a la caída de tensión bajo carga en las pilas AA y la fricción del terreno de juego.
+
+### Lecciones Aprendidas
+1. **Conectividad Inalámbrica:** Las apps personalizadas por Bluetooth clásico (SPP) son propensas a latencia en entornos competitivos saturados; el uso de protocolos BLE con mandos comerciales de consola (Xbox) ofrece una robustez muy superior.
+2. **Integridad de Potencia:** Aislar la alimentación lógica (PowerBank) de la etapa de potencia (pilas AA) eliminó por completo los reinicios inesperados del ESP32 por picos inductivos de los motores.
+3. **Robustez Mecánica:** La soldadura al aire con refuerzo de termofusible/silicón previene desconexiones por vibración mejor que las protoboards tradicionales.
