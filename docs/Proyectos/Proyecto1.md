@@ -210,3 +210,7 @@ A continuación se presentan las evidencias fotográficas del desarrollo, ensamb
 1. **Conectividad Inalámbrica:** Las apps personalizadas por Bluetooth clásico (SPP) son propensas a latencia en entornos competitivos saturados; el uso de protocolos BLE con mandos comerciales de consola (Xbox) ofrece una robustez muy superior.
 2. **Integridad de Potencia:** Aislar la alimentación lógica (PowerBank) de la etapa de potencia (pilas AA) eliminó por completo los reinicios inesperados del ESP32 por picos inductivos de los motores.
 3. **Robustez Mecánica:** La soldadura al aire con refuerzo de termofusible/silicón previene desconexiones por vibración mejor que las protoboards tradicionales.
+
+
+Descargar los documentos usados:
+[Descargar los archivos del carrito(.zip)](../Archi/Carro%20Proyecto.zip)
