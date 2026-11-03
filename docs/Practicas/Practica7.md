@@ -100,4 +100,4 @@ Tomando en cuenta la restricción de los sliders en la interfaz de usuario (incr
 
 ### Simulación Interactiva en Vivo
 
-[Prueba la simulación interactiva PID aquí](https://tu-usuario.github.io/tu-repo/demo_pid.html)
+[Prueba la simulación interactiva PID aquí](https://alele20011.github.io/Intro-Mecatronica/demo_pid.html)
