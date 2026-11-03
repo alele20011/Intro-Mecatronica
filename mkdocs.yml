@@ -72,10 +72,9 @@ nav:
       - "Maquinas del IDIT": Oliver/midit.md
       - "CNC Machines": Oliver/CNC.md
       -  "Molding and Casting": Oliver/molde.md 
-      
+  - "Extra":
+     - "Simulador": Extra/demo_pid.
 
-
-      
       
 
 
