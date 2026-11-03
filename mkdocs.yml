@@ -73,7 +73,7 @@ nav:
       - "CNC Machines": Oliver/CNC.md
       -  "Molding and Casting": Oliver/molde.md 
   - "Extra":
-     - "Simulador": Extra/demo_pid.
+     - "Simulador": Extra/demo_pid.html
 
       
 
