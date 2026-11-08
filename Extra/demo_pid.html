@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Control Interactive Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            color: #222;
+        }
+        .controls {
+            margin-bottom: 25px;
+        }
+        .slider-group {
+            margin-bottom: 12px;
+            width: 240px;
+        }
+        .slider-group label {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+        input[type=range] {
+            width: 100%;
+            cursor: pointer;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #444;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Setpoint fijo: 1.0</h2>
+        
+        <div class="controls">
+            <div class="slider-group">
+                <label for="kp">Kp: <span id="kp-val">5.00</span></label>
+                <input type="range" id="kp" min="0" max="20" step="0.5" value="5.0">
+            </div>
+            
+            <div class="slider-group">
+                <label for="ki">Ki: <span id="ki-val">1.00</span></label>
+                <input type="range" id="ki" min="0" max="10" step="0.1" value="1.0">
+            </div>
+            
+            <div class="slider-group">
+                <label for="kd">Kd: <span id="kd-val">3.50</span></label>
+                <input type="range" id="kd" min="0" max="10" step="0.1" value="3.5">
+            </div>
+        </div>
+
+        <div class="chart-title">PID Control (Second-order Plant)</div>
+        <div class="chart-container">
+            <canvas id="pidChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('pidChart').getContext('2d');
+        
+        // Simulación numérica de planta de 2do orden (Masa-Resorte-Amortiguador)
+        function simulatePID(Kp, Ki, Kd) {
+            const dt = 0.02;
+            const totalTime = 20;
+            const steps = Math.floor(totalTime / dt);
+            
+            const times = [];
+            const outputs = [];
+            const setpoints = [];
+            
+            let y = 0;       // Posición (Salida)
+            let v = 0;       // Velocidad
+            let integral = 0;
+            let prevError = 0;
+            const setpoint = 1.0;
+            
+            // Parámetros físicos de la planta
+            const m = 1.0;
+            const b = 0.5;
+            const k = 1.0;
+            
+            for (let i = 0; i <= steps; i++) {
+                const t = i * dt;
+                const error = setpoint - y;
+                
+                // Término Integral con anti-windup
+                integral += error * dt;
+                if (integral > 5) integral = 5;
+                if (integral < -5) integral = -5;
+                
+                // Término Derivativo
+                const derivative = (error - prevError) / dt;
+                prevError = error;
+                
+                // Acción de control
+                let u = Kp * error + Ki * integral + Kd * derivative;
+                
+                // Ecuación diferencial de la planta: m*a + b*v + k*y = u
+                const a = (u - b * v - k * y) / m;
+                v += a * dt;
+                y += v * dt;
+                
+                times.push(t.toFixed(1));
+                outputs.push(y);
+                setpoints.push(setpoint);
+            }
+            
+            return { times, outputs, setpoints };
+        }
+
+        const initialData = simulatePID(5.0, 1.0, 3.5);
+
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: initialData.times,
+                datasets: [
+                    {
+                        label: 'Process output y(t)',
+                        data: initialData.outputs,
+                        borderColor: '#1f77b4',
+                        borderWidth: 2,
+                        fill: false,
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'Setpoint',
+                        data: initialData.setpoints,
+                        borderColor: '#ff7f0e',
+                        borderWidth: 1.5,
+                        borderDash: [4, 4],
+                        fill: false,
+                        pointRadius: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Time [s]' },
+                        ticks: {
+                            callback: function(val, index) {
+                                return index % 250 === 0 ? this.getLabelForValue(val) : '';
+                            }
+                        },
+                        grid: { display: true, color: '#f0f0f0' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Value' },
+                        min: 0,
+                        max: 1.6,
+                        grid: { display: true, color: '#f0f0f0' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        function updateSimulation() {
+            const Kp = parseFloat(document.getElementById('kp').value);
+            const Ki = parseFloat(document.getElementById('ki').value);
+            const Kd = parseFloat(document.getElementById('kd').value);
+            
+            document.getElementById('kp-val').innerText = Kp.toFixed(2);
+            document.getElementById('ki-val').innerText = Ki.toFixed(2);
+            document.getElementById('kd-val').innerText = Kd.toFixed(2);
+            
+            const data = simulatePID(Kp, Ki, Kd);
+            chart.data.datasets[0].data = data.outputs;
+            chart.update('none');
+        }
+
+        document.getElementById('kp').addEventListener('input', updateSimulation);
+        document.getElementById('ki').addEventListener('input', updateSimulation);
+        document.getElementById('kd').addEventListener('input', updateSimulation);
+    </script>
+</body>
+</html>
