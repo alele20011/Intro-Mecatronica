@@ -124,3 +124,71 @@ El vaciado hace referencia al vertido de materiales líquidos (metales fundidos,
 
 [Descargar Modelo del contramolde(.zip)](../Archi/patolo.zip)
 
+
+
+## 7. Vaciado Final: Resina Cristal y Fundición en Estaño
+
+### A. Vaciado en Molde de Silicona (Resina Cristal con Colorante)
+
+Para la pieza final en molde de silicona flexible, se utilizó **resina cristal** combinada con pigmento/colorante azul.
+
+#### Proceso de Catalización y Pruebas:
+1. **Primer intento ($1\%$ Catalizador):** Se preparó la resina agregando el catalizador al $1\%$ en peso. Sin embargo, la mezcla no logró curar adecuadamente, manteniéndose en estado viscoso.
+2. **Segundo intento ($2\%$ Catalizador):** Se incrementó la dosificación del catalizador al **$2\%$**, logrando una polimerización correcta y una solidificación completa con excelente transparencia y brillo.
+
+![Resina Epóxica y Componentes](../imVS/IMG_2037.jpeg)  
+*Figura 7: Resina empleada para el vaciado.*
+
+![Catalizador K-2000](../imVS/IMG_2038.jpeg)  
+*Figura 8: Catalizador K-2000 dosificado al 2%.*
+
+![Pieza Final en Resina Cristal Azul](../imVS/IMG_2034.jpeg)  
+*Figura 9: Resultado final de la pieza curada en resina cristal con pigmento azul.*
+
+> ⚠️ **Precauciones y Seguridad para Resina Cristal:**
+> * **Reacción Exotérmica:** Al activarse el catalizador, la resina genera una reacción química fuertemente exotérmica, incrementando considerablemente su temperatura. Es crucial evitar el contacto directo con la piel durante el curado para prevenir quemaduras.
+> * **Vapores y Olor:** La resina libera vapores intensos que pueden provocar mareos e irritación. Es obligatorio el uso de **mascarilla con filtros para vapores orgánicos** y trabajar en un área debidamente ventilada.
+
+---
+
+### B. Vaciado en Metal (Estaño Fundido en Arena Silica / Verde)
+
+En paralelo, se realizó un proceso de fundición de una pieza metálica en estaño utilizando el método de moldeo en arena sílica (arena verde para fundición).
+
+#### Proceso Experimental:
+1. **Compactación del Molde:** Se utilizó arena silica/verde apretando y compactando cuidadosamente la mezcla sobre la pieza patrón dentro de las cajas de moldeo para lograr una cavidad nítida.
+2. **Fundición del Estaño:** Se colocó el estaño dentro del horno de fundición hasta alcanzar su punto de fusión.
+3. **Vertido del Metal Liquidificado:** Con la ayuda de pinzas especiales para crisol, se extrajo el metal fundido del horno y se vertió con cuidado dentro del bebedero del molde de arena.
+
+![Preparación del molde en arena silica](../imVS/IMG_2034.jpeg)  
+*Figura 10: Compactación manual de la arena verde en la caja de moldeo.*
+
+![Molde de arena preparado](../imVS/IMG_2039.jpeg)  
+*Figura 11: Cavidad del molde en arena sílica lista para el colado.*
+
+![Horno de Fundición e Inserción de Crisol](../imVS/IMG_2042.jpeg)  
+*Figura 12: Introducción y manejo del crisol dentro del horno de fundición.*
+
+![Vaciado del Estaño Fundido](../imVS/IMG_2045.jpeg)  
+*Figura 13: Extracción del estaño fundido a alta temperatura.*
+
+![Enfriamiento en el Molde de Arena](../imVS/IMG_2048.jpeg)  
+*Figura 14: Colado de estaño recién vertido dentro de la caja de moldeo.*
+
+![Desmoldeo de la Pieza de Metal](../imVS/IMG_2054.jpeg)  
+*Figura 15: Apertura del molde de arena y revisión del vertido de estaño.*
+
+>  **Precauciones y Seguridad para Fundición de Metal:**
+> * **Equipo de Protección Personal (EPP):** Debido a las elevadas temperaturas del horno y del metal fundido, es indispensable contar con **guantes térmicos de calzado/asbesto o carnaza**, **careta de protección facial completa** y peto/mandil de seguridad.
+> * **Manipulación:** La extracción del crisol e introducción al horno debe realizarse únicamente con **pinzas de sujeción especializadas** para evitar accidentes por derrame de metal incandescente.
+
+---
+
+### C. Evidencia en Video del Proceso
+
+#### Video 1: Proceso de Fundición y Vaciado
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WwwmgBBiyQI?si=F7i03uQLBxmNWeR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+#### Video 2: Desmoldeo y Resultado Final
+<iframe width="560" height="315" src="https://www.youtube.com/embed/arreR8XdT1U?si=yAXbvCm9ROafj4ft" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
